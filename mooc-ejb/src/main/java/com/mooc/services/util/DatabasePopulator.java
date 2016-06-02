@@ -1,10 +1,5 @@
 package com.mooc.services.util;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Date;
-import java.util.Locale;
-
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Singleton;
