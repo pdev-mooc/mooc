@@ -24,6 +24,7 @@ public class Course  implements Serializable {
 	private Integer id;
 	private String title;
 	private String description;
+	@OneToMany
 	private List<Chapter> chapters;
 	
 	public Integer getId() {
@@ -45,8 +46,7 @@ public class Course  implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	@OneToMany
+
 	public List<Chapter> getChapters() {
 		return chapters;
 	}
