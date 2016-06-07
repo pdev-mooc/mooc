@@ -2,67 +2,57 @@ package com.mooc.domain;
 
 import java.io.Serializable;
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Table(name = "chapter")
+@Table(name = "course")
 @Entity
-public class Chapter implements Serializable {
+@Inheritance(strategy = InheritanceType.JOINED)
 
+public class Course  implements Serializable {
+	
 	private static final long serialVersionUID = 1L;
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected Integer id;
+	private Integer id;
 	private String title;
-	private String recap;
-	private String body;
-	private List<Quizz> quizzs;
-
+	private String description;
+	private List<Chapter> chapters;
+	
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
+	
 	public String getTitle() {
 		return title;
 	}
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
-	public String getRecap() {
-		return recap;
+	public String getDescription() {
+		return description;
 	}
-
-	public void setRecap(String recap) {
-		this.recap = recap;
-	}
-
-	public String getBody() {
-		return body;
-	}
-
-	public void setBody(String body) {
-		this.body = body;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
-	@OneToMany(targetEntity=Quizz.class)
-	public List<Quizz> getQuizzs() {
-		return quizzs;
+	@OneToMany
+	public List<Chapter> getChapters() {
+		return chapters;
 	}
-
-	public void setQuizzs(List<Quizz> quizzs) {
-		this.quizzs = quizzs;
+	public void setChapters(List<Chapter> chapters) {
+		this.chapters = chapters;
 	}
-
+	
+	
 }
