@@ -5,8 +5,9 @@ import javax.ejb.EJB;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 
-import com.mooc.domain.Admin;
-import com.mooc.domain.User;
+import com.mooc.domain.CommitteeMember;
+import com.mooc.domain.Student;
+import com.mooc.domain.Tutor;
 import com.mooc.services.UserRemoteService;
 
 @Singleton
@@ -20,8 +21,12 @@ public class DatabasePopulator {
 
 	@PostConstruct
 	public void createData() {
-		userService.create(new User("George", "Orwell", "gorwell@mooc.com", "pw"));
-		userService.create(new Admin("Admin1FN", "Admin1LN", "admin1@mooc.com", "pw"));
+		// Tutor
+		userService.create(new Tutor("George", "Orwell", "gorwell@mooc.com", "pw"));
+		// Committee member
+		userService.create(new CommitteeMember("Admin", "Admin", "admin@mooc.com", "pw"));
+		// Student
+		userService.create(new Student("Albert", "Einstein", "aeinstein@mooc.com", "pw"));
 	}
 
 }

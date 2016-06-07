@@ -19,6 +19,11 @@
 			<artifactId>mooc-ejb</artifactId>
 			<type>ejb</type>
 		</dependency>
+		<dependency>
+			<groupId>com.mooc</groupId>
+			<artifactId>mooc-administration</artifactId>
+			<type>war</type>
+		</dependency>
 	</dependencies>
 
 	<build>

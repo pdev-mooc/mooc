@@ -3,16 +3,16 @@ package com.mooc.domain;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Table(name = "admin")
+@Table(name = "committee_member")
 @Entity
-public class Admin extends Person {
+public class CommitteeMember extends Person {
 
 	private static final long serialVersionUID = 1L;
 
-	public Admin() {
+	public CommitteeMember() {
 	}
 
-	public Admin(String firstName, String lastName, String login, String password) {
+	public CommitteeMember(String firstName, String lastName, String login, String password) {
 		super(firstName, lastName, login, password);
 	}
 

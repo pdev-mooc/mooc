@@ -19,7 +19,7 @@ public class Quizz implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String question;
-	private List<String> choices;
+	private String choices;
 	private Integer correctQuestionId;
 
 	public Integer getId() {
@@ -38,11 +38,11 @@ public class Quizz implements Serializable {
 		this.question = question;
 	}
 
-	public List<String> getChoices() {
+	public String getChoices() {
 		return choices;
 	}
 
-	public void setChoices(List<String> choices) {
+	public void setChoices(String choices) {
 		this.choices = choices;
 	}
 
@@ -52,10 +52,6 @@ public class Quizz implements Serializable {
 
 	public void setCorrectQuestionId(Integer correctQuestionId) {
 		this.correctQuestionId = correctQuestionId;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 
 }
