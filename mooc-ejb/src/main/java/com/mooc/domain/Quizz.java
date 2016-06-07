@@ -17,41 +17,36 @@ public class Quizz implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	private Integer id;
 	private String question;
-	private String choices;
-	private Integer correctQuestionId;
-
+	private List<String> propositions;
+	private Integer response;
+	
 	public Integer getId() {
 		return id;
 	}
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
 	public String getQuestion() {
 		return question;
 	}
-
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-
-	public String getChoices() {
-		return choices;
+	public List<String> getPropositions() {
+		return propositions;
+	}
+	public void setPropositions(List<String> propositions) {
+		this.propositions = propositions;
+	}
+	public Integer getResponse() {
+		return response;
+	}
+	public void setResponse(Integer response) {
+		this.response = response;
 	}
 
-	public void setChoices(String choices) {
-		this.choices = choices;
-	}
-
-	public Integer getCorrectQuestionId() {
-		return correctQuestionId;
-	}
-
-	public void setCorrectQuestionId(Integer correctQuestionId) {
-		this.correctQuestionId = correctQuestionId;
-	}
-
+	
 }

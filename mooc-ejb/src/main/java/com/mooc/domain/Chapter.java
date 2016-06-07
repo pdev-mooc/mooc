@@ -1,12 +1,13 @@
 package com.mooc.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Table(name = "chapter")
@@ -17,9 +18,11 @@ public class Chapter implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	@ManyToOne
-	private Course course;
+	protected Integer id;
+	private String title;
+	private String recap;
+	private String body;
+	private List<Quizz> quizzs;
 
 	public Integer getId() {
 		return id;
@@ -28,10 +31,6 @@ public class Chapter implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	private String title;
-	private String recap;
-	private String body;
 
 	public String getTitle() {
 		return title;
@@ -55,6 +54,15 @@ public class Chapter implements Serializable {
 
 	public void setBody(String body) {
 		this.body = body;
+	}
+	
+	@OneToMany(targetEntity=Quizz.class)
+	public List<Quizz> getQuizzs() {
+		return quizzs;
+	}
+
+	public void setQuizzs(List<Quizz> quizzs) {
+		this.quizzs = quizzs;
 	}
 
 }
