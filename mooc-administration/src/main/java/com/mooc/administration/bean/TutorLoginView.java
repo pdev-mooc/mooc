@@ -6,6 +6,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
+import com.mooc.domain.Course;
 import com.mooc.domain.Person;
 import com.mooc.domain.Tutor;
 import com.mooc.services.UserRemoteService;
@@ -18,6 +19,7 @@ public class TutorLoginView {
 	private Tutor currentUser = new Tutor();
 	private Tutor tutor = new Tutor();
 	private String editor;
+	private Course course = new Course();
 
 	public String login() {
 		Person user = userService.findUser(currentUser.getEmail(), currentUser.getPassword());
@@ -55,6 +57,18 @@ public class TutorLoginView {
 
 	public String getEditor() {
 		return editor;
+	}
+
+	public String createCourse() {
+		return "/views/create_course";
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
 	}
 
 }

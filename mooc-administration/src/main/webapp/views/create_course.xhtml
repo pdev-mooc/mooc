@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<p:outputLabel value="Create Course" />
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputLabel for="courseTitle" value="Course Title:" />
+			<p:inputText id="courseTitle"
+				value="#{courseView.course.title}" required="true"
+				label="courseTitle" />
+
+			<h:outputLabel for="courseDescription" value="Course Description:" />
+			<p:inputTextarea id="courseDescription"
+				value="#{courseView.course.description}" required="true"
+				label="courseDescription" />
+
+			<p:commandButton value="Create Course"
+				action="#{courseView.createCourse}" />
+			<p:messages id="message" showDetail="true" autoUpdate="true"
+				closable="true" />
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>
