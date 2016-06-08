@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	Tutor Administration Panel
+	<h:form>
+		<p:editor id="editor" widgetVar="editorWidget"
+			value="#{tutorLoginView.editor}" width="600" />
+
+		<h:panelGrid columns="2" style="margin-top: 10px">
+			<p:commandButton value="Submit" update="display"
+				oncomplete="PF('dlg').show()" icon="ui-icon-disk" />
+
+			<p:commandButton value="Clear" type="button"
+				onclick="PF('editorWidget').clear();" icon="ui-icon-close" />
+		</h:panelGrid>
+
+		<p:dialog header="Content" widgetVar="dlg" showEffect="fade"
+			hideEffect="fade">
+			<h:outputText id="display" value="#{tutorLoginView.editor}" escape="false" />
+		</p:dialog>
+	</h:form>
+</body>
+</html>
