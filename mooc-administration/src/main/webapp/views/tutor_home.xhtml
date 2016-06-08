@@ -18,6 +18,9 @@
 
 			<p:commandButton value="Clear" type="button"
 				onclick="PF('editorWidget').clear();" icon="ui-icon-close" />
+
+			<p:commandButton value="Create Course" action="#{tutorLoginView.createCourse}"/>				
+			<p:link value="Create Course" outcome="/views/create_course" />
 		</h:panelGrid>
 
 		<p:dialog header="Content" widgetVar="dlg" showEffect="fade"
