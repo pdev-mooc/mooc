@@ -6,9 +6,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
-import com.mooc.domain.Admin;
+import com.mooc.domain.CommitteeMember;
 import com.mooc.domain.Person;
-import com.mooc.domain.User;
+import com.mooc.domain.Student;
 import com.mooc.services.UserRemoteService;
 
 @ManagedBean
@@ -33,15 +33,15 @@ public class UserBean {
 		}
 		currentUser = user;
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", currentUser);
-		if (currentUser instanceof Admin) {
+		if (currentUser instanceof CommitteeMember) {
 			return "/views/admin";
 		}
-		return "/views/home";
+		return "/views/test";
 	}
 
 	public String logOut() {
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-		currentUser = new User();
+		currentUser = new Student();
 		return "/views/login?faces-redirect=true";
 	}
 

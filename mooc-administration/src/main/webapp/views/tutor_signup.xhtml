@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputLabel for="userFirstName" value="First Name:" />
+			<p:inputText id="userFirstName"
+				value="#{committeeMemberLoginView.tutor.firstName}" required="true"
+				label="firstName" />
+
+			<h:outputLabel for="userLastName" value="Last Name:" />
+			<p:inputText id="userLastName"
+				value="#{committeeMemberLoginView.tutor.lastName}" required="true"
+				label="lastName" />
+
+			<h:outputLabel for="userEmail" value="Email:" />
+			<p:inputText id="userEmail"
+				value="#{committeeMemberLoginView.tutor.email}" required="true"
+				label="email" />
+
+			<h:outputLabel for="userPassword" value="Password:" />
+			<p:password id="userPassword"
+				value="#{committeeMemberLoginView.tutor.password}" required="true"
+				label="password" />
+
+			<p:commandButton value="Create Tutor"
+				action="#{committeeMemberLoginView.createTutor}" />
+			<p:messages id="message" showDetail="true" autoUpdate="true"
+				closable="true" />
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>

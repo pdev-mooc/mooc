@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputLabel for="userEmail" value="Email:" />
+			<p:inputText id="userEmail" value="#{committeeMemberLoginView.currentUser.email}"
+				required="true" label="email" placeholder="admin@mooc.com" />
+
+			<h:outputLabel for="userPassword" value="Password:" />
+			<p:password id="userPassword" value="#{committeeMemberLoginView.currentUser.password}"
+				required="true" label="password" />
+
+			<p:commandButton value="Login" action="#{committeeMemberLoginView.login}"/>
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>

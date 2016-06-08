@@ -6,8 +6,10 @@
 		<artifactId>mooc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>mooc-web</artifactId>
+	<artifactId>mooc-administration</artifactId>
 	<packaging>war</packaging>
+	<description>Administration panel</description>
+
 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
@@ -41,5 +43,4 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 	</build>
-
 </project>
