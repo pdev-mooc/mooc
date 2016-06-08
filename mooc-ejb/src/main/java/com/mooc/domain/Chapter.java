@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -22,7 +23,19 @@ public class Chapter implements Serializable {
 	private String title;
 	private String recap;
 	private String body;
+	@OneToMany
 	private List<Quizz> quizzs;
+	
+	@ManyToOne
+	private Course course;
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 
 	public Integer getId() {
 		return id;

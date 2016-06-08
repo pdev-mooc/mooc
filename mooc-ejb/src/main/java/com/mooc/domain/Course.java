@@ -13,7 +13,6 @@ import javax.persistence.Table;
 
 @Table(name = "course")
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
 
 public class Course  implements Serializable {
 	
@@ -24,7 +23,7 @@ public class Course  implements Serializable {
 	private Integer id;
 	private String title;
 	private String description;
-	private List<Chapter> chapters;
+	
 	
 	public Integer getId() {
 		return id;
@@ -46,13 +45,7 @@ public class Course  implements Serializable {
 		this.description = description;
 	}
 	
-	@OneToMany
-	public List<Chapter> getChapters() {
-		return chapters;
-	}
-	public void setChapters(List<Chapter> chapters) {
-		this.chapters = chapters;
-	}
+	
 	
 	
 }

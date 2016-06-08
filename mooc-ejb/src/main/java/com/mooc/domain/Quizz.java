@@ -20,7 +20,7 @@ public class Quizz implements Serializable {
 	
 	private Integer id;
 	private String question;
-	private List<String> propositions;
+	private String propositions;
 	private Integer response;
 	
 	public Integer getId() {
@@ -35,10 +35,10 @@ public class Quizz implements Serializable {
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-	public List<String> getPropositions() {
+	public String getPropositions() {
 		return propositions;
 	}
-	public void setPropositions(List<String> propositions) {
+	public void setPropositions(String propositions) {
 		this.propositions = propositions;
 	}
 	public Integer getResponse() {
