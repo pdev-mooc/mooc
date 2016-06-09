@@ -11,14 +11,14 @@
 		<p:outputLabel value="Login as Tutor"/>
 		<h:panelGrid columns="2" cellpadding="5">
 			<h:outputLabel for="userEmail" value="Email:" />
-			<p:inputText id="userEmail" value="#{tutorLoginView.currentUser.email}"
-				required="true" label="email" placeholder="admin@mooc.com" />
+			<p:inputText id="userEmail" value="#{tutorView.tutor.email}"
+				required="true" label="email" />
 
 			<h:outputLabel for="userPassword" value="Password:" />
-			<p:password id="userPassword" value="#{tutorLoginView.currentUser.password}"
+			<p:password id="userPassword" value="#{tutorView.tutor.password}"
 				required="true" label="password" />
 
-			<p:commandButton value="Login" action="#{tutorLoginView.login}"/>
+			<p:commandButton value="Login" action="#{tutorView.login}"/>
 			<p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
 		</h:panelGrid>
 	</h:form>

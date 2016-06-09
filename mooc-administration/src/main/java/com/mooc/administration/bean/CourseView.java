@@ -6,6 +6,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
+import com.mooc.administration.util.SessionUtils;
 import com.mooc.domain.Course;
 import com.mooc.domain.Tutor;
 import com.mooc.services.CourseRemoteService;
@@ -17,11 +18,10 @@ public class CourseView {
 	@EJB
 	private CourseRemoteService courseService;
 	private Course course = new Course();
-	private Tutor currentTutor;
 
 	public String createCourse() {
 		// Retrieve the current tutor
-		currentTutor = (Tutor) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("tutor");
+		Tutor currentTutor = SessionUtils.getTutor();
 
 		course.setTutor(currentTutor);
 

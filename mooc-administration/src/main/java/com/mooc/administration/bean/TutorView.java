@@ -6,35 +6,31 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
-import com.mooc.domain.CommitteeMember;
+import com.mooc.administration.util.SessionUtils;
+import com.mooc.domain.Course;
 import com.mooc.domain.Person;
 import com.mooc.domain.Tutor;
 import com.mooc.services.UserRemoteService;
 
 @ManagedBean @SessionScoped
-public class CommitteeMemberLoginView {
+public class TutorView {
 
 	@EJB
 	private UserRemoteService userService;
-	private Person currentUser = new Person();
 	private Tutor tutor = new Tutor();
+	private String editor;
+	private Course course = new Course();
 
 	public String login() {
-		System.out.println("hello");
-		Person user = userService.findUser(currentUser.getEmail(), currentUser.getPassword());
-		if (user == null) {
+		Person user = userService.findUser(tutor.getEmail(), tutor.getPassword());
+		if (user == null || user instanceof Tutor == false) {
 			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,
 					"Incorrect Email or Passowrd", "Incorrect Email or Passowrd"));
-			return "/views/login";
+			return "/views/tutor_signin";
 		}
-		if (user instanceof CommitteeMember == false) {
-			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,
-					"Permission denied", "Permission denied"));
-			return "/views/login";
-		}
-		currentUser = user;
-		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("admin", currentUser);
-		return "/views/home";
+		tutor = (Tutor) user;
+		SessionUtils.setTutor(tutor);
+		return "/views/tutor_home";
 	}
 
 	public String createTutor() {
@@ -44,23 +40,31 @@ public class CommitteeMemberLoginView {
 		}
 		userService.create(tutor);
 		tutor = new Tutor();
-		return "/views/tutor_signin";
-	}
-
-	public String signinTutor() {
-		return "/views/tutor_signin";
-	}
-
-	public String signupTutor() {
-		return "/views/tutor_signup";
-	}
-
-	public Person getCurrentUser() {
-		return currentUser;
+		return "/views/tutor_home";
 	}
 
 	public Tutor getTutor() {
 		return tutor;
+	}
+
+	public void setEditor(String text) {
+		this.editor = text;
+	}
+
+	public String getEditor() {
+		return editor;
+	}
+
+	public String createCourse() {
+		return "/views/create_course";
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
 	}
 
 }

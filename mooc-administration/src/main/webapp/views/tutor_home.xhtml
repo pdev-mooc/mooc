@@ -10,7 +10,7 @@
 	Tutor Administration Panel
 	<h:form>
 		<p:editor id="editor" widgetVar="editorWidget"
-			value="#{tutorLoginView.editor}" width="600" />
+			value="#{tutorView.editor}" width="600" />
 
 		<h:panelGrid columns="2" style="margin-top: 10px">
 			<p:commandButton value="Submit" update="display"
@@ -19,13 +19,12 @@
 			<p:commandButton value="Clear" type="button"
 				onclick="PF('editorWidget').clear();" icon="ui-icon-close" />
 
-			<p:commandButton value="Create Course" action="#{tutorLoginView.createCourse}"/>				
 			<p:link value="Create Course" outcome="/views/create_course" />
 		</h:panelGrid>
 
 		<p:dialog header="Content" widgetVar="dlg" showEffect="fade"
 			hideEffect="fade">
-			<h:outputText id="display" value="#{tutorLoginView.editor}" escape="false" />
+			<h:outputText id="display" value="#{tutorView.editor}" escape="false" />
 		</p:dialog>
 	</h:form>
 </body>

@@ -10,12 +10,10 @@
 	<h:form>
 		<p:outputLabel value="Welcome to the Administration Panel!"/>
 		<div>
-			<p:commandButton value="Tutor Signup"
-				action="#{committeeMemberLoginView.signupTutor}" />
+			<p:link value="Tutor Signup" outcome="/views/tutor_signup" />
 		</div>
 		<div>
-			<p:commandButton value="Tutor Login"
-				action="#{committeeMemberLoginView.signinTutor}" />
+			<p:link value="Tutor Signin" outcome="/views/tutor_signin" />
 		</div>
 	</h:form>
 </body>
