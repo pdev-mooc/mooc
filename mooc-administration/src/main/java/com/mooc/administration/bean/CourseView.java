@@ -5,8 +5,10 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 
 import com.mooc.administration.util.SessionUtils;
+import com.mooc.domain.Chapter;
 import com.mooc.domain.Course;
 import com.mooc.domain.Tutor;
 import com.mooc.services.CourseRemoteService;
@@ -32,6 +34,13 @@ public class CourseView {
 		}
 		course = new Course();
 		return "/views/tutor_home";
+	}
+
+	public String addChapter(ActionEvent action) {
+		Chapter chapter = (Chapter) action.getComponent().getAttributes().get("chapter");
+		course.getChapters().add(chapter);
+		return "views/tutor_home";
+		
 	}
 
 	public Course getCourse() {

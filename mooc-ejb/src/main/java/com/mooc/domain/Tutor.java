@@ -16,7 +16,7 @@ public class Tutor extends Person {
 	@OneToMany
 	private List<Course> courses = new ArrayList<>();
 
-	public Tutor() {		
+	public Tutor() {
 	}
 
 	public Tutor(String firstName, String lastName, String login, String password) {

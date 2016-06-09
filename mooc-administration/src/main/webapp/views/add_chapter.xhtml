@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<p:outputLabel value="Add Chapter" />
+		<h:panelGrid columns="2" cellpadding="5">
+		
+	        <p:outputLabel for="courseList" value="Select Course:" />
+        	<p:selectOneMenu id="courseList" value="#{chapterView.chapter.course}">
+            	<f:selectItem itemLabel="Select Course" itemValue="" />
+            	<f:selectItems value="#{tutorView.tutor.courses}" />
+        	</p:selectOneMenu>
+
+			<h:outputLabel for="chapterTitle" value="Chapter Title:" />
+			<p:inputText id="chapterTitle"
+				value="#{chapterView.chapter.title}" required="true"
+				label="courseTitle" />
+
+			<h:outputLabel for="chapterRecap" value="Chapter Recap:" />
+			<p:inputText id="chapterRecaps"
+				value="#{chapterView.chapter.recap}" required="true"
+				label="chapterRecap" />
+
+			<h:outputLabel for="chapterBody" value="Chapter Body" />
+
+			<p:editor id="chapterBody" widgetVar="editorWidget"
+			value="#{chapterView.chapter.body}" width="600" />
+
+			<p:commandButton value="Submit" update="display"
+				oncomplete="PF('dlg').show()" icon="ui-icon-disk" />
+
+			<p:commandButton value="Clear" type="button"
+				onclick="PF('editorWidget').clear();" icon="ui-icon-close" />
+
+			<p:commandButton value="Add Chapter"
+				actionListener="#{courseView.addChapter}">
+				<f:attribute name="chapter" value="#{chapterView.chapter}" />
+			</p:commandButton>
+			<p:messages id="message" showDetail="true" autoUpdate="true"
+				closable="true" />
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>

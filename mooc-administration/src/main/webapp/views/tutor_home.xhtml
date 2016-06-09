@@ -9,23 +9,8 @@
 <body>
 	Tutor Administration Panel
 	<h:form>
-		<p:editor id="editor" widgetVar="editorWidget"
-			value="#{tutorView.editor}" width="600" />
-
-		<h:panelGrid columns="2" style="margin-top: 10px">
-			<p:commandButton value="Submit" update="display"
-				oncomplete="PF('dlg').show()" icon="ui-icon-disk" />
-
-			<p:commandButton value="Clear" type="button"
-				onclick="PF('editorWidget').clear();" icon="ui-icon-close" />
-
 			<p:link value="Create Course" outcome="/views/create_course" />
-		</h:panelGrid>
-
-		<p:dialog header="Content" widgetVar="dlg" showEffect="fade"
-			hideEffect="fade">
-			<h:outputText id="display" value="#{tutorView.editor}" escape="false" />
-		</p:dialog>
+			<p:link value="Modify Course" outcome="/views/add_chapter" />
 	</h:form>
 </body>
 </html>

@@ -1,12 +1,14 @@
 package com.mooc.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Table(name = "course")
@@ -23,6 +25,8 @@ public class Course implements Serializable {
 	private String description;
 	@ManyToOne
 	private Tutor tutor;
+	@OneToMany
+	private List<Chapter> chapters;
 
 	public Course() {		
 	}
@@ -57,6 +61,14 @@ public class Course implements Serializable {
 
 	public void setTutor(Tutor tutor) {
 		this.tutor = tutor;
+	}
+
+	public List<Chapter> getChapters() {
+		return chapters;
+	}
+
+	public void setChapters(List<Chapter> chapters) {
+		this.chapters = chapters;
 	}
 
 }
