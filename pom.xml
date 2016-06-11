@@ -77,5 +77,6 @@
 		<module>mooc-web</module>
 		<module>mooc-administration</module>
 		<module>mooc-ear</module>
+		<module>mooc-gui</module>
 	</modules>
 </project>
