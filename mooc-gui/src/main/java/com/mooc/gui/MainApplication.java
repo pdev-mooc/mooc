@@ -16,13 +16,15 @@ import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 import com.mooc.domain.Person;
 import com.mooc.services.UserRemoteService;
+import com.mooc.services.util.RemoteServiceDelegate;
 import com.mooc.services.util.ServiceLocator;
+import javax.swing.JPasswordField;
 
 public class MainApplication {
 
 	private JFrame frame;
 	private JTextField emailTextField;
-	private JTextField passwordTextField;
+	private JPasswordField passwordTextField;
 
 	/**
 	 * Launch the application.
@@ -81,17 +83,16 @@ public class MainApplication {
 		JLabel lblNewLabel_1 = new JLabel("Password");
 		frame.getContentPane().add(lblNewLabel_1, "4, 4");
 		
-		passwordTextField = new JTextField();
+		passwordTextField = new JPasswordField();
 		frame.getContentPane().add(passwordTextField, "8, 4, fill, default");
 		passwordTextField.setColumns(10);
 		
 		JButton btnLoginButton = new JButton("Login");
 		btnLoginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				UserRemoteService userService = (UserRemoteService) ServiceLocator.getInstance().
-						getProxy("ejb:/mooc-ejb/UserRemoteServiceImpl!com.mooc.services.UserRemoteService");
-	            Person user = userService.findUser(emailTextField.getText(), passwordTextField.getText());
-	            JOptionPane.showMessageDialog(null, user);
+				UserRemoteService userService = RemoteServiceDelegate.get(UserRemoteService.class);
+	            Person user = userService.findUser(emailTextField.getText(), new String(passwordTextField.getPassword()));
+	            JOptionPane.showMessageDialog(null, "Hello " + user.getFirstName());
 			}
 		});
 		frame.getContentPane().add(btnLoginButton, "4, 6");
