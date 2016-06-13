@@ -6,6 +6,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -38,6 +39,7 @@ public class TutorLoginView extends JDialog {
 	 */
 	public TutorLoginView(JFrame frame) {
 		super(frame);
+		setModalityType(ModalityType.APPLICATION_MODAL);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		getContentPane().setLayout(new BorderLayout());
@@ -66,6 +68,7 @@ public class TutorLoginView extends JDialog {
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
 		
 		emailField = new JTextField();
+		emailField.setText("gorwell@mooc.com");
 		GridBagConstraints gbc_emailField = new GridBagConstraints();
 		gbc_emailField.insets = new Insets(0, 0, 5, 0);
 		gbc_emailField.fill = GridBagConstraints.HORIZONTAL;
@@ -94,9 +97,11 @@ public class TutorLoginView extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				UserRemoteService userService = RemoteServiceDelegate.get(UserRemoteService.class);
 				Person user = userService.findUser(emailField.getText(), new String(passwordField.getPassword()));
-				if (user != null && user instanceof Tutor) {
+				if (user instanceof Tutor) {
 					tutor = (Tutor) user;
 					JOptionPane.showMessageDialog(null, "Hello " + tutor.getFirstName());
+					setVisible(false);
+					dispose();
 				}
 			}
 		});
@@ -105,6 +110,11 @@ public class TutorLoginView extends JDialog {
 		gbc_btnTutorLogin.gridx = 5;
 		gbc_btnTutorLogin.gridy = 7;
 		contentPane.add(btnTutorLogin, gbc_btnTutorLogin);
+	}
+
+	public Tutor showDialog() {
+		setVisible(true);
+		return tutor;
 	}
 
 }

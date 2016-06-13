@@ -1,9 +1,10 @@
 package com.mooc.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -13,8 +14,8 @@ public class Tutor extends Person {
 
 	private static final long serialVersionUID = 1L;
 
-	@OneToMany
-	private List<Course> courses = new ArrayList<>();
+	@OneToMany(fetch=FetchType.EAGER, targetEntity=Course.class, mappedBy="tutor", cascade=CascadeType.ALL)
+	private List<Course> courses;
 
 	public Tutor() {
 	}
