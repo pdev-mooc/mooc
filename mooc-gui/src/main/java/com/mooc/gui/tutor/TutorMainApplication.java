@@ -95,6 +95,28 @@ public class TutorMainApplication {
 			}
 		});
 		mnCourse.add(mntmCreateCourse);
+		//
+		
+		JMenu mnStudent = new JMenu("Student");
+		menuBar.add(mnStudent);
+		
+		JMenuItem mntmAddStudent = new JMenuItem("Add Student");
+		
+		mntmAddStudent.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				if (tutor == null) {
+					JOptionPane.showMessageDialog(null, "You must login first");
+				} else {
+					//CourseFactoryView courseFactoryView = new CourseFactoryView(frmMoocMainWindow, tutor);
+					//courseFactoryView.setVisible(true);
+					//refreshCourseList();
+				}
+			}
+		});
+		mnStudent.add(mntmAddStudent);
+		//
+		
 		
 		Box verticalBox = Box.createVerticalBox();
 		frmMoocMainWindow.getContentPane().add(verticalBox, BorderLayout.NORTH);
