@@ -1,9 +1,12 @@
 package com.mooc.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,10 +28,16 @@ public class Course implements Serializable {
 	private String description;
 	@ManyToOne
 	private Tutor tutor;
-	@OneToMany
-	private List<Chapter> chapters;
+	@OneToMany(fetch = FetchType.EAGER,targetEntity = Chapter.class, mappedBy = "course", cascade=CascadeType.ALL)
+	private List<Chapter> chapters = new ArrayList<>();
 
 	public Course() {		
+	}
+
+	public Course(String title, String description, Tutor tutor) {
+		this.title = title;
+		this.description = description;
+		this.tutor = tutor;
 	}
 
 	public Integer getId() {

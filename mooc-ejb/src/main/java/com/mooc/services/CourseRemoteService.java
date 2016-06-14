@@ -6,10 +6,5 @@ import com.mooc.domain.Course;
 
 @Remote
 public interface CourseRemoteService extends EntityRemoteService<Course> {
-	public static void Test(){
-		System.out.println("Hello world");
-		
-		
-	}
-
+	public Course findFirst(String title);
 }

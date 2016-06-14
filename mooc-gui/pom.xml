@@ -58,5 +58,12 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.0.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>com.shef</groupId>
+			<artifactId>SHEF</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/SHEF/SHEF.jar</systemPath>
+		</dependency>
 	</dependencies>
 </project>

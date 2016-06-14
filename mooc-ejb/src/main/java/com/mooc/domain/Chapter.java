@@ -29,6 +29,16 @@ public class Chapter implements Serializable {
 	@ManyToOne
 	private Course course;
 
+	public Chapter() {
+	}
+
+	public Chapter(String title, String recap, String body, Course course) {
+		this.title = title;
+		this.recap = recap;
+		this.body = body;
+		this.course = course;
+	}
+
 	public Course getCourse() {
 		return course;
 	}
