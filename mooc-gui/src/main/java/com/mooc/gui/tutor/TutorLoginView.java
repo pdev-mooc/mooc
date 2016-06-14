@@ -102,6 +102,8 @@ public class TutorLoginView extends JDialog {
 					JOptionPane.showMessageDialog(null, "Hello " + tutor.getFirstName());
 					setVisible(false);
 					dispose();
+				} else {
+					JOptionPane.showMessageDialog(null, "Login or passwod is incorrect");
 				}
 			}
 		});
