@@ -5,26 +5,39 @@ import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import com.mooc.domain.Course;
+import com.mooc.domain.Tutor;
+import com.mooc.services.CourseRemoteService;
+import com.mooc.services.util.RemoteServiceDelegate;
+
 public class CourseFactoryView extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
-	private JTextField textField;
+	private JTextField textFieldCourseTitle;
+	private Tutor tutor;
+	private JTextArea textAreaCourseDesc;
 
 	/**
 	 * Create the dialog.
+	 * @param tutor 
 	 */
-	public CourseFactoryView(JFrame parent) {
+	public CourseFactoryView(JFrame parent, Tutor tutor) {
 		super(parent);
+		setModalityType(ModalityType.APPLICATION_MODAL);
+		this.tutor = tutor;
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -44,14 +57,14 @@ public class CourseFactoryView extends JDialog {
 			contentPanel.add(lblCourseTitle, gbc_lblCourseTitle);
 		}
 		{
-			textField = new JTextField();
-			GridBagConstraints gbc_textField = new GridBagConstraints();
-			gbc_textField.insets = new Insets(0, 0, 5, 0);
-			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-			gbc_textField.gridx = 5;
-			gbc_textField.gridy = 0;
-			contentPanel.add(textField, gbc_textField);
-			textField.setColumns(10);
+			textFieldCourseTitle = new JTextField();
+			GridBagConstraints gbc_textFieldCourseTitle = new GridBagConstraints();
+			gbc_textFieldCourseTitle.insets = new Insets(0, 0, 5, 0);
+			gbc_textFieldCourseTitle.fill = GridBagConstraints.HORIZONTAL;
+			gbc_textFieldCourseTitle.gridx = 5;
+			gbc_textFieldCourseTitle.gridy = 0;
+			contentPanel.add(textFieldCourseTitle, gbc_textFieldCourseTitle);
+			textFieldCourseTitle.setColumns(10);
 		}
 		{
 			JLabel lblCourseDescription = new JLabel("Course Description");
@@ -62,12 +75,12 @@ public class CourseFactoryView extends JDialog {
 			contentPanel.add(lblCourseDescription, gbc_lblCourseDescription);
 		}
 		{
-			JTextArea textArea = new JTextArea();
-			GridBagConstraints gbc_textArea = new GridBagConstraints();
-			gbc_textArea.fill = GridBagConstraints.BOTH;
-			gbc_textArea.gridx = 5;
-			gbc_textArea.gridy = 1;
-			contentPanel.add(textArea, gbc_textArea);
+			textAreaCourseDesc = new JTextArea();
+			GridBagConstraints gbc_textAreaCourseDesc = new GridBagConstraints();
+			gbc_textAreaCourseDesc.fill = GridBagConstraints.BOTH;
+			gbc_textAreaCourseDesc.gridx = 5;
+			gbc_textAreaCourseDesc.gridy = 1;
+			contentPanel.add(textAreaCourseDesc, gbc_textAreaCourseDesc);
 		}
 		{
 			JPanel buttonPane = new JPanel();
@@ -75,12 +88,32 @@ public class CourseFactoryView extends JDialog {
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton okButton = new JButton("OK");
+				okButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						Course course = new Course();
+						course.setTitle(textFieldCourseTitle.getText());
+						course.setDescription(textAreaCourseDesc.getText());
+						course.setTutor(tutor);
+						CourseRemoteService courseRS = RemoteServiceDelegate.get(CourseRemoteService.class);
+						if (courseRS.create(course)) {
+							JOptionPane.showMessageDialog(null, "Course created successfully");
+						}
+						setVisible(false);
+						dispose();
+					}
+				});
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
 			}
 			{
 				JButton cancelButton = new JButton("Cancel");
+				cancelButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setVisible(false);
+						dispose();
+					}
+				});
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
 			}
