@@ -3,7 +3,6 @@ package com.mooc.gui.tutor;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.EventQueue;
-import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -20,6 +19,8 @@ import javax.swing.table.DefaultTableModel;
 
 import com.mooc.domain.Course;
 import com.mooc.domain.Tutor;
+import com.mooc.services.UserRemoteService;
+import com.mooc.services.util.RemoteServiceDelegate;
 
 public class TutorMainApplication {
 
@@ -55,7 +56,7 @@ public class TutorMainApplication {
 	 */
 	private void initialize() {
 		frmMoocMainWindow = new JFrame();
-		frmMoocMainWindow.setTitle("MOOC Main Window");
+		frmMoocMainWindow.setTitle("Tutor Administration Panel");
 		Dimension dim = frmMoocMainWindow.getToolkit().getScreenSize();
 		frmMoocMainWindow.setMinimumSize(new Dimension(dim.width / 2, dim.height / 2));
 		frmMoocMainWindow.setExtendedState(JFrame.MAXIMIZED_BOTH); 
@@ -80,7 +81,7 @@ public class TutorMainApplication {
 
 		JMenu mnCourse = new JMenu("Course");
 		menuBar.add(mnCourse);
-		
+
 		JMenuItem mntmCreateCourse = new JMenuItem("Create Course");
 		mntmCreateCourse.addMouseListener(new MouseAdapter() {
 			@Override
@@ -95,8 +96,6 @@ public class TutorMainApplication {
 			}
 		});
 		mnCourse.add(mntmCreateCourse);
-		//
-		
 		JMenu mnStudent = new JMenu("Student");
 		menuBar.add(mnStudent);
 		
@@ -108,16 +107,13 @@ public class TutorMainApplication {
 				if (tutor == null) {
 					JOptionPane.showMessageDialog(null, "You must login first");
 				} else {
-					StudentFactoryView studentFactoryView = new StudentFactoryView(frmMoocMainWindow, tutor);
+					StudentFactoryView studentFactoryView = new StudentFactoryView(frmMoocMainWindow);
 					studentFactoryView.setVisible(true);
-					refreshCourseList();
 				}
 			}
 		});
 		mnStudent.add(mntmAddStudent);
-		//
-		
-		
+
 		Box verticalBox = Box.createVerticalBox();
 		frmMoocMainWindow.getContentPane().add(verticalBox, BorderLayout.NORTH);
 		
@@ -137,6 +133,8 @@ public class TutorMainApplication {
 			public void mouseClicked(MouseEvent arg0) {
 				if (arg0.getClickCount() > 1) {
 					Integer index = (Integer) tableCourses.getModel().getValueAt(tableCourses.getSelectedRow(), 0);
+					updateTutor();
+
 					Course course = tutor.getCourses().get(index);
 					if (tableCourses.getSelectedColumn() == 3) {
 						ChapterFactoryView chapterFactoryView = new ChapterFactoryView(frmMoocMainWindow, course);
@@ -152,8 +150,15 @@ public class TutorMainApplication {
 		scrollPane.setViewportView(tableCourses);
 	}
 
+	private void updateTutor() {
+		// Update tutor
+		UserRemoteService userService = RemoteServiceDelegate.get(UserRemoteService.class);
+		tutor = (Tutor) userService.findUser(tutor.getEmail(), tutor.getPassword());
+	}
+
 	public void refreshCourseList() {
 		if (tutor != null) {
+			updateTutor();
 			DefaultTableModel model = (DefaultTableModel) tableCourses.getModel();
 			for(int i = model.getRowCount() - 1; i >= 0; i--) {
 			   model.removeRow(i);

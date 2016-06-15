@@ -45,17 +45,13 @@ public class DatabasePopulator {
 		tutor.getCourses().add(course2);
 		tutor.getCourses().add(course3);
 		userService.create(tutor);
-		
 		// Student
-				Student student = new Student("Belanes", "Salem", "aeinstein@mooc.com", "pw");
-				//userService.create(student);
-				List<Course> coursesList = new ArrayList<>();
-				coursesList.add(course1);
-				coursesList.add(course2);
-				student.setCourses(coursesList);
-				userService.persist(student);
-			
-				
+		Student student = new Student("Belanes", "Salem", "sbelanes@mooc.com", "pw");
+		List<Course> coursesList = new ArrayList<>();
+		coursesList.add(course1);
+		coursesList.add(course2);
+		student.setCourses(coursesList);
+		userService.persist(student);		
 	}
 
 }

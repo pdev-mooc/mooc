@@ -91,12 +91,18 @@ public class CourseFactoryView extends JDialog {
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						Course course = new Course();
-						course.setTitle(textFieldCourseTitle.getText());
-						course.setDescription(textAreaCourseDesc.getText());
-						course.setTutor(tutor);
-						CourseRemoteService courseRS = RemoteServiceDelegate.get(CourseRemoteService.class);
-						if (courseRS.create(course)) {
-							JOptionPane.showMessageDialog(null, "Course created successfully");
+						String title = textFieldCourseTitle.getText();
+						String desc = textAreaCourseDesc.getText();
+						if (title.isEmpty() || desc.isEmpty()) {
+							JOptionPane.showMessageDialog(null, "Empty fields are not allowed");
+						} else {
+							course.setTitle(title);
+							course.setDescription(desc);
+							course.setTutor(tutor);
+							CourseRemoteService courseRS = RemoteServiceDelegate.get(CourseRemoteService.class);
+							if (courseRS.create(course)) {
+								JOptionPane.showMessageDialog(null, "Course created successfully");
+							}
 						}
 						setVisible(false);
 						dispose();

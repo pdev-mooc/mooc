@@ -1,32 +1,28 @@
 package com.mooc.gui.tutor;
 
 import java.awt.BorderLayout;
+import java.awt.Choice;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-import com.jgoodies.forms.layout.FormLayout;
+
 import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 import com.mooc.domain.Student;
-import com.mooc.domain.Tutor;
-import com.mooc.services.CourseRemoteService;
 import com.mooc.services.UserRemoteService;
 import com.mooc.services.util.RemoteServiceDelegate;
-import com.jgoodies.forms.layout.FormSpecs;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-
-import java.awt.List;
-import java.awt.Choice;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class StudentFactoryView extends JDialog {
 
@@ -40,7 +36,7 @@ public class StudentFactoryView extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public StudentFactoryView(JFrame parent, Tutor tutor) {
+	public StudentFactoryView(JFrame parent) {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -139,19 +135,25 @@ public class StudentFactoryView extends JDialog {
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						Student student = new Student();
-						//student.setTitle(textFieldCourseTitle.getText());
-						student.setFirstName(textField.getText());
-						student.setLastName(textField_1.getText());
-						student.setEmail(textField_2.getText());
-						student.setPassword(String.valueOf(passwordField.getPassword()));
-						UserRemoteService userService = RemoteServiceDelegate.get(UserRemoteService.class);
-						if (userService.create(student)) {
-							JOptionPane.showMessageDialog(null, "Student created successfully");
+						String firstName = textField.getText();
+						String lastName = textField_1.getText();
+						String email = textField_2.getText();
+						String password = String.valueOf(passwordField.getPassword());
+						if (firstName.isEmpty() || lastName.isEmpty()
+							|| email.isEmpty() || password.isEmpty()) {
+							JOptionPane.showMessageDialog(null, "Empty fields are not allowed");
+						} else {
+							student.setFirstName(firstName);
+							student.setLastName(lastName);
+							student.setEmail(email);
+							student.setPassword(password);
+							UserRemoteService userService = RemoteServiceDelegate.get(UserRemoteService.class);
+							if (userService.create(student)) {
+								JOptionPane.showMessageDialog(null, "Student created successfully");
+							}
 						}
 						setVisible(false);
 						dispose();
-						
-						
 					}
 				});
 				okButton.setActionCommand("OK");
