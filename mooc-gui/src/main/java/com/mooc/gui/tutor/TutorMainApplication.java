@@ -108,9 +108,9 @@ public class TutorMainApplication {
 				if (tutor == null) {
 					JOptionPane.showMessageDialog(null, "You must login first");
 				} else {
-					//CourseFactoryView courseFactoryView = new CourseFactoryView(frmMoocMainWindow, tutor);
-					//courseFactoryView.setVisible(true);
-					//refreshCourseList();
+					StudentFactoryView studentFactoryView = new StudentFactoryView(frmMoocMainWindow, tutor);
+					studentFactoryView.setVisible(true);
+					refreshCourseList();
 				}
 			}
 		});
