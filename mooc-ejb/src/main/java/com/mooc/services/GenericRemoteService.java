@@ -56,4 +56,15 @@ public class GenericRemoteService<T> implements EntityRemoteService<T> {
 		}
 		return true;
 	}
+
+	@Override
+	public boolean persist(T entity) {
+		try {
+			entityManager.merge(entity);
+		} catch (EntityExistsException ex) {
+			return false;
+		}
+		return true;
+		
+	}
 }

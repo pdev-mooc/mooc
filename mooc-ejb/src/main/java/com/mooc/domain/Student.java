@@ -1,6 +1,12 @@
 package com.mooc.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Table(name = "student")
@@ -8,6 +14,9 @@ import javax.persistence.Table;
 public class Student extends Person {
 
 	private static final long serialVersionUID = 1L;
+	
+	@OneToMany(fetch = FetchType.LAZY,targetEntity = Course.class,cascade = {CascadeType.PERSIST })
+	private List<Course> courses = new ArrayList<>();
 
 	public Student() {		
 	}
@@ -16,4 +25,18 @@ public class Student extends Person {
 		super(firstName, lastName, login, password);
 	}
 
+	public List<Course> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
+
+	public Student(List<Course> courses) {
+		super();
+		this.courses = courses;
+	}
+
+	
 }

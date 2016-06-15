@@ -13,4 +13,7 @@ public interface EntityRemoteService<T> {
 	List<T> findBy(CriteriaQuery<T> criteria);
 	boolean remove(T entity);
 	boolean update(T entity);
+	boolean persist(T entity);
+	
+	
 }
