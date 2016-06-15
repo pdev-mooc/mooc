@@ -15,7 +15,7 @@ public class Student extends Person {
 
 	private static final long serialVersionUID = 1L;
 	
-	@OneToMany(fetch = FetchType.LAZY,targetEntity = Course.class,cascade = {CascadeType.PERSIST,CascadeType.REMOVE })
+	@OneToMany(fetch = FetchType.LAZY,targetEntity = Course.class,cascade = {CascadeType.PERSIST})
 	private List<Course> courses = new ArrayList<>();
 
 	public Student() {		

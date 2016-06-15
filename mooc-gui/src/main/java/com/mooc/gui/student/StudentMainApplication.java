@@ -73,7 +73,7 @@ public class StudentMainApplication {
 		mntmRegister.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
-				StudentFactoryView studentFactoryView = new StudentFactoryView(frame);
+				StudentFactoryView studentFactoryView = new StudentFactoryView(frame, null);
 				studentFactoryView.setVisible(true);
 			}
 		});
