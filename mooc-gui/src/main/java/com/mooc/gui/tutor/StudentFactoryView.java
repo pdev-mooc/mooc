@@ -171,7 +171,7 @@ public class StudentFactoryView extends JDialog {
 							student.setEmail(email);
 							student.setPassword(password);
 							UserRemoteService userService = RemoteServiceDelegate.get(UserRemoteService.class);
-							if (userService.create(student)) {
+							if (userService.persist(student)) {
 								JOptionPane.showMessageDialog(null, "Student created successfully");
 							}
 						}
