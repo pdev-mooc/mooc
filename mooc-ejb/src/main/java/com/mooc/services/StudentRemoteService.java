@@ -7,7 +7,7 @@ import javax.ejb.Remote;
 import com.mooc.domain.Student;
 
 @Remote
-public interface StudentRemoteService {
+public interface StudentRemoteService extends EntityRemoteService<Student> {
 
 	List<Student> findEnrolledStudentsByCourseId(Integer courseId);
 }

@@ -80,4 +80,13 @@ public class Course implements Serializable {
 		this.chapters = chapters;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Course)) {
+			return false;
+		}
+		Course other = (Course) obj;
+		return getId() == other.getId();
+	}
+
 }

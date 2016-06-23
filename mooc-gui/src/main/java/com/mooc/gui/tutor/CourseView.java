@@ -40,6 +40,7 @@ public class CourseView extends JDialog {
 	private JComboBox comboBox;
 	private HTMLEditorPane htmlEditor;
 	private List<Student> enrolledStudents;
+	private JLabel lblNbEnrolledStudents;
 
 	/**
 	 * Create the dialog.
@@ -48,12 +49,6 @@ public class CourseView extends JDialog {
 		super(parent);
 		setModalityType(ModalityType.APPLICATION_MODAL);
 		this.course = course;
-		
-		// Fetch the list of enrolled students
-//		StudentCourseRemoteService studentCourseRemoteService = RemoteServiceDelegate.get(StudentCourseRemoteService.class);
-//		List<StudentCourse> studentCourse = studentCourseRemoteService.findAll();
-		StudentRemoteService studentRemoteService = RemoteServiceDelegate.get(StudentRemoteService.class);
-		enrolledStudents = studentRemoteService.findEnrolledStudentsByCourseId(course.getId());
 
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
@@ -150,12 +145,11 @@ public class CourseView extends JDialog {
 				contentPanel.add(lblEnrolledStudents, gbc_lblEnrolledStudents);
 			}
 			{
-				JLabel lblNbEnrolledStudents = new JLabel("New label");
+				lblNbEnrolledStudents = new JLabel("New label");
 				GridBagConstraints gbc_lblNbEnrolledStudents = new GridBagConstraints();
 				gbc_lblNbEnrolledStudents.insets = new Insets(0, 0, 5, 0);
 				gbc_lblNbEnrolledStudents.gridx = 4;
 				gbc_lblNbEnrolledStudents.gridy = 4;
-				lblNbEnrolledStudents.setText(String.valueOf(enrolledStudents.size()));
 				contentPanel.add(lblNbEnrolledStudents, gbc_lblNbEnrolledStudents);
 			}
 			{
@@ -164,7 +158,8 @@ public class CourseView extends JDialog {
 					@Override
 					public void mousePressed(MouseEvent e) {
 						EnrolledStudentsView enrolledStudentsView = new EnrolledStudentsView(CourseView.this, course, enrolledStudents);
-						enrolledStudentsView.setVisible(true);
+						enrolledStudentsView.showDialog();
+						updateEnrolledStudentsList();
 					}
 				});
 				GridBagConstraints gbc_btnViewEnrolledStudents = new GridBagConstraints();
@@ -215,6 +210,17 @@ public class CourseView extends JDialog {
 				buttonPane.add(cancelButton);
 			}
 		}
+		updateEnrolledStudentsList();
+	}
+
+	private void updateEnrolledStudentsList() {
+		// Fetch the list of enrolled students
+//		StudentCourseRemoteService studentCourseRemoteService = RemoteServiceDelegate.get(StudentCourseRemoteService.class);
+//		List<StudentCourse> studentCourse = studentCourseRemoteService.findAll();
+		StudentRemoteService studentRemoteService = RemoteServiceDelegate.get(StudentRemoteService.class);
+		enrolledStudents = studentRemoteService.findEnrolledStudentsByCourseId(course.getId());
+		lblNbEnrolledStudents.setText(String.valueOf(enrolledStudents.size()));
+		repaint();
 	}
 
 }
