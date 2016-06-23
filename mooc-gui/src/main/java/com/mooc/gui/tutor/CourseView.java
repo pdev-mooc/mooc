@@ -23,7 +23,6 @@ import javax.swing.border.EmptyBorder;
 import com.mooc.domain.Chapter;
 import com.mooc.domain.Course;
 import com.mooc.domain.Student;
-import com.mooc.domain.StudentCourse;
 import com.mooc.gui.ChapterComboBoxModel;
 import com.mooc.services.ChapterRemoteService;
 import com.mooc.services.StudentCourseRemoteService;
