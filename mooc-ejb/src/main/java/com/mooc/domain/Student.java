@@ -15,10 +15,10 @@ public class Student extends Person {
 
 	private static final long serialVersionUID = 1L;
 	
-	@OneToMany(fetch = FetchType.EAGER, targetEntity = Course.class, cascade = {CascadeType.PERSIST})
+	@OneToMany(fetch = FetchType.EAGER, targetEntity = Course.class, cascade=CascadeType.ALL)
 	private List<Course> courses = new ArrayList<>();
 
-	public Student() {		
+	public Student() {
 	}
 
 	public Student(String firstName, String lastName, String login, String password) {
@@ -38,5 +38,4 @@ public class Student extends Person {
 		this.courses = courses;
 	}
 
-	
 }

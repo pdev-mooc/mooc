@@ -14,6 +14,5 @@ public interface EntityRemoteService<T> {
 	boolean remove(T entity);
 	boolean update(T entity);
 	boolean persist(T entity);
-	
-	
+	CriteriaQuery<T> createCriteriaQuery();
 }

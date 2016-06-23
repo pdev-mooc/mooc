@@ -67,4 +67,10 @@ public class GenericRemoteService<T> implements EntityRemoteService<T> {
 		return true;
 		
 	}
+
+	@Override
+	public CriteriaQuery<T> createCriteriaQuery() {
+		return entityManager.getCriteriaBuilder().createQuery(clazz);
+	}
+
 }

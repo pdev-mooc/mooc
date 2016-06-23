@@ -5,9 +5,11 @@ import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.Dialog.ModalityType;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -20,13 +22,17 @@ import javax.swing.border.EmptyBorder;
 
 import com.mooc.domain.Chapter;
 import com.mooc.domain.Course;
+import com.mooc.domain.Student;
+import com.mooc.domain.StudentCourse;
 import com.mooc.gui.ChapterComboBoxModel;
 import com.mooc.services.ChapterRemoteService;
+import com.mooc.services.StudentCourseRemoteService;
+import com.mooc.services.StudentRemoteService;
 import com.mooc.services.util.RemoteServiceDelegate;
 
 import net.atlanticbb.tantlinger.shef.HTMLEditorPane;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class CourseView extends JDialog {
 
@@ -34,6 +40,7 @@ public class CourseView extends JDialog {
 	private Course course;
 	private JComboBox comboBox;
 	private HTMLEditorPane htmlEditor;
+	private List<Student> enrolledStudents;
 
 	/**
 	 * Create the dialog.
@@ -42,15 +49,22 @@ public class CourseView extends JDialog {
 		super(parent);
 		setModalityType(ModalityType.APPLICATION_MODAL);
 		this.course = course;
+		
+		// Fetch the list of enrolled students
+//		StudentCourseRemoteService studentCourseRemoteService = RemoteServiceDelegate.get(StudentCourseRemoteService.class);
+//		List<StudentCourse> studentCourse = studentCourseRemoteService.findAll();
+		StudentRemoteService studentRemoteService = RemoteServiceDelegate.get(StudentRemoteService.class);
+		enrolledStudents = studentRemoteService.findEnrolledStudentsByCourseId(course.getId());
+
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		GridBagLayout gbl_contentPanel = new GridBagLayout();
 		gbl_contentPanel.columnWidths = new int[]{0, 0, 0, 0, 0, 0};
-		gbl_contentPanel.rowHeights = new int[]{0, 0, 0, 0, 0, 0};
+		gbl_contentPanel.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0};
 		gbl_contentPanel.columnWeights = new double[]{0.0, 1.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
+		gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
 		contentPanel.setLayout(gbl_contentPanel);
 		{
 			JLabel lblTitle = new JLabel("Title:");
@@ -128,12 +142,43 @@ public class CourseView extends JDialog {
 		{
 			htmlEditor = new HTMLEditorPane();
 			htmlEditor.setVisible(false);
+			{
+				JLabel lblEnrolledStudents = new JLabel("Nb. Enrolled Students");
+				GridBagConstraints gbc_lblEnrolledStudents = new GridBagConstraints();
+				gbc_lblEnrolledStudents.insets = new Insets(0, 0, 5, 5);
+				gbc_lblEnrolledStudents.gridx = 1;
+				gbc_lblEnrolledStudents.gridy = 4;
+				contentPanel.add(lblEnrolledStudents, gbc_lblEnrolledStudents);
+			}
+			{
+				JLabel lblNbEnrolledStudents = new JLabel("New label");
+				GridBagConstraints gbc_lblNbEnrolledStudents = new GridBagConstraints();
+				gbc_lblNbEnrolledStudents.insets = new Insets(0, 0, 5, 0);
+				gbc_lblNbEnrolledStudents.gridx = 4;
+				gbc_lblNbEnrolledStudents.gridy = 4;
+				lblNbEnrolledStudents.setText(String.valueOf(enrolledStudents.size()));
+				contentPanel.add(lblNbEnrolledStudents, gbc_lblNbEnrolledStudents);
+			}
+			{
+				JButton btnViewEnrolledStudents = new JButton("View Enrolled Students");
+				btnViewEnrolledStudents.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mousePressed(MouseEvent e) {
+						EnrolledStudentsView enrolledStudentsView = new EnrolledStudentsView(CourseView.this, course, enrolledStudents);
+						enrolledStudentsView.setVisible(true);
+					}
+				});
+				GridBagConstraints gbc_btnViewEnrolledStudents = new GridBagConstraints();
+				gbc_btnViewEnrolledStudents.insets = new Insets(0, 0, 5, 0);
+				gbc_btnViewEnrolledStudents.gridx = 4;
+				gbc_btnViewEnrolledStudents.gridy = 5;
+				contentPanel.add(btnViewEnrolledStudents, gbc_btnViewEnrolledStudents);
+			}
 			GridBagConstraints gbc_editorPane = new GridBagConstraints();
 			gbc_editorPane.gridwidth = 4;
-			gbc_editorPane.insets = new Insets(0, 0, 0, 5);
 			gbc_editorPane.fill = GridBagConstraints.BOTH;
 			gbc_editorPane.gridx = 1;
-			gbc_editorPane.gridy = 4;
+			gbc_editorPane.gridy = 6;
 			contentPanel.add(htmlEditor, gbc_editorPane);
 		}
 		{

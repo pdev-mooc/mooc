@@ -31,7 +31,6 @@ public class DatabasePopulator {
 	public void createData() {
 		// Committee member
 		userService.create(new CommitteeMember("Admin", "Admin", "admin@mooc.com", "pw"));
-		
 		// Tutor
 		Tutor tutor = new Tutor("George", "Orwell", "gorwell@mooc.com", "pw");
 		// Add courses
@@ -47,9 +46,10 @@ public class DatabasePopulator {
 		userService.create(tutor);
 		// Student
 		Student student = new Student("Belanes", "Salem", "sbelanes@mooc.com", "pw");
+		List<Course> courses = courseService.findAll();
 		List<Course> coursesList = new ArrayList<>();
-		coursesList.add(course1);
-		coursesList.add(course2);
+		coursesList.add(courses.get(0));
+		coursesList.add(courses.get(1));
 		student.setCourses(coursesList);
 		userService.persist(student);		
 	}
