@@ -1,6 +1,7 @@
 package com.mooc.domain;
 
 import java.io.Serializable;
+import java.security.Principal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 @Table(name = "person")
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Person implements Serializable {
+public class Person implements Principal, Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -73,6 +74,30 @@ public class Person implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	@Override
+	public String getName() {
+		return firstName;
+	}
+
+	@Override
+	public String toString() {
+		return "First name = " + firstName + ", Last name = " + lastName;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Person)) {
+			return false;
+		}
+		Person other = (Person) obj;
+		return firstName.equals(other.getFirstName()) && lastName.equals(other.getLastName())
+				&& email.equals(other.getEmail()) && password.equals(other.getPassword());
+	}
+
+	public int hashCode() {
+		return email.hashCode();
 	}
 
 }

@@ -4,7 +4,16 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
+import javax.security.auth.callback.Callback;
+import javax.security.auth.callback.CallbackHandler;
+import javax.security.auth.callback.NameCallback;
+import javax.security.auth.callback.PasswordCallback;
+import javax.security.auth.callback.TextOutputCallback;
+import javax.security.auth.callback.UnsupportedCallbackException;
+import javax.security.auth.login.LoginContext;
+import javax.security.auth.login.LoginException;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -15,17 +24,15 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import com.mooc.domain.Person;
 import com.mooc.domain.Tutor;
-import com.mooc.services.UserRemoteService;
-import com.mooc.services.util.RemoteServiceDelegate;
 
-public class TutorLoginView extends JDialog {
+public class TutorLoginView extends JDialog implements CallbackHandler {
 
 	private final JPanel contentPanel = new JPanel();
 	protected Tutor tutor;
 	private JTextField textFieldEmail;
 	private JPasswordField passwordField;
+	private LoginContext lc;
 
 	/**
 	 * Create the dialog.
@@ -67,16 +74,14 @@ public class TutorLoginView extends JDialog {
 				JButton okButton = new JButton("OK");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						UserRemoteService userService = RemoteServiceDelegate.get(UserRemoteService.class);
-						Person user = userService.findUser(textFieldEmail.getText(), new String(passwordField.getPassword()));
-						if (user instanceof Tutor) {
-							tutor = (Tutor) user;
+						try {
+							lc.login();
+							tutor = (Tutor) lc.getSubject().getPrincipals().iterator().next();
 							JOptionPane.showMessageDialog(null, "Hello " + tutor.getFirstName());
 							setVisible(false);
 							dispose();
-						}else{
+						} catch (LoginException le) {
 							JOptionPane.showMessageDialog(null, "Login or password is incorrect");
-							
 						}
 					}
 				});
@@ -96,11 +101,68 @@ public class TutorLoginView extends JDialog {
 				buttonPane.add(cancelButton);
 			}
 		}
+        try {
+            lc = new LoginContext("Sample", this);
+        } catch (LoginException le) {
+            System.err.println("Cannot create LoginContext. "
+                + le.getMessage());
+            System.exit(-1);
+        } catch (SecurityException se) {
+            System.err.println("Cannot create LoginContext. "
+                + se.getMessage());
+            System.exit(-1);
+        }
 	}
 
 	public Tutor showDialog() {
 		setVisible(true);
 		return tutor;
+	}
+
+	@Override
+	public void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackException {
+        for (int i = 0; i < callbacks.length; i++) {
+            if (callbacks[i] instanceof TextOutputCallback) {
+
+                // display the message according to the specified type
+                TextOutputCallback toc = (TextOutputCallback)callbacks[i];
+                switch (toc.getMessageType()) {
+                case TextOutputCallback.INFORMATION:
+                    System.out.println(toc.getMessage());
+                    break;
+                case TextOutputCallback.ERROR:
+                    System.out.println("ERROR: " + toc.getMessage());
+                    break;
+                case TextOutputCallback.WARNING:
+                    System.out.println("WARNING: " + toc.getMessage());
+                    break;
+                default:
+                    throw new IOException("Unsupported message type: " +
+                                        toc.getMessageType());
+                }
+
+            } else if (callbacks[i] instanceof NameCallback) {
+
+                // prompt the user for a username
+                NameCallback nc = (NameCallback)callbacks[i];
+
+                System.err.print(nc.getPrompt());
+                System.err.flush();
+                nc.setName(textFieldEmail.getText());
+
+            } else if (callbacks[i] instanceof PasswordCallback) {
+
+                // prompt the user for sensitive information
+                PasswordCallback pc = (PasswordCallback)callbacks[i];
+                System.err.print(pc.getPrompt());
+                System.err.flush();
+                pc.setPassword(passwordField.getPassword());
+
+            } else {
+                throw new UnsupportedCallbackException
+                        (callbacks[i], "Unrecognized Callback");
+            }
+        }
 	}
 
 }
