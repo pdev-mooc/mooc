@@ -9,6 +9,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.swing.Box;
@@ -17,21 +25,23 @@ import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import org.apache.fop.render.pdf.PDFContentGenerator;
+import org.xml.sax.SAXException;
 
 import com.mooc.domain.Chapter;
 import com.mooc.domain.Course;
 import com.mooc.domain.Student;
+import com.mooc.fop.PDFGenerator;
 import com.mooc.gui.ChapterComboBoxModel;
 import com.mooc.services.ChapterRemoteService;
-import com.mooc.services.StudentCourseRemoteService;
 import com.mooc.services.StudentRemoteService;
 import com.mooc.services.util.RemoteServiceDelegate;
 
 import net.atlanticbb.tantlinger.shef.HTMLEditorPane;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class CourseView extends JDialog {
 
@@ -56,9 +66,9 @@ public class CourseView extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		GridBagLayout gbl_contentPanel = new GridBagLayout();
 		gbl_contentPanel.columnWidths = new int[]{0, 0, 0, 0, 0, 0};
-		gbl_contentPanel.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0};
+		gbl_contentPanel.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
 		gbl_contentPanel.columnWeights = new double[]{0.0, 1.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
+		gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
 		contentPanel.setLayout(gbl_contentPanel);
 		{
 			JLabel lblTitle = new JLabel("Title:");
@@ -168,11 +178,51 @@ public class CourseView extends JDialog {
 				gbc_btnViewEnrolledStudents.gridy = 5;
 				contentPanel.add(btnViewEnrolledStudents, gbc_btnViewEnrolledStudents);
 			}
+			{
+				JButton btnNewButton = new JButton("Generate PDF");
+				btnNewButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						try {
+							FileOutputStream fos = new FileOutputStream(new File("course-overview.xml"));
+							PrintWriter printW = new PrintWriter(fos);
+							printW.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+							printW.write("<root>");
+							printW.write("<course-title>" + course.getTitle() + "</course-title>");
+							printW.write("<course-description>" + course.getDescription() + "</course-description>");
+							printW.write("</root>");
+							printW.close();
+							try {
+								PDFGenerator pdfGen = new PDFGenerator();
+								if (pdfGen.generatePDF(new FileInputStream(new File("course-overview.xml")), "course-"
+										+ course.getTitle().toLowerCase() + "-overview.pdf")) {
+									JOptionPane.showMessageDialog(null, "PDF docs created successfully");
+								} else {
+									JOptionPane.showMessageDialog(null, "Failed to create PDF doc!");
+								}
+							} catch (SAXException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+						} catch (FileNotFoundException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+				});
+				GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+				gbc_btnNewButton.insets = new Insets(0, 0, 5, 0);
+				gbc_btnNewButton.gridx = 4;
+				gbc_btnNewButton.gridy = 6;
+				contentPanel.add(btnNewButton, gbc_btnNewButton);
+			}
 			GridBagConstraints gbc_editorPane = new GridBagConstraints();
 			gbc_editorPane.gridwidth = 4;
 			gbc_editorPane.fill = GridBagConstraints.BOTH;
 			gbc_editorPane.gridx = 1;
-			gbc_editorPane.gridy = 6;
+			gbc_editorPane.gridy = 7;
 			contentPanel.add(htmlEditor, gbc_editorPane);
 		}
 		{
