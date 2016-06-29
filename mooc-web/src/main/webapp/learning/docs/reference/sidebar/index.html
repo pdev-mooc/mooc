@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Sidebar - Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../workflow/gulp/index.html">Gulp</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../workflow/grunt/index.html">Grunt</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../code/structure/index.html">Structure</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/bower/index.html">Bower</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/include-paths/index.html">Include paths</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/less/index.html">Less</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/swig/index.html">Swig</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/browserify/index.html">Browserify</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/rtl/index.html">Right-to-Left</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/angular/index.html">AngularJS</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../layout/index.html">Layout</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="index.html">Sidebar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../navbar/index.html">Navbar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../essential/index.html">Essential</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../material/index.html">Material</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../colors/index.html">Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../maps/index.html">Maps</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../layout/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../navbar/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#sidebar">Sidebar</a></li>
+        
+            <li><a href="#requirements">Requirements</a></li>
+        
+            <li><a href="#javascript-api">JavaScript API</a></li>
+        
+            <li><a href="#jquery-api">jQuery API</a></li>
+        
+            <li><a href="#events">Events</a></li>
+        
+            <li><a href="#markup-api">Markup API</a></li>
+        
+            <li><a href="#sidebar-menus">Sidebar menus</a></li>
+        
+            <li><a href="#sidebar-list-groups">Sidebar list groups</a></li>
+        
+            <li><a href="#sidebar-tree-views">Sidebar tree views</a></li>
+        
+            <li><a href="#scrollable-sidebar">Scrollable sidebar</a></li>
+        
+            <li><a href="#sidebar-positioning">Sidebar positioning</a></li>
+        
+            <li><a href="#sidebar-visiblity">Sidebar visiblity</a></li>
+        
+            <li><a href="#sidebar-size">Sidebar size</a></li>
+        
+            <li><a href="#sidebar-skins">Sidebar skins</a></li>
+        
+            <li><a href="#sidebar-page-layouts">Sidebar page layouts</a></li>
+        
+            <li><a href="#sidebar-transitions">Sidebar transitions</a></li>
+        
+            <li><a href="#sidebar-elements">Sidebar elements</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="sidebar">Sidebar</h1>
+<p><strong>The sidebar component</strong> provides:</p>
+<ul>
+<li>Sidebar page layouts</li>
+<li>Sidebar transitions</li>
+<li>Sidebar menus: Dropdowns, Collapsibles, Tree views, List groups</li>
+<li>Sidebar elements: Scrollable areas, Tabs, UI elements, Form components, User profiles, Branding</li>
+</ul>
+<hr />
+<h2 id="requirements">Requirements</h2>
+<h4 id="dependencies">Dependencies</h4>
+<ul>
+<li><a href="../../reference/layout/index.html">Layout</a></li>
+</ul>
+<h3 id="javascript">JavaScript</h3>
+<p>To load the sidebar component, from <code>src/js/themes/$THEME_NAME/app.js</code>:</p>
+<pre><code>// Sidebar
+require('sidebar/js/main');
+</code></pre>
+<p>This will load <code>lib/sidebar/js/main.js</code> into our main application script bundle.</p>
+<h3 id="less">Less</h3>
+<p>From <code>src/less/themes/$THEME_NAME/app.less</code>:</p>
+<pre><code>// Sidebar
+@import "sidebar/less/sidebar";
+</code></pre>
+<p>Which will load <code>lib/sidebar/less/sidebar.less</code> into our main application style bundle.</p>
+<hr />
+<h4 id="rtl-support">RTL Support</h4>
+<p>Add to <code>src/less/themes/$THEME_NAME/app.less</code>, after the main component:</p>
+<pre><code>// Sidebar RTL
+@import "sidebar/less/sidebar-rtl";
+</code></pre>
+<hr />
+<h4 id="alternative">Alternative</h4>
+<p>If working with Less and Browserify bundles is not your favorite thing, you can alternatively load the pre-built static assets we have included:</p>
+<pre><code>&lt;!-- In the head of the HTML document --&gt;
+&lt;link rel="stylesheet" href="css/app/sidebar.css" /&gt;
+
+&lt;!-- At the bottom of the HTML document --&gt;
+&lt;script src="js/app/sidebar.js"&gt;&lt;/script&gt;
+</code></pre>
+<hr />
+<h2 id="javascript-api">JavaScript API</h2>
+<p>You can interact with an initialized sidebar directly from JavaScript.</p>
+<h4 id="sidebaropenid-options">sidebar.open(id, [options])</h4>
+<p>Opens a sidebar by it's <code>id</code> attribute.</p>
+<p><code>options</code> (optional):</p>
+<pre><code>{
+    // The sidebar transition effect class name.
+    effect: "st-effect-1",
+
+    // The sidebar transition duration in miliseconds.
+    duration: 550,
+
+    // Enable the sidebar overlay.
+    overlay: false
+}
+</code></pre>
+<h4 id="sidebarcloseid-options">sidebar.close(id, [options])</h4>
+<p>Closes a sidebar by it's <code>id</code> attribute.</p>
+<p><code>options</code> (optional):</p>
+<pre><code>{
+    // The sidebar transition effect class name.
+    effect: "st-effect-1"
+}
+</code></pre>
+<h4 id="sidebaroptionssidebar">sidebar.options(sidebar)</h4>
+<p>Accepts a sidebar argument (jQuery object).
+Returns the sidebar options object.</p>
+<hr />
+<h2 id="jquery-api">jQuery API</h2>
+<p>You can initialize and interact with the sidebar component via the jQuery wrappers.</p>
+<h4 id="tksidebaroptions">$.tkSidebar(options)</h4>
+<p>Initializes a new sidebar.</p>
+<pre><code>$('#my-sidebar').tkSidebar({
+    menuType: 'collapse',
+    toggleBar: false
+});
+</code></pre>
+<h4 id="tksidebartogglebar">$.tkSidebarToggleBar()</h4>
+<p>Adds a toggle bar to a sidebar.</p>
+<pre><code>$('#my-sidebar').tkSidebarToggleBar();
+</code></pre>
+<p>You can also enable the toggle bar directly when calling <code>$.tkSidebar(options)</code> with the option <code>toggleBar</code> set to <code>true</code>:</p>
+<pre><code>$('#my-sidebar').tkSidebar({
+    menuType: 'collapse',
+    toggleBar: true
+});
+</code></pre>
+<h4 id="tksidebarcollapse">$.tkSidebarCollapse()</h4>
+<p>Initializes a sidebar with collapsible menus.</p>
+<pre><code>$('#my-sidebar').tkSidebarCollapse();
+</code></pre>
+<p>This is the same as calling <code>$.tkSidebar(options)</code> with the <code>menuType</code> option set to <code>collapse</code>.</p>
+<h4 id="tksidebardropdown">$.tkSidebarDropdown()</h4>
+<p>Initializes a sidebar with dropdown menus.</p>
+<pre><code>$('#my-sidebar').tkSidebarDropdown();
+</code></pre>
+<p>This is the same as calling <code>$.tkSidebar(options)</code> with the <code>menuType</code> option set to <code>dropdown</code>.</p>
+<h3 id="change-menu-type-programatically">Change menu type programatically</h3>
+<p>You can dynamically change the menu type of an already initialized sidebar, by calling <code>$.tkSidebarDropdown()</code> on a element that was initialized with collapsible menus and <code>$.tkSidebarCollapse()</code> on a element that was initialized with dropdown menus.</p>
+<hr />
+<h2 id="events">Events</h2>
+<h4 id="sidebarshown">sidebar.shown</h4>
+<pre><code>$(document).on('sidebar.shown', function (event, data) {
+    if (data.target == "#my-sidebar") {
+        // do something when #my-sidebar is completely visible
+        console.log(data.sidebar);
+    }
+});
+</code></pre>
+<h4 id="sidebarhidden">sidebar.hidden</h4>
+<pre><code>$(document).on('sidebar.hidden', function (event, data) {
+    if (data.target == "#my-sidebar") {
+        // do something when #my-sidebar is completely hidden
+        console.log(data.sidebar);
+    }
+});
+</code></pre>
+<h4 id="sidebarshow">sidebar.show</h4>
+<pre><code>$(document).on('sidebar.show', function (event, data) {
+    if (data.target == "#my-sidebar") {
+        // do something when #my-sidebar starts to open
+        console.log(data.sidebar);
+    }
+});
+</code></pre>
+<h4 id="sidebarhide">sidebar.hide</h4>
+<pre><code>$(document).on('sidebar.hide', function (event, data) {
+    if (data.target == "#my-sidebar") {
+        // do something when #my-sidebar starts to close
+        console.log(data.sidebar);
+    }
+});
+</code></pre>
+<hr />
+<h2 id="markup-api">Markup API</h2>
+<p>You can initialize a sidebar directly through markup, by adding the <code>sidebar</code> class to any element.</p>
+<pre><code>&lt;div class="sidebar" id="sidebar"&gt;&lt;/div&gt;
+</code></pre>
+<p>Any sidebar element must have a unique <code>id</code> attribute.</p>
+<hr />
+<h2 id="sidebar-menus">Sidebar menus</h2>
+<p>To initialize a sidebar with collapsible menus:</p>
+<pre><code>&lt;div class="sidebar" id="sidebar" data-type="collapse"&gt;&lt;/div&gt;
+</code></pre>
+<p>Or, dropdown menus:</p>
+<pre><code>&lt;div class="sidebar" id="sidebar" data-type="dropdown"&gt;&lt;/div&gt;
+</code></pre>
+<p>To create a menu, add an unordered list with the class <code>sidebar-menu</code>. You can have multiple sidebar menus within the same sidebar.</p>
+<pre><code>&lt;div class="sidebar" id="sidebar"&gt;
+
+    &lt;!-- A simple sidebar menu --&gt;
+    &lt;ul class="sidebar-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;My menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- // Arbitrary markup here --&gt;
+
+    &lt;!-- Another sidebar menu within the same sidebar --&gt;
+    &lt;ul class="sidebar-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Another menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<h3 id="sidebar-submenus">Sidebar submenus</h3>
+<p>Whether you're using dropdown or collapsible menus, the HTML markup for submenus will alway be the same:</p>
+<pre><code>&lt;div class="sidebar" id="sidebar" data-type="dropdown"&gt;
+    &lt;ul class="sidebar-menu"&gt;
+
+        &lt;!-- Top level menu items --&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;My menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+        &lt;!-- Submenus --&gt;
+        &lt;li class="hasSubmenu"&gt;
+            &lt;a href="#submenu"&gt;&lt;span&gt;My submenu trigger&lt;/span&gt;&lt;/a&gt;
+            &lt;ul id="submenu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;My submenu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Note that when we create a submenu, we always:</p>
+<ul>
+<li>nest another <code>ul</code> into a parent top level <code>li</code>.</li>
+<li>add the class <code>hasSubmenu</code> on the parent top level <code>li</code>.</li>
+<li>add a unique id attribute on the nested <code>ul</code> submenu.</li>
+<li>reference the submenu id on the <code>href</code> attribute of the parent link.</li>
+</ul>
+<h3 id="active-menu-items">Active menu items</h3>
+<pre><code>&lt;div class="sidebar" id="sidebar" data-type="dropdown"&gt;
+    &lt;ul class="sidebar-menu"&gt;
+
+        &lt;!-- Top level menu items --&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;span&gt;My menu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+        &lt;!-- Submenus --&gt;
+        &lt;li class="hasSubmenu open"&gt;
+            &lt;a href="#submenu"&gt;&lt;span&gt;My submenu trigger&lt;/span&gt;&lt;/a&gt;
+            &lt;ul id="submenu"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;My submenu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>the <code>active</code> class can be added to any <code>li</code>, top level or submenus;</li>
+</ul>
+<h3 id="open-submenus">Open submenus</h3>
+<pre><code>&lt;div class="sidebar" id="sidebar" data-type="collapse"&gt;
+    &lt;ul class="sidebar-menu"&gt;
+
+        &lt;!-- Submenus --&gt;
+        &lt;li class="hasSubmenu open"&gt;
+            &lt;a href="#submenu"&gt;&lt;span&gt;My submenu trigger&lt;/span&gt;&lt;/a&gt;
+            &lt;ul id="submenu" class="in"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;My submenu item&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>the <code>open</code> class can be added to any <code>li.hasSubmenu</code>;</li>
+<li>when using collapsible submenus, we must add an additional <code>in</code> class to the submenu <code>ul</code> in order to make it open by default.</li>
+</ul>
+<h3 id="icons">Icons</h3>
+<pre><code>&lt;div class="sidebar" id="sidebar"&gt;
+    &lt;ul class="sidebar-menu"&gt;
+        &lt;li&gt;
+            &lt;a href="#"&gt;
+                &lt;i class="fa fa-bar-chart"&gt;&lt;/i&gt;
+                &lt;span&gt;Charts&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="sidebar-list-groups">Sidebar list groups</h2>
+<h4 id="default">Default</h4>
+<p>Add the <code>list-group-menu</code> class to any <code>list-group</code> unordered list within the <code>sidebar</code> element to create a simple, but stylish, one level menu.</p>
+<pre><code class="html">&lt;div class=&quot;sidebar&quot; id=&quot;sidebar&quot;&gt;
+
+    &lt;h4 class=&quot;category&quot;&gt;&lt;i class=&quot;fa fa-folder-open&quot;&gt;&lt;/i&gt; Default&lt;/h4&gt;
+    &lt;div class=&quot;sidebar-block&quot;&gt;
+        &lt;ul class=&quot;list-group list-group-menu&quot;&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;120+&lt;/span&gt; Design&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item active&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;30+&lt;/span&gt; Programming&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;40+&lt;/span&gt; WordPress&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;60+&lt;/span&gt; Workflow&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;15+&lt;/span&gt; HTML&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;25+&lt;/span&gt; CSS&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;35+&lt;/span&gt; iOS&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;list-group-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;20+&lt;/span&gt; Free&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<h4 id="striped">Striped</h4>
+<p>Additionaly, add the <code>list-group-striped</code> class to any <code>list-group-menu</code> within the <code>sidebar</code> element to enable a striped style type.</p>
+<pre><code class="html">&lt;div class=&quot;sidebar&quot; id=&quot;sidebar&quot;&gt;
+
+    &lt;h4 class=&quot;category&quot;&gt;&lt;i class=&quot;fa fa-folder-open&quot;&gt;&lt;/i&gt; Striped&lt;/h4&gt;
+    &lt;ul class=&quot;sidebar-block list-group list-group-menu list-group-striped&quot;&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;120+&lt;/span&gt; Design&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item active&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;30+&lt;/span&gt; Programming&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;40+&lt;/span&gt; WordPress&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;60+&lt;/span&gt; Workflow&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;15+&lt;/span&gt; HTML&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;25+&lt;/span&gt; CSS&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;35+&lt;/span&gt; iOS&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;20+&lt;/span&gt; Free&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<h4 id="minimal">Minimal</h4>
+<p>Add the <code>list-group-minimal</code> class to any <code>list-group-menu</code> unordered list within the <code>sidebar</code> element to remove borders.</p>
+<pre><code class="html">&lt;div class=&quot;sidebar&quot; id=&quot;sidebar&quot;&gt;
+
+    &lt;h4 class=&quot;category&quot;&gt;&lt;i class=&quot;fa fa-folder-open&quot;&gt;&lt;/i&gt; Minimal&lt;/h4&gt;
+    &lt;ul class=&quot;sidebar-block list-group list-group-menu list-group-minimal&quot;&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;120+&lt;/span&gt; Design&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item active&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;30+&lt;/span&gt; Programming&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;40+&lt;/span&gt; WordPress&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;60+&lt;/span&gt; Workflow&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;15+&lt;/span&gt; HTML&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;25+&lt;/span&gt; CSS&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;35+&lt;/span&gt; iOS&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;list-group-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;badge pull-right&quot;&gt;20+&lt;/span&gt; Free&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+<h2 id="sidebar-tree-views">Sidebar tree views</h2>
+<p>In addition to dropdown menus, collapsible menus and list group menus, you can also have sidebars with <a href="../../reference/essential/index.html#tree-views">tree views</a>.</p>
+<pre><code class="html">&lt;div class=&quot;sidebar right sidebar-size-2 sidebar-offset-0 sidebar-skin-white sidebar-visible-desktop&quot;&gt;
+    &lt;div data-scrollable&gt;
+        &lt;h4 class=&quot;category&quot;&gt;&lt;i class=&quot;fa fa-folder-open&quot;&gt;&lt;/i&gt; Tree Views&lt;/h4&gt;
+        &lt;div class=&quot;sidebar-block sidebar-block-full&quot;&gt;
+
+            &lt;!-- Tree view --&gt;
+            &lt;div data-toggle=&quot;tree&quot;&gt;
+                &lt;ul style=&quot;display: none;&quot;&gt;
+                    &lt;li class=&quot;active&quot;&gt;item1&lt;/li&gt;
+                    &lt;li&gt;item2&lt;/li&gt;
+                    &lt;li class=&quot;folder expanded&quot;&gt;
+                        Folder &lt;em&gt;1&lt;/em&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Sub-item 3.1
+                                &lt;ul&gt;
+                                    &lt;li&gt;Sub-item 3.1.1&lt;/li&gt;
+                                    &lt;li&gt;Sub-item 3.1.2&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;Sub-item 3.2
+                                &lt;ul&gt;
+                                    &lt;li&gt;Sub-item 3.2.1&lt;/li&gt;
+                                    &lt;li&gt;Sub-item 3.2.2&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;expanded&quot;&gt;
+                        Document with children
+                        &lt;ul&gt;
+                            &lt;li class=&quot;expanded&quot;&gt;Sub-item 4.1
+                                &lt;ul&gt;
+                                    &lt;li&gt;Sub-item 4.1.1&lt;/li&gt;
+                                    &lt;li&gt;Sub-item 4.1.2&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;Sub-item 4.2
+                                &lt;ul&gt;
+                                    &lt;li&gt;Sub-item 4.2.1&lt;/li&gt;
+                                    &lt;li&gt;Sub-item 4.2.2&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;folder expanded&quot;&gt;
+                        Folder &lt;em&gt;2&lt;/em&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Sub-item 5.1
+                                &lt;ul&gt;
+                                    &lt;li&gt;Sub-item 5.1.1&lt;/li&gt;
+                                    &lt;li&gt;Sub-item 5.1.2&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;Sub-item 5.2
+                                &lt;ul&gt;
+                                    &lt;li&gt;Sub-item 5.2.1&lt;/li&gt;
+                                    &lt;li&gt;Sub-item 5.2.2&lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;!-- // END tree view --&gt;
+
+        &lt;/div&gt;
+        &lt;!-- // END .sidebar-block --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- // END scrollable --&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+<h2 id="scrollable-sidebar">Scrollable sidebar</h2>
+<p>When we have many menu items or other sidebar elements, it's probably desirable to make use of a scrollable area within the sidebar, which can be useful specially on small screens of mobile devices.</p>
+<pre><code>&lt;div class="sidebar" id="sidebar"&gt;
+    &lt;div data-scrollable&gt;
+        &lt;!-- anything that goes here is scrollable (if necessary) --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="sidebar-positioning">Sidebar positioning</h2>
+<p>To position a sidebar, add the <code>left</code> or <code>right</code> class to the sidebar element.</p>
+<pre><code>&lt;div class="sidebar left" id="sidebar"&gt;&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="sidebar-visiblity">Sidebar visiblity</h2>
+<p>By default, all sidebars are hidden on any device screen. To make a sidebar visible by default, add any of the following classes to the sidebar element:</p>
+<ul>
+<li><code>sidebar-visible-desktop</code> for desktop;</li>
+<li><code>sidebar-visible-mobile</code> for mobile screens.</li>
+</ul>
+<pre><code>&lt;div class=&quot;sidebar left sidebar-visible-desktop&quot; id=&quot;sidebar&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>To display the sidebars on the page that have at least one of the <code>sidebar-visible-*</code> classes, you must also apply the <code>show-sidebar</code> class to the <code>&lt;html&gt;</code> tag.</p>
+<hr />
+<h2 id="sidebar-size">Sidebar size</h2>
+<h3 id="fixed-size">Fixed size</h3>
+<p><strong>Any screen size</strong>:</p>
+<p>There are three predefined classes for fixed pixel based sizes that we can apply to a sidebar element:</p>
+<ul>
+<li><code>sidebar-size-1</code>: applies a width of <code>56px</code> to the sidebar and hides all content within the sidebar except the main menu icons;</li>
+<li><code>sidebar-size-2</code>: applies a width of <code>200px</code> to the sidebar;</li>
+<li><code>sidebar-size-3</code>: applies a width of <code>250px</code> to the sidebar;</li>
+<li>
+<p><code>sidebar-offset-$size</code>: </p>
+<ul>
+<li>required for any sidebar element;</li>
+<li>sets the position of the sidebar in relation to other sidebar elements and the rest of the layout;</li>
+<li>allows multiple sidebars to be placed in specific placements on each side;</li>
+<li><code>$size</code> must be one of the predefined sizes (1-3);</li>
+<li>for example, a sidebar element with <code>.left</code> and <code>.sidebar-offset-2</code> will leave a gap for another <code>.sidebar-size-2</code> element, starting from the left of the screen;</li>
+<li>for a single sidebar on it's side (left or right), the <code>$size</code> needs to be <code>0</code>, so add the class <code>sidebar-offset-0</code> to the sidebar element;</li>
+</ul>
+</li>
+</ul>
+<p><strong>Specific screen sizes</strong>:</p>
+<p>Additionally, we can control the size of our sidebars on any specific screen size, by adding the follwing classes to the sidebar element:</p>
+<ul>
+<li><code>sidebar-size-$screen-$size</code>: applies the sidebar <code>$size</code> on a specific <code>$screen</code>;</li>
+<li><code>sidebar-offset-$screen-$size</code>: required when using the class above.</li>
+</ul>
+<p><code>$screen</code> can be substituted with any of the following: <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>.</p>
+<p><strong>Examples</strong>:</p>
+<ol>
+<li>
+<p>A single sidebar of 200px width, visible on desktop by default and positioned on the left:</p>
+<pre><code>&lt;div class="sidebar left sidebar-visible-desktop sidebar-size-2 sidebar-offset-0" id="sidebar"&gt;&lt;/div&gt;
+</code></pre>
+</li>
+<li>
+<p>Two sidebars, visible on desktop by default and positioned on the left, next to each other, and additionally:</p>
+<p>The <strong>first sidebar</strong> has a width of 56px;</p>
+<p>The <strong>second sidebar</strong> has a width of 200px.</p>
+<pre><code>&lt;!-- First sidebar --&gt;
+&lt;div class="sidebar left sidebar-visible-desktop sidebar-size-1 sidebar-offset-0" id="first-sidebar"&gt;&lt;/div&gt;
+
+&lt;!-- Second sidebar --&gt;
+&lt;div class="sidebar left sidebar-visible-desktop sidebar-size-2 sidebar-offset-1" id="second-sidebar"&gt;&lt;/div&gt;
+</code></pre>
+</li>
+<li>
+<p>Two sidebars, visible on desktop by default and positioned on the left, next to each other, and additionally:</p>
+<p>The <strong>first sidebar</strong> has a width of 56px on desktop <strong>and</strong> is visible by default on mobile <strong>and</strong> has a width of 200px on mobile;</p>
+<p>The <strong>second sidebar</strong> has a width of 250px.</p>
+<pre><code>&lt;!-- First sidebar --&gt;
+&lt;div class="sidebar left sidebar-visible-desktop sidebar-visible-mobile sidebar-size-1 sidebar-offset-0 sidebar-size-xs-2 sidebar-offset-xs-0" id="first-sidebar"&gt;&lt;/div&gt;
+
+&lt;!-- Second sidebar --&gt;
+&lt;div class="sidebar left sidebar-visible-desktop sidebar-size-3 sidebar-offset-1" id="second-sidebar"&gt;&lt;/div&gt;
+</code></pre>
+</li>
+</ol>
+<h3 id="percentage-size">Percentage size</h3>
+<p>In addition to the predefined fixed pixel based sizes, the sidebars can also have a percentage based width, between 25% to 100% in 1% increments.</p>
+<p>Add the <code>sidebar-size-$SIZEpc</code> class to the sidebar element, substituting <code>$SIZE</code> with any value from 25 to 100. Additionally, you can condition the <code>$SIZE</code> to a specific <code>$screen</code> size with <code>sidebar-size-$screen-$SIZEpc</code>.</p>
+<p><strong>Limitations</strong>:</p>
+<p>Note that you can't use a mix of two sidebars that are positioned on the same size (e.g. both left), when both sidebars have to be visible at once and when one of the sidebars has a fixed pixel based width and the other sidebar has a percentage based width.</p>
+<p><strong>Examples</strong>:</p>
+<p>A sidebar visible on desktop, positioned on left, has a width of 200px by default on any screen size, has a width of 25% on large desktop screens and 30% on medium desktop screens:</p>
+<pre><code>&lt;div class="sidebar left sidebar-visible-desktop sidebar-size-2 sidebar-offset-0 sidebar-size-md-30pc sidebar-size-lg-25pc" id="sidebar"&gt;&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="sidebar-skins">Sidebar skins</h2>
+<p>There are two core sidebar skins included. Apply one of the following classes to the <code>sidebar</code> element.</p>
+<ul>
+<li><code>sidebar-skin-dark</code></li>
+<li><code>sidebar-skin-white</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;sidebar left sidebar-visible-desktop sidebar-size-2 sidebar-offset-0 sidebar-skin-white&quot; id=&quot;sidebar&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<hr />
+<h2 id="sidebar-page-layouts">Sidebar page layouts</h2>
+<p>Up to this point we've covered the structure of a sidebar element, creating sidebar menus and the usage for various sidebar options like the size and position. Now, it's time to understand sidebars in the context of a complete page layout.</p>
+<p>When using sidebars, we must instruct the layout where the sidebars are positioned on the page in order to accommodate them. The following classes must be added on the <code>html</code> element, that will apply the required layout spacings when we display sidebars.</p>
+<hr />
+<h3 id="single-sidebar-on-one-side">Single sidebar on one side</h3>
+<p>These classes must be used when there is single sidebar on each side. For example, one sidebar on the left side and/or one sidebar on the right side.</p>
+<h4 id="when-using-fixed-px-based-sidebar-sizes">When using fixed px based sidebar sizes</h4>
+<p>Substitute <code>$size</code> with any valid sidebar size class suffix: <code>1</code>, <code>2</code> or <code>3</code>:</p>
+<p><strong>Any screen size</strong>:</p>
+<ul>
+<li><code>sidebar-l$size</code> used for a fixed-width left sidebar on any screen size.</li>
+<li><code>sidebar-r$size</code> used for a fixed-width right sidebar on any screen size.</li>
+</ul>
+<p><strong>Specific screen size</strong>:</p>
+<p>We can control sidebar page layouts on specific screen sizes. Substitute <code>$screen</code> with <code>xs</code>, <code>sm</code>, <code>md</code> or <code>lg</code>:</p>
+<ul>
+<li><code>sidebar-l$size-$screen</code></li>
+<li><code>sidebar-r$size-$screen</code></li>
+</ul>
+<h4 id="when-using-fluid-percentage-based-sidebar-sizes">When using fluid percentage based sidebar sizes</h4>
+<p>Substitute <code>$SIZE</code> with any value between <code>25</code> and <code>100</code>:</p>
+<p><strong>Any screen size</strong>:</p>
+<ul>
+<li><code>sidebar-l-$SIZEpc</code> used for a fluid-width left sidebar on any screen size.</li>
+<li><code>sidebar-r-$SIZEpc</code> used for a fluid-width right sidebar on any screen size.</li>
+</ul>
+<p><strong>Specific screen size</strong>:</p>
+<p>Substitute <code>$screen</code> with <code>xs</code>, <code>sm</code>, <code>md</code> or <code>lg</code>:</p>
+<ul>
+<li><code>sidebar-l-$SIZEpc-$screen</code></li>
+<li><code>sidebar-r-$SIZEpc-$screen</code></li>
+</ul>
+<hr />
+<h3 id="multiple-sidebars-on-one-side">Multiple sidebars on one side</h3>
+<p>These classes must be used when there are multiple sidebars on each side. Substitute <code>$sizes</code> with a number formed from concatenating any of the valid sidebar sizes (<code>1</code>, <code>2</code> or <code>3</code>) used for the corresponding side, respecting the order of the sidebars from left to right. </p>
+<p>For example, when there are 2 sidebars on the left next to each other, first sidebar of size <code>1</code> and second sidebar of size <code>2</code>, we will use <code>sidebar-l-sum-12</code>. If there is another sidebar on the same page, on the right side, of size <code>2</code>, we will also use the <code>sidebar-r2</code> class.</p>
+<p><strong>Any screen size</strong>:</p>
+<ul>
+<li><code>sidebar-l-sum-$sizes</code> used for multiple left sidebars on any screen size.</li>
+<li><code>sidebar-r-sum-$sizes</code> used for multiple right sidebars on any screen size.</li>
+</ul>
+<p><strong>Specific screen size</strong>:</p>
+<p>Substitute <code>$screen</code> with <code>xs</code>, <code>sm</code>, <code>md</code> or <code>lg</code>:</p>
+<ul>
+<li><code>sidebar-l-sum-$screen-$sizes</code></li>
+<li><code>sidebar-r-sum-$screen-$sizes</code></li>
+</ul>
+<hr />
+<p>For the following examples, we'll be using <a href="../../code/swig/index.html">Swig templates</a>. Also, note that some of the Swig templates used to construct page layouts in the following examples are explained in the <a href="../../reference/layout/index.html">layout component</a>.</p>
+<p><strong>One left sidebar example</strong>:</p>
+<p>In this example, we'll create a simple layout with a single left sidebar and use them in context of a page in the application.</p>
+<p>Consider a page layout in <code>src/html/themes/$THEME_NAME/_layout_single_sidebar.html</code>:</p>
+<pre><code>&lt;!-- Start the HTML document --&gt;
+{% include "lib/layout/html/_header.html" { htmlClass: 'show-sidebar sidebar-l2' } %}
+
+&lt;!-- Include a simple sidebar --&gt;
+{% include "src/html/themes/$THEME_NAME/_simple_sidebar.html" { sidebarOptions: "left sidebar-size-2 sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop sidebar-visible-mobile", sidebarData: "id=sidebar-menu data-type=dropdown" } %}
+
+&lt;!-- The page content --&gt;
+&lt;div id="content"&gt;
+    &lt;div class="container-fluid"&gt;
+
+       &lt;!-- Define the content block --&gt;
+       &lt;!-- This will be used by pages that extend this layout to inject their content --&gt;
+        {% block content %}{% endblock %}
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Complete the HTML document --&gt;
+{% include "lib/layout/html/_footer_scripts.html" %}
+</code></pre>
+<p>And a simple sidebar element in <code>src/html/themes/$THEME_NAME/_simple_sidebar.html</code>:</p>
+<pre><code>&lt;div class="sidebar{% if sidebarOptions %} {{ sidebarOptions }}{% endif %}"{% if sidebarData %} {{ sidebarData }}{% endif %}&gt;
+    &lt;div data-scrollable&gt;
+        &lt;ul class="sidebar-menu"&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="hasSubmenu"&gt;
+                &lt;a href="#submenu"&gt;&lt;span&gt;Submenu&lt;/span&gt;&lt;/a&gt;
+                &lt;ul id="submenu"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>And a simple page in <code>src/html/themes/$THEME_NAME/page-single-sidebar.html</code>:</p>
+<pre><code>{% extends "src/html/themes/$THEME_NAME/_layout_single_sidebar.html" %}
+
+{% block content %}
+    &lt;p&gt;This is a simple page.&lt;/p&gt;
+{% endblock %}
+</code></pre>
+<p><strong>Multiple sidebars example</strong>:</p>
+<p>In this example, we'll create a layout with 2 left sidebars and use them in context of a page in the application.</p>
+<p>Consider a page layout in <code>src/html/themes/$THEME_NAME/_layout_multi_sidebars.html</code>:</p>
+<pre><code>&lt;!-- Start the HTML document --&gt;
+{% include "lib/layout/html/_header.html" { htmlClass: 'show-sidebar sidebar-l-sum-12' } %}
+
+&lt;!-- 1st left sidebar --&gt;
+{% include "src/html/themes/$THEME_NAME/_simple_sidebar.html" { sidebarOptions: "left sidebar-size-1 sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop sidebar-visible-mobile", sidebarData: "id=sidebar-menu data-type=dropdown" } %}
+
+&lt;!-- 2nd left sidebar --&gt;
+{% include "src/html/themes/$THEME_NAME/_simple_sidebar.html" { sidebarOptions: "left sidebar-size-2 sidebar-offset-1 sidebar-skin-white sidebar-visible-desktop", sidebarData: "id=sidebar-menu-2 data-type=dropdown" } %}
+
+&lt;!-- The page content --&gt;
+&lt;div id="content"&gt;
+    &lt;div class="container-fluid"&gt;
+
+       &lt;!-- Define the content block --&gt;
+       &lt;!-- This will be used by pages that extend this layout to inject their content --&gt;
+        {% block content %}{% endblock %}
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Complete the HTML document --&gt;
+{% include "lib/layout/html/_footer_scripts.html" %}
+</code></pre>
+<p>And a simple page in <code>src/html/themes/$THEME_NAME/page-multi-sidebars.html</code>:</p>
+<pre><code>{% extends "src/html/themes/$THEME_NAME/_layout_multi_sidebars.html" %}
+
+{% block content %}
+    &lt;p&gt;This is a simple page.&lt;/p&gt;
+{% endblock %}
+</code></pre>
+<p>Note that we're using the same sidebar Swig template we have created from the previous example <code>src/html/themes/$THEME_NAME/_simple_sidebar.html</code>.</p>
+<p>Now, you can follow through the <a href="../../workflow/gulp/index.html">build process</a> and see the compiled HTML result in your <a href="../../workflow/gulp/index.html#build-paths">theme's build path</a>: </p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/page-single-sidebar.html</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/page-multi-sidebars.html</code></li>
+</ul>
+<hr />
+<h2 id="sidebar-transitions">Sidebar transitions</h2>
+<p>Transition effects for off-canvas views.</p>
+<p>To enable sidebar transitions we must do a few things. First, add the <code>st-layout</code> class to the <code>html</code> document.</p>
+<p>Within the <code>body</code> element:</p>
+<pre><code>&lt;!-- Wrapper required for sidebar transitions --&gt;
+&lt;div class="st-container"&gt;
+
+    &lt;!-- sidebars with the following effects MUST go OUTSIDE of the .st-pusher wrapper: --&gt;
+    &lt;!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 --&gt;
+
+    &lt;!-- content push wrapper --&gt;
+    &lt;div class="st-pusher" id="content"&gt;
+
+        &lt;!-- sidebars with the following effects MUST go INSIDE the .st-pusher wrapper: --&gt;
+        &lt;!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 --&gt;
+
+        &lt;!-- this is the wrapper for the content --&gt;
+        &lt;div class="st-content"&gt;
+
+            &lt;!-- extra div for emulating position:fixed of the menu --&gt;
+            &lt;div class="st-content-inner"&gt;
+
+                &lt;!-- Your page content --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- // END .st-content-inner --&gt;
+
+        &lt;/div&gt;
+        &lt;!-- // END .st-content --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- // END .st-pusher --&gt;
+
+&lt;/div&gt;
+&lt;!-- // END .st-container --&gt;
+</code></pre>
+<h3 id="effects">Effects</h3>
+<p>There are 14 effects that can be used for sidebar transitions. The effect is configured directly on the toggle button that triggers the display of the sidebar. Add the <code>data-toggle</code> attribute to any link, anywhere in the document, with a value of <code>sidebar-menu</code>, with the <code>href</code> attribute value set to the target sidebar id and the <code>data-effect</code> attribute with a valid effect class name (<code>st-effect-1</code> to <code>st-effect-14</code>).</p>
+<h4 id="slide-in-on-top">Slide in on top</h4>
+<pre><code>&lt;a href="#sidebar-menu" data-toggle="sidebar-menu" data-effect="st-effect-1" class="btn btn-default"&gt;Slide in on top&lt;/a&gt;
+</code></pre>
+<h4 id="reveal">Reveal</h4>
+<pre><code>&lt;a href="#st-effect-2" data-toggle="sidebar-menu" data-effect="st-effect-2" class="btn btn-default"&gt;Reveal&lt;/a&gt;
+</code></pre>
+<h4 id="push">Push</h4>
+<pre><code>&lt;a href="#st-effect-3" data-toggle="sidebar-menu" data-effect="st-effect-3" class="btn btn-default"&gt;Push&lt;/a&gt;
+</code></pre>
+<h4 id="slide-along">Slide along</h4>
+<pre><code>&lt;a href="#st-effect-4" data-toggle="sidebar-menu" data-effect="st-effect-4" class="btn btn-default"&gt;Slide along&lt;/a&gt;
+</code></pre>
+<h4 id="reverse-slide-out">Reverse slide out</h4>
+<pre><code>&lt;a href="#st-effect-5" data-toggle="sidebar-menu" data-effect="st-effect-5" class="btn btn-default"&gt;Reverse slide out&lt;/a&gt;
+</code></pre>
+<h4 id="rotate-pusher">Rotate pusher</h4>
+<pre><code>&lt;a href="#st-effect-6" data-toggle="sidebar-menu" data-effect="st-effect-6" class="btn btn-default"&gt;Rotate Pusher&lt;/a&gt;
+</code></pre>
+<h4 id="3d-rotate-in">3D rotate in</h4>
+<pre><code>&lt;a href="#st-effect-7" data-toggle="sidebar-menu" data-effect="st-effect-7" class="btn btn-default"&gt;3D rotate in&lt;/a&gt;
+</code></pre>
+<h4 id="3d-rotate-out">3D rotate out</h4>
+<pre><code>&lt;a href="#st-effect-8" data-toggle="sidebar-menu" data-effect="st-effect-8" class="btn btn-default"&gt;3D rotate out&lt;/a&gt;
+</code></pre>
+<h4 id="scale-down-pusher">Scale down pusher</h4>
+<pre><code>&lt;a href="#st-effect-9" data-toggle="sidebar-menu" data-effect="st-effect-9" class="btn btn-default"&gt;Scale down pusher&lt;/a&gt;
+</code></pre>
+<h4 id="scale-up">Scale up</h4>
+<pre><code>&lt;a href="#st-effect-10" data-toggle="sidebar-menu" data-effect="st-effect-10" class="btn btn-default"&gt;Scale up&lt;/a&gt;
+</code></pre>
+<h4 id="scale-and-rotate-pusher">Scale and rotate pusher</h4>
+<pre><code>&lt;a href="#st-effect-11" data-toggle="sidebar-menu" data-effect="st-effect-11" class="btn btn-default"&gt;Scale &amp;amp; rotate pusher&lt;/a&gt;
+</code></pre>
+<h4 id="open-door">Open door</h4>
+<pre><code>&lt;a href="#st-effect-12" data-toggle="sidebar-menu" data-effect="st-effect-12" class="btn btn-default"&gt;Open door&lt;/a&gt;
+</code></pre>
+<h4 id="fall-down">Fall down</h4>
+<pre><code>&lt;a href="#st-effect-13" data-toggle="sidebar-menu" data-effect="st-effect-13" class="btn btn-default"&gt;Fall down&lt;/a&gt;
+</code></pre>
+<h4 id="delayed-3d-rotate">Delayed 3D rotate</h4>
+<pre><code>&lt;a href="#st-effect-14" data-toggle="sidebar-menu" data-effect="st-effect-14" class="btn btn-default"&gt;Delayed 3D rotate&lt;/a&gt;
+</code></pre>
+<h3 id="example">Example</h3>
+<p>In this example, we'll create a layout configured for sidebar transitions, with a single left sidebar and use them in context of a page in the application.</p>
+<p>Consider a page layout in <code>src/html/themes/$THEME_NAME/_layout_sidebar_transition.html</code>:</p>
+<pre><code>&lt;!-- Start the HTML document --&gt;
+{% include "lib/layout/html/_header.html" { htmlClass: 'show-sidebar sidebar-l2 st-layout' } %}
+
+&lt;!-- Wrapper required for sidebar transitions --&gt;
+&lt;div class="st-container"&gt;
+
+    &lt;!-- sidebars with the following effects MUST go OUTSIDE of the .st-pusher wrapper: --&gt;
+    &lt;!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 --&gt;
+
+    &lt;!-- For this example, we'll be using the st-effect-1 transition --&gt;
+    &lt;!-- Include a simple sidebar --&gt;
+    {% include "src/html/themes/$THEME_NAME/_simple_sidebar.html" { sidebarOptions: "left sidebar-size-2 sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop sidebar-visible-mobile", sidebarData: "id=sidebar-menu data-type=dropdown" } %}
+
+    &lt;!-- content push wrapper --&gt;
+    &lt;div class="st-pusher" id="content"&gt;
+
+        &lt;!-- sidebars with the following effects MUST go INSIDE the .st-pusher wrapper: --&gt;
+        &lt;!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 --&gt;
+
+        &lt;!-- this is the wrapper for the content --&gt;
+        &lt;div class="st-content"&gt;
+
+            &lt;!-- extra div for emulating position:fixed of the menu --&gt;
+            &lt;div class="st-content-inner"&gt;
+
+                &lt;!-- The page content --&gt;
+                &lt;div class="container-fluid"&gt;
+
+                    &lt;!-- Define the content block --&gt;
+                    &lt;!-- This will be used by pages that extend this layout to inject their content --&gt;
+                    {% block content %}{% endblock %}
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!-- // END .st-content-inner --&gt;
+
+        &lt;/div&gt;
+        &lt;!-- // END .st-content --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- // END .st-pusher --&gt;
+
+&lt;/div&gt;
+&lt;!-- // END .st-container --&gt;
+
+&lt;!-- Complete the HTML document --&gt;
+{% include "lib/layout/html/_footer_scripts.html" %}
+</code></pre>
+<p>And a simple sidebar element in <code>src/html/themes/$THEME_NAME/_simple_sidebar.html</code>:</p>
+<pre><code>&lt;div class="sidebar{% if sidebarOptions %} {{ sidebarOptions }}{% endif %}"{% if sidebarData %} {{ sidebarData }}{% endif %}&gt;
+    &lt;div data-scrollable&gt;
+        &lt;ul class="sidebar-menu"&gt;
+            &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="hasSubmenu"&gt;
+                &lt;a href="#submenu"&gt;&lt;span&gt;Submenu&lt;/span&gt;&lt;/a&gt;
+                &lt;ul id="submenu"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;&lt;span&gt;Sample Menu&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>And a simple page in <code>src/html/themes/$THEME_NAME/page-sidebar-transition.html</code>:</p>
+<pre><code>{% extends "src/html/themes/$THEME_NAME/_layout_sidebar_transition.html" %}
+
+{% block content %}
+    &lt;p&gt;This is a simple page.&lt;/p&gt;
+    &lt;p&gt;
+        &lt;a href="#sidebar-menu" data-toggle="sidebar-menu" data-effect="st-effect-1" class="btn btn-default"&gt;Slide in on top&lt;/a&gt;
+    &lt;/p&gt;
+{% endblock %}
+</code></pre>
+<p>Now, you can follow through the <a href="../../workflow/gulp/index.html">build process</a> and see the compiled HTML result in your <a href="../../workflow/gulp/index.html#build-paths">theme's build path</a>: </p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/page-sidebar-transition.html</code></li>
+</ul>
+<hr />
+<h2 id="sidebar-elements">Sidebar elements</h2>
+<h3 id="sidebar-tabs">Sidebar tabs</h3>
+<pre><code>&lt;div class="sidebar left sidebar-size-2 sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop" id="sidebar-menu"&gt;
+
+    &lt;!-- Split wrapper --&gt;
+    &lt;div class="split-vertical"&gt;
+
+        &lt;!-- Tabbable component --&gt;
+        &lt;div class="tabbable tabs-icons tabs-primary"&gt;
+
+            &lt;!-- Standard Bootstrap Tab Nav --&gt;
+            &lt;ul class="nav nav-tabs"&gt;
+                &lt;li class="active"&gt;
+                    &lt;a href="#sidebar-tabs-l1" data-toggle="tab"&gt;
+                        &lt;i class="fa fa-bar-chart-o"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#sidebar-tabs-l2" data-toggle="tab"&gt;
+                        &lt;i class="fa fa-comments"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- // END .nav --&gt;
+
+        &lt;/div&gt;
+        &lt;!-- // END .tabbable --&gt;
+
+        &lt;!-- Split body --&gt;
+        &lt;div class="split-vertical-body"&gt;
+            &lt;div class="split-vertical-cell"&gt;
+
+                &lt;!-- Standard Bootstrap Tab Content --&gt;
+                &lt;div class="tab-content"&gt;
+
+                    &lt;!-- Tab pane --&gt;
+                    &lt;div class="tab-pane active" id="sidebar-tabs-l1"&gt;
+                        &lt;div data-scrollable&gt;
+                            &lt;h4 class="category"&gt;Tab #1&lt;/h4&gt;
+                            &lt;div class="sidebar-block"&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet architecto aspernatur, autem, beatae commodi consequatur dolores ducimus ea eius est ex, expedita neque ratione saepe tempora unde ut. Doloremque!&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- // END .tab-pane --&gt;
+
+                    &lt;!-- Tab pane --&gt;
+                    &lt;div class="tab-pane" id="sidebar-tabs-l2"&gt;
+                        &lt;div data-scrollable&gt;
+                            &lt;h4 class="category"&gt;Tab #2&lt;/h4&gt;
+                            &lt;div class="sidebar-block"&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet architecto aspernatur, autem, beatae commodi consequatur dolores ducimus ea eius est ex, expedita neque ratione saepe tempora unde ut. Doloremque!&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- // END .tab-pane --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- // END .tab-content --&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- // END split body --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- // END split wrapper --&gt;
+
+&lt;/div&gt;
+</code></pre>
+<h3 id="sidebar-buttons">Sidebar buttons</h3>
+<pre><code>&lt;div class="sidebar left sidebar-size-2 sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop" id="sidebar-menu"&gt;
+    &lt;div data-scrollable&gt;
+
+        &lt;div class="category"&gt;Regular Buttons&lt;/div&gt;
+        &lt;div class="sidebar-block"&gt;
+            &lt;button class="btn btn-block btn-white"&gt;White&lt;/button&gt;
+            &lt;button class="btn btn-block btn-default"&gt;Default&lt;/button&gt;
+            &lt;button class="btn btn-block btn-success"&gt;Success&lt;/button&gt;
+            &lt;button class="btn btn-block btn-warning"&gt;Warning&lt;/button&gt;
+            &lt;button class="btn btn-block btn-danger"&gt;Danger&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div class="category"&gt;Stacked Buttons&lt;/div&gt;
+        &lt;div class="sidebar-block"&gt;
+            &lt;button class="btn btn-block btn-default btn-icon-stacked"&gt;
+                &lt;i class="fa fa-2x fa-facebook"&gt;&lt;/i&gt; 
+                &lt;span&gt;Join using &lt;br&gt;Facebook&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="btn btn-block btn-primary btn-icon-stacked"&gt;
+                &lt;i class="fa fa-2x fa-twitter"&gt;&lt;/i&gt; 
+                &lt;span&gt;Join using your&lt;br&gt;Twitter Account&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="btn btn-block btn-info btn-icon-stacked"&gt;
+                &lt;i class="fa fa-2x fa-dribbble"&gt;&lt;/i&gt; 
+                &lt;span&gt;Join using your&lt;br&gt;Dribble Account&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="sidebar-progress-bars">Sidebar progress bars</h3>
+<pre><code class="html">&lt;div class=&quot;sidebar left sidebar-size-2 sidebar-offset-0 sidebar-skin-dark sidebar-visible-desktop&quot; id=&quot;sidebar-menu&quot;&gt;
+    &lt;div data-scrollable&gt;
+
+        &lt;div class=&quot;category&quot;&gt;Progress Bars&lt;/div&gt;
+        &lt;div class=&quot;sidebar-block&quot;&gt;
+            &lt;div class=&quot;progress&quot;&gt;
+                &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;progress&quot;&gt;
+                &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 40%;&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;40% Complete&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;progress&quot;&gt;
+                &lt;div class=&quot;progress-bar progress-bar-warning&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;74&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 74%;&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;74% Complete&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;progress&quot;&gt;
+                &lt;div class=&quot;progress-bar progress-bar-danger&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;56&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 56%;&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;56% Complete&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div>
+        </div>
+
+        
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

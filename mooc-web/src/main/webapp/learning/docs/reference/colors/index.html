@@ -1,0 +1,3474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Colors - Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../workflow/gulp/index.html">Gulp</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../workflow/grunt/index.html">Grunt</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../code/structure/index.html">Structure</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/bower/index.html">Bower</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/include-paths/index.html">Include paths</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/less/index.html">Less</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/swig/index.html">Swig</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/browserify/index.html">Browserify</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/rtl/index.html">Right-to-Left</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/angular/index.html">AngularJS</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../layout/index.html">Layout</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../sidebar/index.html">Sidebar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../navbar/index.html">Navbar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../essential/index.html">Essential</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../material/index.html">Material</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="index.html">Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../maps/index.html">Maps</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../material/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../maps/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#colors">Colors</a></li>
+        
+            <li><a href="#requirements">Requirements</a></li>
+        
+            <li><a href="#the-color-palettes">The color palettes</a></li>
+        
+            <li><a href="#background-color">Background color</a></li>
+        
+            <li><a href="#text-color">Text color</a></li>
+        
+            <li><a href="#buttons">Buttons</a></li>
+        
+            <li><a href="#progress-bars">Progress bars</a></li>
+        
+            <li><a href="#alerts">Alerts</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="colors">Colors</h1>
+<p><strong>The colors package</strong> introduces unexpected and vibrant colors, based on Google's <a href="http://www.google.ro/design/spec/style/color.html#color-color-palette">Material Design</a> Guideline, inspired by bold color statements juxtaposed with muted environments, taking cues from contemporary architecture &amp; many more.</p>
+<hr />
+<h2 id="requirements">Requirements</h2>
+<h3 id="less">Less</h3>
+<p>From <code>src/less/themes/$THEME_NAME/app.less</code>:</p>
+<pre><code>// Color Mixins
+@import "colors/less/mixins/mixins";
+
+// Colors
+@import "colors/less/ui/ui";
+</code></pre>
+<p>Which will load the following into our main application style bundle:</p>
+<ul>
+<li><code>lib/colors/less/mixins/mixins.less</code></li>
+<li><code>lib/colors/less/ui/ui.less</code></li>
+</ul>
+<p>Or, instead of loading the entire <code>colors/less/ui</code> package, you can just pick your requirements one by one:</p>
+<pre><code>// Colors
+@import "colors/less/ui/_helpers"; // required
+@import "colors/less/ui/_background";
+@import "colors/less/ui/_text";
+@import "colors/less/ui/_buttons";
+@import "colors/less/ui/_progress-bars";
+@import "colors/less/ui/_calendar";
+@import "colors/less/ui/_alerts";
+@import "colors/less/ui/_ribbons";
+</code></pre>
+<hr />
+<h4 id="alternative">Alternative</h4>
+<p>If working with Less is not your favorite thing, you can alternatively load the pre-built static assets we have included:</p>
+<pre><code>&lt;!-- In the head of the HTML document --&gt;
+&lt;link rel="stylesheet" href="css/app/colors-background.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/colors-text.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/colors-buttons.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/colors-progress-bars.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/colors-calendar.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/colors-alerts.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/colors-ribbons.css" /&gt;
+</code></pre>
+<hr />
+<h2 id="the-color-palettes">The color palettes</h2>
+<p>19 color palettes designed to work harmoniously with each other. Each color palette starts with primary colors and fills in the spectrum to create a complete and usable palette. <strong>Google suggests using the <code>*-500</code> colors</strong> as the primary colors in your app and the other colors as accents colors.</p>
+<hr />
+<h3 id="red-color-palette">Red color palette</h3>
+<p><img alt="Red color palette" src="../../images/colors/red.png" /></p>
+<p>Use any of the following Less variables to apply a red color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@red-100</code> to <code>@red-900</code> in <code>100</code> increments.</li>
+<li>use <code>@red-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@red-A100</code></li>
+<li><code>@red-A200</code></li>
+<li><code>@red-A400</code></li>
+<li><code>@red-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#red-background-colors">Red background colors</a></li>
+<li><a href="#red-text-colors">Red text colors</a></li>
+<li><a href="#red-buttons">Red buttons</a></li>
+<li><a href="#red-progress-bars">Red progress bars</a></li>
+<li><a href="#red-alerts">Red alerts</a></li>
+</ul>
+<hr />
+<h3 id="pink-color-palette">Pink color palette</h3>
+<p><img alt="Pink color palette" src="../../images/colors/pink.png" /></p>
+<p>Use any of the following Less variables to apply a pink color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@pink-100</code> to <code>@pink-900</code> in <code>100</code> increments.</li>
+<li>use <code>@pink-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@pink-A100</code></li>
+<li><code>@pink-A200</code></li>
+<li><code>@pink-A400</code></li>
+<li><code>@pink-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#pink-background-colors">Pink background colors</a></li>
+<li><a href="#pink-text-colors">Pink text colors</a></li>
+<li><a href="#pink-buttons">Pink buttons</a></li>
+<li><a href="#pink-progress-bars">Pink progress bars</a></li>
+<li><a href="#pink-alerts">Pink alerts</a></li>
+</ul>
+<hr />
+<h3 id="purple-color-palette">Purple color palette</h3>
+<p><img alt="Purple color palette" src="../../images/colors/purple.png" /></p>
+<p>Use any of the following Less variables to apply a purple color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@purple-100</code> to <code>@purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>@purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@purple-A100</code></li>
+<li><code>@purple-A200</code></li>
+<li><code>@purple-A400</code></li>
+<li><code>@purple-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#purple-background-colors">Purple background colors</a></li>
+<li><a href="#purple-text-colors">Purple text colors</a></li>
+<li><a href="#purple-buttons">Purple buttons</a></li>
+<li><a href="#purple-progress-bars">Purple progress bars</a></li>
+<li><a href="#purple-alerts">Purple alerts</a></li>
+</ul>
+<hr />
+<h3 id="deep-purple-color-palette">Deep Purple color palette</h3>
+<p><img alt="Deep Purple color palette" src="../../images/colors/deep-purple.png" /></p>
+<p>Use any of the following Less variables to apply a deep purple color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@deep-purple-100</code> to <code>@deep-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>@deep-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@deep-purple-A100</code></li>
+<li><code>@deep-purple-A200</code></li>
+<li><code>@deep-purple-A400</code></li>
+<li><code>@deep-purple-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#deep-purple-background-colors">Deep Purple background colors</a></li>
+<li><a href="#deep-purple-text-colors">Deep Purple text colors</a></li>
+<li><a href="#deep-purple-buttons">Deep Purple buttons</a></li>
+<li><a href="#deep-purple-progress-bars">Deep Purple progress bars</a></li>
+<li><a href="#deep-purple-alerts">Deep Purple alerts</a></li>
+</ul>
+<hr />
+<h3 id="indigo-color-palette">Indigo color palette</h3>
+<p><img alt="Indigo color palette" src="../../images/colors/indigo.png" /></p>
+<p>Use any of the following Less variables to apply an indigo color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@indigo-100</code> to <code>@indigo-900</code> in <code>100</code> increments.</li>
+<li>use <code>@indigo-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@indigo-A100</code></li>
+<li><code>@indigo-A200</code></li>
+<li><code>@indigo-A400</code></li>
+<li><code>@indigo-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#indigo-background-colors">Indigo background colors</a></li>
+<li><a href="#indigo-text-colors">Indigo text colors</a></li>
+<li><a href="#indigo-buttons">Indigo buttons</a></li>
+<li><a href="#indigo-progress-bars">Indigo progress bars</a></li>
+<li><a href="#indigo-alerts">Indigo alerts</a></li>
+</ul>
+<hr />
+<h3 id="blue-color-palette">Blue color palette</h3>
+<p><img alt="Blue color palette" src="../../images/colors/blue.png" /></p>
+<p>Use any of the following Less variables to apply a blue color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@blue-100</code> to <code>@blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>@blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@blue-A100</code></li>
+<li><code>@blue-A200</code></li>
+<li><code>@blue-A400</code></li>
+<li><code>@blue-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#blue-background-colors">Blue background colors</a></li>
+<li><a href="#blue-text-colors">Blue text colors</a></li>
+<li><a href="#blue-buttons">Blue buttons</a></li>
+<li><a href="#blue-progress-bars">Blue progress bars</a></li>
+<li><a href="#blue-alerts">Blue alerts</a></li>
+</ul>
+<hr />
+<h3 id="light-blue-color-palette">Light Blue color palette</h3>
+<p><img alt="Light Blue color palette" src="../../images/colors/light-blue.png" /></p>
+<p>Use any of the following Less variables to apply a light blue color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@light-blue-100</code> to <code>@light-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>@light-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@light-blue-A100</code></li>
+<li><code>@light-blue-A200</code></li>
+<li><code>@light-blue-A400</code></li>
+<li><code>@light-blue-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#light-blue-background-colors">Light Blue background colors</a></li>
+<li><a href="#light-blue-text-colors">Light Blue text colors</a></li>
+<li><a href="#light-blue-buttons">Light Blue buttons</a></li>
+<li><a href="#light-blue-progress-bars">Light Blue progress bars</a></li>
+<li><a href="#light-blue-alerts">Light Blue alerts</a></li>
+</ul>
+<hr />
+<h3 id="cyan-color-palette">Cyan color palette</h3>
+<p><img alt="Cyan color palette" src="../../images/colors/cyan.png" /></p>
+<p>Use any of the following Less variables to apply a cyan color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@cyan-100</code> to <code>@cyan-900</code> in <code>100</code> increments.</li>
+<li>use <code>@cyan-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@cyan-A100</code></li>
+<li><code>@cyan-A200</code></li>
+<li><code>@cyan-A400</code></li>
+<li><code>@cyan-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#cyan-background-colors">Cyan background colors</a></li>
+<li><a href="#cyan-text-colors">Cyan text colors</a></li>
+<li><a href="#cyan-buttons">Cyan buttons</a></li>
+<li><a href="#cyan-progress-bars">Cyan progress bars</a></li>
+<li><a href="#cyan-alerts">Cyan alerts</a></li>
+</ul>
+<hr />
+<h3 id="teal-color-palette">Teal color palette</h3>
+<p><img alt="Teal color palette" src="../../images/colors/teal.png" /></p>
+<p>Use any of the following Less variables to apply a teal color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@teal-100</code> to <code>@teal-900</code> in <code>100</code> increments.</li>
+<li>use <code>@teal-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@teal-A100</code></li>
+<li><code>@teal-A200</code></li>
+<li><code>@teal-A400</code></li>
+<li><code>@teal-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#teal-background-colors">Teal background colors</a></li>
+<li><a href="#teal-text-colors">Teal text colors</a></li>
+<li><a href="#teal-buttons">Teal buttons</a></li>
+<li><a href="#teal-progress-bars">Teal progress bars</a></li>
+<li><a href="#teal-alerts">Teal alerts</a></li>
+</ul>
+<hr />
+<h3 id="green-color-palette">Green color palette</h3>
+<p><img alt="Green color palette" src="../../images/colors/green.png" /></p>
+<p>Use any of the following Less variables to apply a green color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@green-100</code> to <code>@green-900</code> in <code>100</code> increments.</li>
+<li>use <code>@green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@green-A100</code></li>
+<li><code>@green-A200</code></li>
+<li><code>@green-A400</code></li>
+<li><code>@green-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#green-background-colors">Green background colors</a></li>
+<li><a href="#green-text-colors">Green text colors</a></li>
+<li><a href="#green-buttons">Green buttons</a></li>
+<li><a href="#green-progress-bars">Green progress bars</a></li>
+<li><a href="#green-alerts">Green alerts</a></li>
+</ul>
+<hr />
+<h3 id="light-green-color-palette">Light Green color palette</h3>
+<p><img alt="Light Green color palette" src="../../images/colors/light-green.png" /></p>
+<p>Use any of the following Less variables to apply a light green color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@light-green-100</code> to <code>@light-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>@light-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@light-green-A100</code></li>
+<li><code>@light-green-A200</code></li>
+<li><code>@light-green-A400</code></li>
+<li><code>@light-green-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#light-green-background-colors">Light Green background colors</a></li>
+<li><a href="#light-green-text-colors">Light Green text colors</a></li>
+<li><a href="#light-green-buttons">Light Green buttons</a></li>
+<li><a href="#light-green-progress-bars">Light Green progress bars</a></li>
+<li><a href="#light-green-alerts">Light Green alerts</a></li>
+</ul>
+<hr />
+<h3 id="lime-color-palette">Lime color palette</h3>
+<p><img alt="Lime color palette" src="../../images/colors/lime.png" /></p>
+<p>Use any of the following Less variables to apply a lime color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@lime-100</code> to <code>@lime-900</code> in <code>100</code> increments.</li>
+<li>use <code>@lime-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@lime-A100</code></li>
+<li><code>@lime-A200</code></li>
+<li><code>@lime-A400</code></li>
+<li><code>@lime-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#lime-background-colors">Lime background colors</a></li>
+<li><a href="#lime-text-colors">Lime text colors</a></li>
+<li><a href="#lime-buttons">Lime buttons</a></li>
+<li><a href="#lime-progress-bars">Lime progress bars</a></li>
+<li><a href="#lime-alerts">Lime alerts</a></li>
+</ul>
+<hr />
+<h3 id="yellow-color-palette">Yellow color palette</h3>
+<p><img alt="Yellow color palette" src="../../images/colors/yellow.png" /></p>
+<p>Use any of the following Less variables to apply a yellow color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@yellow-100</code> to <code>@yellow-900</code> in <code>100</code> increments.</li>
+<li>use <code>@yellow-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@yellow-A100</code></li>
+<li><code>@yellow-A200</code></li>
+<li><code>@yellow-A400</code></li>
+<li><code>@yellow-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#yellow-background-colors">Yellow background colors</a></li>
+<li><a href="#yellow-text-colors">Yellow text colors</a></li>
+<li><a href="#yellow-buttons">Yellow buttons</a></li>
+<li><a href="#yellow-progress-bars">Yellow progress bars</a></li>
+<li><a href="#yellow-alerts">Yellow alerts</a></li>
+</ul>
+<hr />
+<h3 id="amber-color-palette">Amber color palette</h3>
+<p><img alt="Amber color palette" src="../../images/colors/amber.png" /></p>
+<p>Use any of the following Less variables to apply an amber color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@amber-100</code> to <code>@amber-900</code> in <code>100</code> increments.</li>
+<li>use <code>@amber-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@amber-A100</code></li>
+<li><code>@amber-A200</code></li>
+<li><code>@amber-A400</code></li>
+<li><code>@amber-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#amber-background-colors">Amber background colors</a></li>
+<li><a href="#amber-text-colors">Amber text colors</a></li>
+<li><a href="#amber-buttons">Amber buttons</a></li>
+<li><a href="#amber-progress-bars">Amber progress bars</a></li>
+<li><a href="#amber-alerts">Amber alerts</a></li>
+</ul>
+<hr />
+<h3 id="orange-color-palette">Orange color palette</h3>
+<p><img alt="Orange color palette" src="../../images/colors/orange.png" /></p>
+<p>Use any of the following Less variables to apply an orange color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@orange-100</code> to <code>@orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>@orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@orange-A100</code></li>
+<li><code>@orange-A200</code></li>
+<li><code>@orange-A400</code></li>
+<li><code>@orange-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#orange-background-colors">Orange background colors</a></li>
+<li><a href="#orange-text-colors">Orange text colors</a></li>
+<li><a href="#orange-buttons">Orange buttons</a></li>
+<li><a href="#orange-progress-bars">Orange progress bars</a></li>
+<li><a href="#orange-alerts">Orange alerts</a></li>
+</ul>
+<hr />
+<h3 id="deep-orange-color-palette">Deep Orange color palette</h3>
+<p><img alt="Deep Orange color palette" src="../../images/colors/deep-orange.png" /></p>
+<p>Use any of the following Less variables to apply a deep orange color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@deep-orange-100</code> to <code>@deep-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>@deep-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>@deep-orange-A100</code></li>
+<li><code>@deep-orange-A200</code></li>
+<li><code>@deep-orange-A400</code></li>
+<li><code>@deep-orange-A700</code></li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#deep-orange-background-colors">Deep Orange background colors</a></li>
+<li><a href="#deep-orange-text-colors">Deep Orange text colors</a></li>
+<li><a href="#deep-orange-buttons">Deep Orange buttons</a></li>
+<li><a href="#deep-orange-progress-bars">Deep Orange progress bars</a></li>
+<li><a href="#deep-orange-alerts">Deep Orange alerts</a></li>
+</ul>
+<hr />
+<h3 id="brown-color-palette">Brown color palette</h3>
+<p><img alt="Brown color palette" src="../../images/colors/brown.png" /></p>
+<p>Use any of the following Less variables to apply a brown color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@brown-100</code> to <code>@brown-900</code> in <code>100</code> increments.</li>
+<li>use <code>@brown-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#brown-background-colors">Brown background colors</a></li>
+<li><a href="#brown-text-colors">Brown text colors</a></li>
+<li><a href="#brown-buttons">Brown buttons</a></li>
+<li><a href="#brown-progress-bars">Brown progress bars</a></li>
+<li><a href="#brown-alerts">Brown alerts</a></li>
+</ul>
+<hr />
+<h3 id="grey-color-palette">Grey color palette</h3>
+<p><img alt="Grey color palette" src="../../images/colors/grey.png" /></p>
+<p>Use any of the following Less variables to apply a grey color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@grey-100</code> to <code>@grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>@grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#grey-background-colors">Grey background colors</a></li>
+<li><a href="#grey-text-colors">Grey text colors</a></li>
+<li><a href="#grey-buttons">Grey buttons</a></li>
+<li><a href="#grey-progress-bars">Grey progress bars</a></li>
+<li><a href="#grey-alerts">Grey alerts</a></li>
+</ul>
+<hr />
+<h3 id="blue-grey-color-palette">Blue Grey color palette</h3>
+<p><img alt="Blue Grey color palette" src="../../images/colors/blue-grey.png" /></p>
+<p>Use any of the following Less variables to apply a blue grey color to any CSS property.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>@blue-grey-100</code> to <code>@blue-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>@blue-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>CSS components</strong>:</p>
+<ul>
+<li><a href="#blue-grey-background-colors">Blue Grey background colors</a></li>
+<li><a href="#blue-grey-text-colors">Blue Grey text colors</a></li>
+<li><a href="#blue-grey-buttons">Blue Grey buttons</a></li>
+<li><a href="#blue-grey-progress-bars">Blue Grey progress bars</a></li>
+<li><a href="#blue-grey-alerts">Blue Grey alerts</a></li>
+</ul>
+<hr />
+<h2 id="background-color">Background color</h2>
+<h3 id="red-background-colors">Red background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a red background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-red-100</code> to <code>bg-red-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-red-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-red-A100</code></li>
+<li><code>bg-red-A200</code></li>
+<li><code>bg-red-A400</code></li>
+<li><code>bg-red-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-red-500&quot;&gt;
+    &lt;!-- Red background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#red-color-palette">Red color palette</a></li>
+</ul>
+<hr />
+<h3 id="pink-background-colors">Pink background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a pink background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-pink-100</code> to <code>bg-pink-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-pink-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-pink-A100</code></li>
+<li><code>bg-pink-A200</code></li>
+<li><code>bg-pink-A400</code></li>
+<li><code>bg-pink-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-pink-500&quot;&gt;
+    &lt;!-- Pink background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#pink-color-palette">Pink color palette</a></li>
+</ul>
+<hr />
+<h3 id="purple-background-colors">Purple background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a purple background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-purple-100</code> to <code>bg-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-purple-A100</code></li>
+<li><code>bg-purple-A200</code></li>
+<li><code>bg-purple-A400</code></li>
+<li><code>bg-purple-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-purple-500&quot;&gt;
+    &lt;!-- Purple background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#purple-color-palette">Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-purple-background-colors">Deep Purple background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a deep purple background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-deep-purple-100</code> to <code>bg-deep-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-deep-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-deep-purple-A100</code></li>
+<li><code>bg-deep-purple-A200</code></li>
+<li><code>bg-deep-purple-A400</code></li>
+<li><code>bg-deep-purple-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-deep-purple-500&quot;&gt;
+    &lt;!-- Deep Purple background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-purple-color-palette">Deep Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="indigo-background-colors">Indigo background colors</h3>
+<p>Use any of the following CSS classes on any element to apply an indigo background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-indigo-100</code> to <code>bg-indigo-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-indigo-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-indigo-A100</code></li>
+<li><code>bg-indigo-A200</code></li>
+<li><code>bg-indigo-A400</code></li>
+<li><code>bg-indigo-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-indigo-500&quot;&gt;
+    &lt;!-- Indigo background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#indigo-color-palette">Indigo color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-background-colors">Blue background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a blue background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-blue-100</code> to <code>bg-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-blue-A100</code></li>
+<li><code>bg-blue-A200</code></li>
+<li><code>bg-blue-A400</code></li>
+<li><code>bg-blue-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-blue-500&quot;&gt;
+    &lt;!-- Blue background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-color-palette">Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-blue-background-colors">Light Blue background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a light blue background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-light-blue-100</code> to <code>bg-light-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-light-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-light-blue-A100</code></li>
+<li><code>bg-light-blue-A200</code></li>
+<li><code>bg-light-blue-A400</code></li>
+<li><code>bg-light-blue-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-light-blue-500&quot;&gt;
+    &lt;!-- Light Blue background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-blue-color-palette">Light Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="cyan-background-colors">Cyan background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a cyan background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-cyan-100</code> to <code>bg-cyan-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-cyan-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-cyan-A100</code></li>
+<li><code>bg-cyan-A200</code></li>
+<li><code>bg-cyan-A400</code></li>
+<li><code>bg-cyan-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-cyan-500&quot;&gt;
+    &lt;!-- Cyan background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#cyan-color-palette">Cyan color palette</a></li>
+</ul>
+<hr />
+<h3 id="teal-background-colors">Teal background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a teal background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-teal-100</code> to <code>bg-teal-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-teal-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-teal-A100</code></li>
+<li><code>bg-teal-A200</code></li>
+<li><code>bg-teal-A400</code></li>
+<li><code>bg-teal-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-teal-500&quot;&gt;
+    &lt;!-- Teal background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#teal-color-palette">Teal color palette</a></li>
+</ul>
+<hr />
+<h3 id="green-background-colors">Green background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a green background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-green-100</code> to <code>bg-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-green-A100</code></li>
+<li><code>bg-green-A200</code></li>
+<li><code>bg-green-A400</code></li>
+<li><code>bg-green-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-green-500&quot;&gt;
+    &lt;!-- Green background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#green-color-palette">Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-green-background-colors">Light Green background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a light green background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-light-green-100</code> to <code>bg-light-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-light-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-light-green-A100</code></li>
+<li><code>bg-light-green-A200</code></li>
+<li><code>bg-light-green-A400</code></li>
+<li><code>bg-light-green-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-light-green-500&quot;&gt;
+    &lt;!-- Light Green background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-green-color-palette">Light Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="lime-background-colors">Lime background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a lime background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-lime-100</code> to <code>bg-lime-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-lime-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-lime-A100</code></li>
+<li><code>bg-lime-A200</code></li>
+<li><code>bg-lime-A400</code></li>
+<li><code>bg-lime-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-lime-500&quot;&gt;
+    &lt;!-- Lime background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#lime-color-palette">Lime color palette</a></li>
+</ul>
+<hr />
+<h3 id="yellow-background-colors">Yellow background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a yellow background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-yellow-100</code> to <code>bg-yellow-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-yellow-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-yellow-A100</code></li>
+<li><code>bg-yellow-A200</code></li>
+<li><code>bg-yellow-A400</code></li>
+<li><code>bg-yellow-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-yellow-500&quot;&gt;
+    &lt;!-- Yellow background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#yellow-color-palette">Yellow color palette</a></li>
+</ul>
+<hr />
+<h3 id="amber-background-colors">Amber background colors</h3>
+<p>Use any of the following CSS classes on any element to apply an amber background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-amber-100</code> to <code>bg-amber-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-amber-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-amber-A100</code></li>
+<li><code>bg-amber-A200</code></li>
+<li><code>bg-amber-A400</code></li>
+<li><code>bg-amber-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-amber-500&quot;&gt;
+    &lt;!-- Amber background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#amber-color-palette">Amber color palette</a></li>
+</ul>
+<hr />
+<h3 id="orange-background-colors">Orange background colors</h3>
+<p>Use any of the following CSS classes on any element to apply an orange background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-orange-100</code> to <code>bg-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-orange-A100</code></li>
+<li><code>bg-orange-A200</code></li>
+<li><code>bg-orange-A400</code></li>
+<li><code>bg-orange-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-orange-500&quot;&gt;
+    &lt;!-- Orange background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#orange-color-palette">Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-orange-background-colors">Deep Orange background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a deep orange background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-deep-orange-100</code> to <code>bg-deep-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-deep-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>bg-deep-orange-A100</code></li>
+<li><code>bg-deep-orange-A200</code></li>
+<li><code>bg-deep-orange-A400</code></li>
+<li><code>bg-deep-orange-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-deep-orange-500&quot;&gt;
+    &lt;!-- Deep Orange background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-orange-color-palette">Deep Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="brown-background-colors">Brown background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a brown background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-brown-100</code> to <code>bg-brown-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-brown-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-brown-500&quot;&gt;
+    &lt;!-- Brown background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#brown-color-palette">Brown color palette</a></li>
+</ul>
+<hr />
+<h3 id="grey-background-colors">Grey background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a grey background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-grey-100</code> to <code>bg-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-grey-500&quot;&gt;
+    &lt;!-- Grey background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#grey-color-palette">Grey color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-grey-background-colors">Blue Grey background colors</h3>
+<p>Use any of the following CSS classes on any element to apply a blue grey background color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>bg-blue-grey-100</code> to <code>bg-blue-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>bg-blue-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;bg-blue-grey-500&quot;&gt;
+    &lt;!-- Blue Grey background block --&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-grey-color-palette">Blue Grey color palette</a></li>
+</ul>
+<hr />
+<h2 id="text-color">Text color</h2>
+<h3 id="red-text-colors">Red text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a red text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-red-100</code> to <code>text-red-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-red-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-red-A100</code></li>
+<li><code>text-red-A200</code></li>
+<li><code>text-red-A400</code></li>
+<li><code>text-red-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-red-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#red-color-palette">Red color palette</a></li>
+</ul>
+<hr />
+<h3 id="pink-text-colors">Pink text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a pink text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-pink-100</code> to <code>text-pink-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-pink-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-pink-A100</code></li>
+<li><code>text-pink-A200</code></li>
+<li><code>text-pink-A400</code></li>
+<li><code>text-pink-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-pink-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#pink-color-palette">Pink color palette</a></li>
+</ul>
+<hr />
+<h3 id="purple-text-colors">Purple text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a purple text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-purple-100</code> to <code>text-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-purple-A100</code></li>
+<li><code>text-purple-A200</code></li>
+<li><code>text-purple-A400</code></li>
+<li><code>text-purple-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-purple-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#purple-color-palette">Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-purple-text-colors">Deep Purple text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a deep purple text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-deep-purple-100</code> to <code>text-deep-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-deep-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-deep-purple-A100</code></li>
+<li><code>text-deep-purple-A200</code></li>
+<li><code>text-deep-purple-A400</code></li>
+<li><code>text-deep-purple-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-deep-purple-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-purple-color-palette">Deep Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="indigo-text-colors">Indigo text colors</h3>
+<p>Use any of the following CSS classes on any element to apply an indigo text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-indigo-100</code> to <code>text-indigo-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-indigo-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-indigo-A100</code></li>
+<li><code>text-indigo-A200</code></li>
+<li><code>text-indigo-A400</code></li>
+<li><code>text-indigo-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-indigo-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#indigo-color-palette">Indigo color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-text-colors">Blue text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a blue text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-blue-100</code> to <code>text-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-blue-A100</code></li>
+<li><code>text-blue-A200</code></li>
+<li><code>text-blue-A400</code></li>
+<li><code>text-blue-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-blue-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-color-palette">Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-blue-text-colors">Light Blue text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a light blue text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-light-blue-100</code> to <code>text-light-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-light-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-light-blue-A100</code></li>
+<li><code>text-light-blue-A200</code></li>
+<li><code>text-light-blue-A400</code></li>
+<li><code>text-light-blue-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-light-blue-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-blue-color-palette">Light Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="cyan-text-colors">Cyan text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a cyan text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-cyan-100</code> to <code>text-cyan-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-cyan-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-cyan-A100</code></li>
+<li><code>text-cyan-A200</code></li>
+<li><code>text-cyan-A400</code></li>
+<li><code>text-cyan-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-cyan-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#cyan-color-palette">Cyan color palette</a></li>
+</ul>
+<hr />
+<h3 id="teal-text-colors">Teal text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a teal text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-teal-100</code> to <code>text-teal-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-teal-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-teal-A100</code></li>
+<li><code>text-teal-A200</code></li>
+<li><code>text-teal-A400</code></li>
+<li><code>text-teal-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-teal-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#teal-color-palette">Teal color palette</a></li>
+</ul>
+<hr />
+<h3 id="green-text-colors">Green text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a green text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-green-100</code> to <code>text-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-green-A100</code></li>
+<li><code>text-green-A200</code></li>
+<li><code>text-green-A400</code></li>
+<li><code>text-green-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-green-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#green-color-palette">Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-green-text-colors">Light Green text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a light green text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-light-green-100</code> to <code>text-light-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-light-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-light-green-A100</code></li>
+<li><code>text-light-green-A200</code></li>
+<li><code>text-light-green-A400</code></li>
+<li><code>text-light-green-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-light-green-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-green-color-palette">Light Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="lime-text-colors">Lime text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a lime text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-lime-100</code> to <code>text-lime-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-lime-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-lime-A100</code></li>
+<li><code>text-lime-A200</code></li>
+<li><code>text-lime-A400</code></li>
+<li><code>text-lime-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-lime-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#lime-color-palette">Lime color palette</a></li>
+</ul>
+<hr />
+<h3 id="yellow-text-colors">Yellow text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a yellow text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-yellow-100</code> to <code>text-yellow-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-yellow-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-yellow-A100</code></li>
+<li><code>text-yellow-A200</code></li>
+<li><code>text-yellow-A400</code></li>
+<li><code>text-yellow-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-yellow-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#yellow-color-palette">Yellow color palette</a></li>
+</ul>
+<hr />
+<h3 id="amber-text-colors">Amber text colors</h3>
+<p>Use any of the following CSS classes on any element to apply an amber text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-amber-100</code> to <code>text-amber-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-amber-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-amber-A100</code></li>
+<li><code>text-amber-A200</code></li>
+<li><code>text-amber-A400</code></li>
+<li><code>text-amber-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-amber-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#amber-color-palette">Amber color palette</a></li>
+</ul>
+<hr />
+<h3 id="orange-text-colors">Orange text colors</h3>
+<p>Use any of the following CSS classes on any element to apply an orange text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-orange-100</code> to <code>text-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-orange-A100</code></li>
+<li><code>text-orange-A200</code></li>
+<li><code>text-orange-A400</code></li>
+<li><code>text-orange-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-orange-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#orange-color-palette">Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-orange-text-colors">Deep Orange text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a deep orange text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-deep-orange-100</code> to <code>text-deep-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-deep-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>text-deep-orange-A100</code></li>
+<li><code>text-deep-orange-A200</code></li>
+<li><code>text-deep-orange-A400</code></li>
+<li><code>text-deep-orange-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-deep-orange-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-orange-color-palette">Deep Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="brown-text-colors">Brown text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a brown text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-brown-100</code> to <code>text-brown-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-brown-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-brown-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#brown-color-palette">Brown color palette</a></li>
+</ul>
+<hr />
+<h3 id="grey-text-colors">Grey text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a grey text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-grey-100</code> to <code>text-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-grey-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#grey-color-palette">Grey color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-grey-text-colors">Blue Grey text colors</h3>
+<p>Use any of the following CSS classes on any element to apply a blue grey text color.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>text-blue-grey-100</code> to <code>text-blue-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>text-blue-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;p class=&quot;text-blue-grey-500&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante porta, finibus neque id, commodo justo.&lt;/p&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-grey-color-palette">Blue Grey color palette</a></li>
+</ul>
+<hr />
+<h2 id="buttons">Buttons</h2>
+<h3 id="red-buttons">Red buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a red button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-red-500</code> to <code>btn-red-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-red-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-red-A100</code></li>
+<li><code>btn-red-A200</code></li>
+<li><code>btn-red-A400</code></li>
+<li><code>btn-red-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-red-500&quot;&gt;Red&lt;/button&gt;
+
+&lt;!-- Stroked, white background, red text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-red-500 btn-stroke&quot;&gt;Red&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-red-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Red
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#red-color-palette">Red color palette</a></li>
+</ul>
+<hr />
+<h3 id="pink-buttons">Pink buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a pink button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-pink-500</code> to <code>btn-pink-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-pink-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-pink-A100</code></li>
+<li><code>btn-pink-A200</code></li>
+<li><code>btn-pink-A400</code></li>
+<li><code>btn-pink-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-pink-500&quot;&gt;Pink&lt;/button&gt;
+
+&lt;!-- Stroked, white background, pink text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-pink-500 btn-stroke&quot;&gt;Pink&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-pink-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Pink
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#pink-color-palette">Pink color palette</a></li>
+</ul>
+<hr />
+<h3 id="purple-buttons">Purple buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a purple button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-purple-500</code> to <code>btn-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-purple-A100</code></li>
+<li><code>btn-purple-A200</code></li>
+<li><code>btn-purple-A400</code></li>
+<li><code>btn-purple-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-purple-500&quot;&gt;Purple&lt;/button&gt;
+
+&lt;!-- Stroked, white background, purple text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-purple-500 btn-stroke&quot;&gt;Purple&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-purple-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Purple
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#purple-color-palette">Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-purple-buttons">Deep Purple buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a deep purple button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-deep-purple-500</code> to <code>btn-deep-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-deep-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-deep-purple-A100</code></li>
+<li><code>btn-deep-purple-A200</code></li>
+<li><code>btn-deep-purple-A400</code></li>
+<li><code>btn-deep-purple-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-deep-purple-500&quot;&gt;Deep Purple&lt;/button&gt;
+
+&lt;!-- Stroked, white background, deep purple text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-deep-purple-500 btn-stroke&quot;&gt;Deep Purple&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-deep-purple-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Deep Purple
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-purple-color-palette">Deep Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="indigo-buttons">Indigo buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get an indigo button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-indigo-500</code> to <code>btn-indigo-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-indigo-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-indigo-A100</code></li>
+<li><code>btn-indigo-A200</code></li>
+<li><code>btn-indigo-A400</code></li>
+<li><code>btn-indigo-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-indigo-500&quot;&gt;Indigo&lt;/button&gt;
+
+&lt;!-- Stroked, white background, indigo text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-indigo-500 btn-stroke&quot;&gt;Indigo&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-indigo-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Indigo
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#indigo-color-palette">Indigo color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-buttons">Blue buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a blue button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-blue-500</code> to <code>btn-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-blue-A100</code></li>
+<li><code>btn-blue-A200</code></li>
+<li><code>btn-blue-A400</code></li>
+<li><code>btn-blue-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-blue-500&quot;&gt;Blue&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-blue-500 btn-stroke&quot;&gt;Blue&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-blue-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Blue
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-color-palette">Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-blue-buttons">Light Blue buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a light blue button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-light-blue-500</code> to <code>btn-light-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-light-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-light-blue-A100</code></li>
+<li><code>btn-light-blue-A200</code></li>
+<li><code>btn-light-blue-A400</code></li>
+<li><code>btn-light-blue-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-light-blue-500&quot;&gt;Light Blue&lt;/button&gt;
+
+&lt;!-- Stroked, white background, light blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-light-blue-500 btn-stroke&quot;&gt;Light Blue&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-light-blue-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Light Blue
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-blue-color-palette">Light Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="cyan-buttons">Cyan buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a cyan button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-cyan-500</code> to <code>btn-cyan-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-cyan-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-cyan-A100</code></li>
+<li><code>btn-cyan-A200</code></li>
+<li><code>btn-cyan-A400</code></li>
+<li><code>btn-cyan-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-cyan-500&quot;&gt;Cyan&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-cyan-500 btn-stroke&quot;&gt;Cyan&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-cyan-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Cyan
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#cyan-color-palette">Cyan color palette</a></li>
+</ul>
+<hr />
+<h3 id="teal-buttons">Teal buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a teal button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-teal-500</code> to <code>btn-teal-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-teal-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-teal-A100</code></li>
+<li><code>btn-teal-A200</code></li>
+<li><code>btn-teal-A400</code></li>
+<li><code>btn-teal-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-teal-500&quot;&gt;Teal&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-teal-500 btn-stroke&quot;&gt;Teal&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-teal-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Teal
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#teal-color-palette">Teal color palette</a></li>
+</ul>
+<hr />
+<h3 id="green-buttons">Green buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a green button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-green-500</code> to <code>btn-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-green-A100</code></li>
+<li><code>btn-green-A200</code></li>
+<li><code>btn-green-A400</code></li>
+<li><code>btn-green-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-green-500&quot;&gt;Green&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-green-500 btn-stroke&quot;&gt;Green&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-green-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Green
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#green-color-palette">Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-green-buttons">Light Green buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a light green button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-light-green-500</code> to <code>btn-light-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-light-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-light-green-A100</code></li>
+<li><code>btn-light-green-A200</code></li>
+<li><code>btn-light-green-A400</code></li>
+<li><code>btn-light-green-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-light-green-500&quot;&gt;Light Green&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-light-green-500 btn-stroke&quot;&gt;Light Green&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-light-green-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Light Green
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-green-color-palette">Light Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="lime-buttons">Lime buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a lime button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-lime-500</code> to <code>btn-lime-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-lime-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-lime-A100</code></li>
+<li><code>btn-lime-A200</code></li>
+<li><code>btn-lime-A400</code></li>
+<li><code>btn-lime-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-lime-500&quot;&gt;Lime&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-lime-500 btn-stroke&quot;&gt;Lime&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-lime-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Lime
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#lime-color-palette">Lime color palette</a></li>
+</ul>
+<hr />
+<h3 id="yellow-buttons">Yellow buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a yellow button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-yellow-500</code> to <code>btn-yellow-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-yellow-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-yellow-A100</code></li>
+<li><code>btn-yellow-A200</code></li>
+<li><code>btn-yellow-A400</code></li>
+<li><code>btn-yellow-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-yellow-500&quot;&gt;Yellow&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-yellow-500 btn-stroke&quot;&gt;Yellow&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-yellow-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Yellow
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#yellow-color-palette">Yellow color palette</a></li>
+</ul>
+<hr />
+<h3 id="amber-buttons">Amber buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get an amber button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-amber-500</code> to <code>btn-amber-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-amber-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-amber-A100</code></li>
+<li><code>btn-amber-A200</code></li>
+<li><code>btn-amber-A400</code></li>
+<li><code>btn-amber-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-amber-500&quot;&gt;Amber&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-amber-500 btn-stroke&quot;&gt;Amber&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-amber-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Amber
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#amber-color-palette">Amber color palette</a></li>
+</ul>
+<hr />
+<h3 id="orange-buttons">Orange buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get an orange button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-orange-500</code> to <code>btn-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-orange-A100</code></li>
+<li><code>btn-orange-A200</code></li>
+<li><code>btn-orange-A400</code></li>
+<li><code>btn-orange-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-orange-500&quot;&gt;Orange&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-orange-500 btn-stroke&quot;&gt;Orange&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-orange-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Orange
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#orange-color-palette">Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-orange-buttons">Deep Orange buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a deep orange button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-deep-orange-500</code> to <code>btn-deep-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-deep-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>btn-deep-orange-A100</code></li>
+<li><code>btn-deep-orange-A200</code></li>
+<li><code>btn-deep-orange-A400</code></li>
+<li><code>btn-deep-orange-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-deep-orange-500&quot;&gt;Deep Orange&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-deep-orange-500 btn-stroke&quot;&gt;Deep Orange&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-deep-orange-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Deep Orange
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-orange-color-palette">Deep Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="brown-buttons">Brown buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a brown button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-brown-500</code> to <code>btn-brown-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-brown-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-brown-500&quot;&gt;Brown&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-brown-500 btn-stroke&quot;&gt;Brown&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-brown-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Brown
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#brown-color-palette">Brown color palette</a></li>
+</ul>
+<hr />
+<h3 id="grey-buttons">Grey buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a grey button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-grey-500</code> to <code>btn-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-grey-500&quot;&gt;Grey&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-grey-500 btn-stroke&quot;&gt;Grey&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-grey-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Grey
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#grey-color-palette">Grey color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-grey-buttons">Blue Grey buttons</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap button to get a blue grey button variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>btn-blue-grey-500</code> to <code>btn-blue-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>btn-blue-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled background color --&gt;
+&lt;button class=&quot;btn btn-blue-grey-500&quot;&gt;Blue Grey&lt;/button&gt;
+
+&lt;!-- Stroked, white background, blue text and border and filled background on hover --&gt;
+&lt;button class=&quot;btn btn-blue-grey-500 btn-stroke&quot;&gt;Blue Grey&lt;/button&gt;
+
+&lt;!-- Dropdown --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-blue-grey-500 dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+        Dropdown Blue Grey
+        &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-grey-color-palette">Blue Grey color palette</a></li>
+</ul>
+<hr />
+<h2 id="progress-bars">Progress bars</h2>
+<h3 id="red-progress-bars">Red progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-red-100</code> to <code>progress-bar-red-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-red-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-red-A100</code></li>
+<li><code>progress-bar-red-A200</code></li>
+<li><code>progress-bar-red-A400</code></li>
+<li><code>progress-bar-red-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-red-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#red-color-palette">Red color palette</a></li>
+</ul>
+<hr />
+<h3 id="pink-progress-bars">Pink progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-pink-100</code> to <code>progress-bar-pink-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-pink-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-pink-A100</code></li>
+<li><code>progress-bar-pink-A200</code></li>
+<li><code>progress-bar-pink-A400</code></li>
+<li><code>progress-bar-pink-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-pink-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#pink-color-palette">Pink color palette</a></li>
+</ul>
+<hr />
+<h3 id="purple-progress-bars">Purple progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-purple-100</code> to <code>progress-bar-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-purple-A100</code></li>
+<li><code>progress-bar-purple-A200</code></li>
+<li><code>progress-bar-purple-A400</code></li>
+<li><code>progress-bar-purple-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-purple-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#purple-color-palette">Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-purple-progress-bars">Deep Purple progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-deep-purple-100</code> to <code>progress-bar-deep-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-deep-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-deep-purple-A100</code></li>
+<li><code>progress-bar-deep-purple-A200</code></li>
+<li><code>progress-bar-deep-purple-A400</code></li>
+<li><code>progress-bar-deep-purple-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-deep-purple-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-purple-color-palette">Deep Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="indigo-progress-bars">Indigo progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-indigo-100</code> to <code>progress-bar-indigo-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-indigo-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-indigo-A100</code></li>
+<li><code>progress-bar-indigo-A200</code></li>
+<li><code>progress-bar-indigo-A400</code></li>
+<li><code>progress-bar-indigo-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-indigo-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#indigo-color-palette">Indigo color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-progress-bars">Blue progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-blue-100</code> to <code>progress-bar-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-blue-A100</code></li>
+<li><code>progress-bar-blue-A200</code></li>
+<li><code>progress-bar-blue-A400</code></li>
+<li><code>progress-bar-blue-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-blue-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-color-palette">Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-blue-progress-bars">Light Blue progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-light-blue-100</code> to <code>progress-bar-light-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-light-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-light-blue-A100</code></li>
+<li><code>progress-bar-light-blue-A200</code></li>
+<li><code>progress-bar-light-blue-A400</code></li>
+<li><code>progress-bar-light-blue-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-light-blue-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-blue-color-palette">Light Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="cyan-progress-bars">Cyan progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-cyan-100</code> to <code>progress-bar-cyan-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-cyan-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-cyan-A100</code></li>
+<li><code>progress-bar-cyan-A200</code></li>
+<li><code>progress-bar-cyan-A400</code></li>
+<li><code>progress-bar-cyan-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-cyan-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#cyan-color-palette">Cyan color palette</a></li>
+</ul>
+<hr />
+<h3 id="teal-progress-bars">Teal progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-teal-100</code> to <code>progress-bar-teal-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-teal-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-teal-A100</code></li>
+<li><code>progress-bar-teal-A200</code></li>
+<li><code>progress-bar-teal-A400</code></li>
+<li><code>progress-bar-teal-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-teal-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#teal-color-palette">Teal color palette</a></li>
+</ul>
+<hr />
+<h3 id="green-progress-bars">Green progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-green-100</code> to <code>progress-bar-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-green-A100</code></li>
+<li><code>progress-bar-green-A200</code></li>
+<li><code>progress-bar-green-A400</code></li>
+<li><code>progress-bar-green-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-green-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#green-color-palette">Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-green-progress-bars">Light Green progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-light-green-100</code> to <code>progress-bar-light-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-light-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-light-green-A100</code></li>
+<li><code>progress-bar-light-green-A200</code></li>
+<li><code>progress-bar-light-green-A400</code></li>
+<li><code>progress-bar-light-green-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-light-green-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-green-color-palette">Light Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="lime-progress-bars">Lime progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-lime-100</code> to <code>progress-bar-lime-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-lime-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-lime-A100</code></li>
+<li><code>progress-bar-lime-A200</code></li>
+<li><code>progress-bar-lime-A400</code></li>
+<li><code>progress-bar-lime-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-lime-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#lime-color-palette">Lime color palette</a></li>
+</ul>
+<hr />
+<h3 id="yellow-progress-bars">Yellow progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-yellow-100</code> to <code>progress-bar-yellow-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-yellow-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-yellow-A100</code></li>
+<li><code>progress-bar-yellow-A200</code></li>
+<li><code>progress-bar-yellow-A400</code></li>
+<li><code>progress-bar-yellow-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-yellow-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#yellow-color-palette">Yellow color palette</a></li>
+</ul>
+<hr />
+<h3 id="amber-progress-bars">Amber progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-amber-100</code> to <code>progress-bar-amber-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-amber-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-amber-A100</code></li>
+<li><code>progress-bar-amber-A200</code></li>
+<li><code>progress-bar-amber-A400</code></li>
+<li><code>progress-bar-amber-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-amber-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#amber-color-palette">Amber color palette</a></li>
+</ul>
+<hr />
+<h3 id="orange-progress-bars">Orange progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-orange-100</code> to <code>progress-bar-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-orange-A100</code></li>
+<li><code>progress-bar-orange-A200</code></li>
+<li><code>progress-bar-orange-A400</code></li>
+<li><code>progress-bar-orange-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-orange-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#orange-color-palette">Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-orange-progress-bars">Deep Orange progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-deep-orange-100</code> to <code>progress-bar-deep-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-deep-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>progress-bar-deep-orange-A100</code></li>
+<li><code>progress-bar-deep-orange-A200</code></li>
+<li><code>progress-bar-deep-orange-A400</code></li>
+<li><code>progress-bar-deep-orange-A700</code></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-deep-orange-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-orange-color-palette">Deep Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="brown-progress-bars">Brown progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-brown-100</code> to <code>progress-bar-brown-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-brown-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-brown-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#brown-color-palette">Brown color palette</a></li>
+</ul>
+<hr />
+<h3 id="grey-progress-bars">Grey progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-grey-100</code> to <code>progress-bar-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-grey-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#grey-color-palette">Grey color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-grey-progress-bars">Blue Grey progress bars</h3>
+<p>Use any of the following CSS classes on a standard Bootstrap progress bar.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>progress-bar-blue-grey-100</code> to <code>progress-bar-blue-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>progress-bar-blue-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="html">&lt;div class=&quot;progress-bar progress-bar-blue-grey-500&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-grey-color-palette">Blue Grey color palette</a></li>
+</ul>
+<hr />
+<h2 id="alerts">Alerts</h2>
+<h3 id="red-alerts">Red alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a red alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-red-500</code> to <code>alert-red-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-red-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-red-A100</code></li>
+<li><code>alert-red-A200</code></li>
+<li><code>alert-red-A400</code></li>
+<li><code>alert-red-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-red-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-red-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#red-color-palette">Red color palette</a></li>
+</ul>
+<hr />
+<h3 id="pink-alerts">Pink alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a pink alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-pink-500</code> to <code>alert-pink-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-pink-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-pink-A100</code></li>
+<li><code>alert-pink-A200</code></li>
+<li><code>alert-pink-A400</code></li>
+<li><code>alert-pink-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-pink-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-pink-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#pink-color-palette">Pink color palette</a></li>
+</ul>
+<hr />
+<h3 id="purple-alerts">Purple alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a purple alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-purple-500</code> to <code>alert-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-purple-A100</code></li>
+<li><code>alert-purple-A200</code></li>
+<li><code>alert-purple-A400</code></li>
+<li><code>alert-purple-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-purple-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-purple-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#purple-color-palette">Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-purple-alerts">Deep Purple alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a deep purple alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-deep-purple-500</code> to <code>alert-deep-purple-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-deep-purple-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-deep-purple-A100</code></li>
+<li><code>alert-deep-purple-A200</code></li>
+<li><code>alert-deep-purple-A400</code></li>
+<li><code>alert-deep-purple-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-deep-purple-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-deep-purple-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-purple-color-palette">Deep Purple color palette</a></li>
+</ul>
+<hr />
+<h3 id="indigo-alerts">Indigo alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a indigo alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-indigo-500</code> to <code>alert-indigo-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-indigo-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-indigo-A100</code></li>
+<li><code>alert-indigo-A200</code></li>
+<li><code>alert-indigo-A400</code></li>
+<li><code>alert-indigo-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-indigo-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-indigo-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#indigo-color-palette">Indigo color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-alerts">Blue alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a blue alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-blue-500</code> to <code>alert-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-blue-A100</code></li>
+<li><code>alert-blue-A200</code></li>
+<li><code>alert-blue-A400</code></li>
+<li><code>alert-blue-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-blue-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-blue-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-color-palette">Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-blue-alerts">Light Blue alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a light blue alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-light-blue-500</code> to <code>alert-light-blue-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-light-blue-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-light-blue-A100</code></li>
+<li><code>alert-light-blue-A200</code></li>
+<li><code>alert-light-blue-A400</code></li>
+<li><code>alert-light-blue-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-light-blue-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-light-blue-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-blue-color-palette">Light Blue color palette</a></li>
+</ul>
+<hr />
+<h3 id="cyan-alerts">Cyan alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a cyan alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-cyan-500</code> to <code>alert-cyan-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-cyan-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-cyan-A100</code></li>
+<li><code>alert-cyan-A200</code></li>
+<li><code>alert-cyan-A400</code></li>
+<li><code>alert-cyan-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-cyan-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-cyan-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#cyan-color-palette">Cyan color palette</a></li>
+</ul>
+<hr />
+<h3 id="teal-alerts">Teal alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a teal alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-teal-500</code> to <code>alert-teal-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-teal-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-teal-A100</code></li>
+<li><code>alert-teal-A200</code></li>
+<li><code>alert-teal-A400</code></li>
+<li><code>alert-teal-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-teal-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-teal-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#teal-color-palette">Teal color palette</a></li>
+</ul>
+<hr />
+<h3 id="green-alerts">Green alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a green alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-green-500</code> to <code>alert-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-green-A100</code></li>
+<li><code>alert-green-A200</code></li>
+<li><code>alert-green-A400</code></li>
+<li><code>alert-green-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-green-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-green-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#green-color-palette">Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="light-green-alerts">Light Green alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a light green alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-light-green-500</code> to <code>alert-light-green-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-light-green-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-light-green-A100</code></li>
+<li><code>alert-light-green-A200</code></li>
+<li><code>alert-light-green-A400</code></li>
+<li><code>alert-light-green-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-light-green-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-light-green-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#light-green-color-palette">Light Green color palette</a></li>
+</ul>
+<hr />
+<h3 id="lime-alerts">Lime alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a lime alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-lime-500</code> to <code>alert-lime-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-lime-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-lime-A100</code></li>
+<li><code>alert-lime-A200</code></li>
+<li><code>alert-lime-A400</code></li>
+<li><code>alert-lime-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-lime-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-lime-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#lime-color-palette">Lime color palette</a></li>
+</ul>
+<hr />
+<h3 id="yellow-alerts">Yellow alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a yellow alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-yellow-500</code> to <code>alert-yellow-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-yellow-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-yellow-A100</code></li>
+<li><code>alert-yellow-A200</code></li>
+<li><code>alert-yellow-A400</code></li>
+<li><code>alert-yellow-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-yellow-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-yellow-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#yellow-color-palette">Yellow color palette</a></li>
+</ul>
+<hr />
+<h3 id="amber-alerts">Amber alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get an amber alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-amber-500</code> to <code>alert-amber-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-amber-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-amber-A100</code></li>
+<li><code>alert-amber-A200</code></li>
+<li><code>alert-amber-A400</code></li>
+<li><code>alert-amber-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-amber-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-amber-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#amber-color-palette">Amber color palette</a></li>
+</ul>
+<hr />
+<h3 id="orange-alerts">Orange alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get an orange alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-orange-500</code> to <code>alert-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-orange-A100</code></li>
+<li><code>alert-orange-A200</code></li>
+<li><code>alert-orange-A400</code></li>
+<li><code>alert-orange-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-orange-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-orange-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#orange-color-palette">Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="deep-orange-alerts">Deep Orange alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a deep orange alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-deep-orange-500</code> to <code>alert-deep-orange-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-deep-orange-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Accent colors</strong>:</p>
+<ul>
+<li><code>alert-deep-orange-A100</code></li>
+<li><code>alert-deep-orange-A200</code></li>
+<li><code>alert-deep-orange-A400</code></li>
+<li><code>alert-deep-orange-A700</code></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-deep-orange-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-deep-orange-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#deep-orange-color-palette">Deep Orange color palette</a></li>
+</ul>
+<hr />
+<h3 id="brown-alerts">Brown alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a brown alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-brown-500</code> to <code>alert-brown-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-brown-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-brown-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-brown-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#brown-color-palette">Brown color palette</a></li>
+</ul>
+<hr />
+<h3 id="grey-alerts">Grey alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a grey alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-grey-500</code> to <code>alert-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-grey-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-grey-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#grey-color-palette">Grey color palette</a></li>
+</ul>
+<hr />
+<h3 id="blue-grey-alerts">Blue Grey alerts</h3>
+<p>Use any of the following CSS classes on any standard Bootstrap alert to get a blue grey alert variation.</p>
+<p><strong>Primary colors</strong>:</p>
+<ul>
+<li><code>alert-blue-grey-500</code> to <code>alert-grey-900</code> in <code>100</code> increments.</li>
+<li>use <code>alert-blue-grey-500</code> as the primary color.</li>
+<li>the higher the number, the darker the color.</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<pre><code class="html">&lt;!-- Filled --&gt;
+&lt;div class=&quot;alert alert-blue-grey-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+
+&lt;!-- Stroked with colored text and lighter background color --&gt;
+&lt;div class=&quot;alert alert-stroke alert-blue-grey-500&quot; role=&quot;alert&quot;&gt;
+    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>Less variables</strong>:</p>
+<ul>
+<li><a href="#blue-grey-color-palette">Blue Grey color palette</a></li>
+</ul></div>
+        </div>
+
+        
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

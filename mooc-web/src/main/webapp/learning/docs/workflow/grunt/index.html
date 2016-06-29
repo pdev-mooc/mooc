@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Grunt - Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../gulp/index.html">Gulp</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="index.html">Grunt</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../code/structure/index.html">Structure</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/bower/index.html">Bower</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/include-paths/index.html">Include paths</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/less/index.html">Less</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/swig/index.html">Swig</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/browserify/index.html">Browserify</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/rtl/index.html">Right-to-Left</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/angular/index.html">AngularJS</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../reference/layout/index.html">Layout</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/sidebar/index.html">Sidebar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/navbar/index.html">Navbar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/essential/index.html">Essential</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/material/index.html">Material</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/colors/index.html">Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/maps/index.html">Maps</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../gulp/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../../code/structure/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#grunt-overview">Grunt Overview</a></li>
+        
+            <li><a href="#prerequisites">Prerequisites</a></li>
+        
+            <li><a href="#build">Build</a></li>
+        
+            <li><a href="#watch">Watch</a></li>
+        
+            <li><a href="#tasks">Tasks</a></li>
+        
+            <li><a href="#see-also">See also</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="grunt-overview">Grunt Overview</h1>
+<p><a href="http://gruntjs.com">Grunt</a> is the JavaScript task runner with the largest ecosystem. You can use Grunt to automate just about anything with a minimum of effort. We provide Grunt tasks for the most important aspects of customizing our templates.</p>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Make sure you have followed the <a href="../../index.html">Grunt installation steps</a> for your operating system.</p>
+<h3 id="linux-mac-os-x">Linux / Mac OS X</h3>
+<ul>
+<li><strong>create a copy of</strong> <code>lib/grunt/Gruntfile.js</code> to the root directory, <em>if it doesn't exist already</em>.</li>
+</ul>
+<h3 id="windows">Windows</h3>
+<p>Additionaly, when running on Windows operating systems, do the following:</p>
+<ol>
+<li><strong>remove the provided Gruntfile.js</strong> from the root directory of the project, <em>if it already exists</em> - it's a soft linux symlink and chances are the contents of this file is just a pointer to the real file which is located in <code>lib/grunt/Gruntfile.js</code></li>
+<li><strong>copy</strong> <code>lib/grunt/Gruntfile.js</code> in place of the file you removed at step 1.</li>
+<li><strong>When using Windows, make sure all the commands in this documentation are executed from either the Terminal builtin with SourceTree or a MSYS terminal. Don't use cmd.exe, it won't work! See <a href="../../index.html">installation on Windows</a>.</strong></li>
+</ol>
+<h3 id="notes">Notes</h3>
+<p>Substitute <code>$THEME_NAME</code> where ever you see it thoughout the documentation instructions with a valid theme name. You can see the available themes by looking at the first level directories within <code>src/html/themes</code>.</p>
+<hr />
+<h2 id="build">Build</h2>
+<p><a href="../../workflow/gulp/index.html">Unlike Gulp</a>, where we have a stream based <strong>build pipeline</strong>, Grunt provides a file based <strong>build system</strong>. Nonetheless, it connects files together across a number of processing steps, defining dependencies and which results in the final assets that get used by the application.</p>
+<h3 id="build-paths">Build paths</h3>
+<p>A build path is the destination directory where our final assets are placed after going through the build process. The build path is established with the <code>--dist path/to/build</code> CLI option.</p>
+<ul>
+<li>For usage details and examples, see <a href="../../workflow/gulp/index.html#build-paths">Build paths from Gulp</a>.</li>
+<li>We'll be referring to the build path throughout the documentation via <code>$BUILD_PATH</code>.</li>
+</ul>
+<hr />
+<h3 id="concatenated-files-and-bundles">Concatenated files and bundles</h3>
+<p>See <a href="../../workflow/gulp/index.html#concatenated-files-and-bundles">Concatenated files and bundles from Gulp</a>.</p>
+<h3 id="build-with-concatenated-files-and-bundles">Build with concatenated files and bundles</h3>
+<pre><code class="bash">grunt --theme $THEME_NAME build:d
+</code></pre>
+
+<p><strong>This is the fastest build task and has the following main characteristics:</strong></p>
+<ol>
+<li>
+<p>Cleans the theme's build path (removes everything under <code>$BUILD_PATH/$THEME_NAME/</code>).</p>
+</li>
+<li>
+<p>Does NOT generate minified assets.</p>
+<p>You can enable minification for both CSS and JavaScript:</p>
+<pre><code>grunt --theme $THEME_NAME build:d --minify true
+</code></pre>
+<p>And with source maps:</p>
+<pre><code>grunt --theme $THEME_NAME build:d --minify true --debug true
+</code></pre>
+</li>
+<li>
+<p>Compiles Less files into CSS:</p>
+<ul>
+<li><code>src/less/themes/$THEME_NAME/app.less</code> into <code>$BUILD_PATH/$THEME_NAME/css/app/app.css</code> <strong>(required)</strong></li>
+<li><code>src/less/themes/$THEME_NAME/main.less</code> into <code>$BUILD_PATH/$THEME_NAME/css/app/main.css</code></li>
+<li><code>src/less/themes/$THEME_NAME/vendor/*.less</code> into <code>$BUILD_PATH/$THEME_NAME/css/vendor/*.css</code></li>
+</ul>
+</li>
+<li>
+<p>Bundles application JavaScript with Browserify:</p>
+<ul>
+<li><code>src/js/themes/$THEME_NAME/app.js</code> into <code>$BUILD_PATH/$THEME_NAME/js/app/app.js</code> <strong>(required)</strong></li>
+<li><code>src/js/themes/$THEME_NAME/main.js</code> into <code>$BUILD_PATH/$THEME_NAME/js/app/main.js</code></li>
+<li>executes <em>browserify</em> tasks defined in <code>.build/browserify.json</code></li>
+<li><strong>excluding tasks for which the <code>build</code> key starts with <code>app/*</code> (which are ignored)</strong></li>
+</ul>
+</li>
+<li>
+<p>Compiles Swig template files into HTML:</p>
+<ul>
+<li><code>src/html/themes/$THEME_NAME/**/*.html</code> into <code>$BUILD_PATH/$THEME_NAME/**/*.html</code></li>
+</ul>
+</li>
+<li>
+<p>Copies files, in the following order:</p>
+<ol>
+<li><code>src/images/common/*</code> into <code>$BUILD_PATH/$THEME_NAME/images/*</code> - <strong>images stored here will end up in every theme</strong></li>
+<li><code>src/images/themes/$THEME_NAME/*</code> into <code>$BUILD_PATH/$THEME_NAME/images/*</code> - <strong>theme specific images</strong></li>
+<li>executes <em>copy</em> tasks defined in <code>.build/copy-*/copy.*.json</code> <em>(in path alphabetical order)</em></li>
+<li>executes <em>copy</em> tasks defined in <code>.build/copy.json</code></li>
+</ol>
+</li>
+<li>
+<p>Concatenates files, in the following order:</p>
+<ol>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat-*/concat.*.json</code> <em>(in path alphabetical order)</em></li>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat.json</code></li>
+<li><strong>excluding tasks for which the <code>build</code> key starts with <code>js/app/*</code> (which are ignored)</strong></li>
+</ol>
+</li>
+</ol>
+<p>Note that the execution order of different tasks is important.</p>
+<hr />
+<h3 id="separated-libraries">Separated libraries</h3>
+<p>See <a href="../../workflow/gulp/index.html#separated-libraries">Separated libraries from Gulp</a>.</p>
+<h3 id="build-with-separated-libraries">Build with separated libraries</h3>
+<p><strong>We definitely don't recommend this</strong>, but we won't stop you either. Here's how you can do it:</p>
+<pre><code class="bash">grunt --theme $THEME_NAME build:dm
+</code></pre>
+
+<p>Which is the same as: </p>
+<pre><code class="bash">grunt --theme $THEME_NAME build:d
+</code></pre>
+
+<p>But, with the following additional tasks:</p>
+<ol>
+<li>
+<p>Compiles separated Less modules to CSS:</p>
+<ul>
+<li><code>src/less/theme/$THEME_NAME/app/*.less</code> into <code>$BUILD_PATH/$THEME_NAME/css/app/*.css</code></li>
+</ul>
+</li>
+<li>
+<p>Bundles separated JavaScript modules with Browserify:</p>
+<ul>
+<li>executes <em>browserify</em> tasks defined in <code>.build/browserify.json</code></li>
+<li><strong>including tasks for which the <code>build</code> key starts with <code>app/*</code> (which are ignored with <code>build:d</code>)</strong></li>
+</ul>
+</li>
+<li>
+<p>Concatenates separated JavaScript files which don't make use of Browserify and <code>require</code>:</p>
+<ul>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat-app/concat.*.json</code></li>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat.json</code></li>
+<li><strong>including tasks for which the <code>build</code> key starts with <code>js/app/*</code> (which are ignored with <code>build:d</code>)</strong></li>
+</ul>
+</li>
+</ol>
+<p>Additionally, you can instruct Swig when it compiles into HTML, to automatically load the separated files instead of the bundles (so the final HTML output of your application will look similar to <a href="../../workflow/gulp/index.html#separated-libraries">this example</a>):</p>
+<pre><code class="bash">grunt --theme $THEME_NAME build:dm --bundle false
+</code></pre>
+
+<hr />
+<h2 id="watch">Watch</h2>
+<pre><code class="bash">grunt --theme $THEME_NAME
+</code></pre>
+
+<p>See <a href="../../workflow/gulp/index.html#watch">Watch from Gulp</a>.</p>
+<hr />
+<h2 id="tasks">Tasks</h2>
+<p>While we already introduced the most important tasks of the grunt workflow, <code>build:d</code>, <code>build:dm</code> and <code>watch</code>, there are several other tasks that are actually used by the build tasks themselves and that you can also use when you see fit.</p>
+<hr />
+<h3 id="browserify-tasks">Browserify tasks</h3>
+<h4 id="browserify">browserify</h4>
+<ul>
+<li>Creates the main application script bundle from <code>src/js/themes/$THEME_NAME/app.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/app/app.js</code>.</li>
+<li>Creates a secondary and optional application script bundle from <code>src/js/themes/$THEME_NAME/main.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/app/main.js</code> <em>(only if the source file exists)</em>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME browserify
+</code></pre>
+
+<h4 id="browserify-modules">browserify-modules</h4>
+<ul>
+<li>Executes <em>browserify</em> tasks defined in <code>.build/browserify.json</code> for which the build key starts with <code>app/*</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME browserify-modules
+</code></pre>
+
+<hr />
+<h3 id="code-validation-tasks">Code validation tasks</h3>
+<h4 id="jshint">jshint</h4>
+<ul>
+<li>Runs JSHint on all the JavaScript files within <code>lib/**/*.js</code> and <code>src/**/*.js</code>, a tool to detect errors and potential problems in your JavaScript code.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME jshint
+</code></pre>
+
+<hr />
+<h3 id="javascript-compression-tasks">JavaScript compression tasks</h3>
+<h4 id="uglifyall">uglify:all</h4>
+<ul>
+<li>Minifies all JavaScript files from <code>$BUILD_PATH/$THEME_NAME/js/**/*.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/**/*.min.js</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME uglify:all
+</code></pre>
+
+<h4 id="uglifytheme">uglify:theme</h4>
+<p>Minifies the following JavaScript files: </p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/js/app/app.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/app/app.min.js</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/app/main.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/app/main.min.js</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/app/vendor/*.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/app/vendor/*.min.js</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME uglify:theme
+</code></pre>
+
+<h4 id="uglifymodules">uglify:modules</h4>
+<p>Minifies all JavaScript files from <code>$BUILD_PATH/$THEME_NAME/js/app/*.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/app/*.min.js</code>.</p>
+<p><strong>Except</strong>:</p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/js/app/app.js</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/app/main.js</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME uglify:modules
+</code></pre>
+
+<h4 id="uglifymain">uglify:main</h4>
+<p>Minifies JavaScript from <code>$BUILD_PATH/$THEME_NAME/js/app/app.js</code> to <code>$BUILD_PATH/$THEME_NAME/js/app/app.min.js</code>.</p>
+<pre><code class="bash">grunt --theme $THEME_NAME uglify:main
+</code></pre>
+
+<hr />
+<h3 id="css-compression-tasks">CSS compression tasks</h3>
+<h4 id="cssminvendor">cssmin:vendor</h4>
+<ul>
+<li>Minifies all CSS files from <code>$BUILD_PATH/$THEME_NAME/css/vendor/*.css</code> to <code>$BUILD_PATH/$THEME_NAME/css/vendor/*.min.css</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME cssmin:vendor
+</code></pre>
+
+<h4 id="cssmintheme">cssmin:theme</h4>
+<p>Minifies the following CSS files:</p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/css/app/app.css</code> to <code>$BUILD_PATH/$THEME_NAME/css/app/app.min.css</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/css/app/main.css</code> to <code>$BUILD_PATH/$THEME_NAME/css/app/main.min.css</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME cssmin:theme
+</code></pre>
+
+<h4 id="cssminmodules">cssmin:modules</h4>
+<ul>
+<li>Minifies all CSS files from <code>$BUILD_PATH/$THEME_NAME/css/app/*.css</code> to <code>$BUILD_PATH/$THEME_NAME/css/app/*.min.css</code> <strong>except</strong> <code>app.css</code> and <code>main.css</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME cssmin:modules
+</code></pre>
+
+<h4 id="cssminskins">cssmin:skins</h4>
+<ul>
+<li>Minifies all CSS files from <code>$BUILD_PATH/$THEME_NAME/css/skin-*.css</code> to <code>$BUILD_PATH/$THEME_NAME/css/skin-*.min.css</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME cssmin:skins
+</code></pre>
+
+<h4 id="cssmin">cssmin</h4>
+<p>Runs the following <em>cssmin</em> tasks: </p>
+<ul>
+<li><code>cssmin:vendor</code></li>
+<li><code>cssmin:theme</code></li>
+<li><code>cssmin:modules</code></li>
+<li><code>cssmin:skins</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME cssmin
+</code></pre>
+
+<hr />
+<h3 id="copy-tasks">Copy tasks</h3>
+<h4 id="copyimages_common">copy:images_common</h4>
+<ul>
+<li>Copies all files and directories from <code>src/images/common</code> to <code>$BUILD_PATH/$THEME_NAME/images</code> - <strong>images stored in the <code>src/images/common</code> source directory will end up in every theme</strong>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME copy:images_common
+</code></pre>
+
+<h4 id="copyimages_theme">copy:images_theme</h4>
+<ul>
+<li>Copies all files and directories from <code>src/images/themes/$THEME_NAME</code> to <code>$BUILD_PATH/$THEME_NAME/images</code> - <strong>theme specific images</strong>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME copy:images_theme
+</code></pre>
+
+<h4 id="copy">copy</h4>
+<p>Runs the following <em>copy</em> tasks: </p>
+<ul>
+<li><code>copy:images_common</code></li>
+<li><code>copy:images_theme</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME copy
+</code></pre>
+
+<h4 id="copy-build">copy-build</h4>
+<p>Runs the following <em>copy</em> tasks:</p>
+<ol>
+<li><code>copy:images_common</code></li>
+<li><code>copy:images_theme</code></li>
+<li>executes <em>copy</em> tasks defined in <code>.build/copy-*/copy.*.json</code> <em>(in path alphabetical order)</em></li>
+<li>executes <em>copy</em> tasks defined in <code>.build/copy.json</code></li>
+</ol>
+<pre><code class="bash">grunt --theme $THEME_NAME copy-build
+</code></pre>
+
+<hr />
+<h3 id="concatenation-tasks">Concatenation tasks</h3>
+<h4 id="concat">concat</h4>
+<ol>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat-*/concat.*.json</code> <em>(in path alphabetical order)</em></li>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat.json</code></li>
+<li><strong>excluding tasks for which the <code>build</code> key starts with <code>js/app/*</code> or <code>css/app/*</code> (which are ignored)</strong></li>
+</ol>
+<pre><code class="bash">grunt --theme $THEME_NAME concat
+</code></pre>
+
+<h4 id="concat-modules">concat-modules</h4>
+<ol>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat-*/concat.*.json</code> <em>(in path alphabetical order)</em></li>
+<li>executes <em>concat</em> tasks defined in <code>.build/concat.json</code></li>
+<li><strong>ONLY tasks for which the <code>build</code> key starts with <code>js/app/*</code> or <code>css/app/*</code></strong></li>
+</ol>
+<pre><code class="bash">grunt --theme $THEME_NAME concat-modules
+</code></pre>
+
+<hr />
+<h3 id="clean-tasks">Clean tasks</h3>
+<h4 id="cleanhtml">clean:html</h4>
+<ul>
+<li>Removes all HTML files from <code>$BUILD_PATH/$THEME_NAME/**/*.html</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME clean:html
+</code></pre>
+
+<h4 id="cleandist">clean:dist</h4>
+<ul>
+<li>Removes all files and directories from <code>$BUILD_PATH/$THEME_NAME/**/*</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME clean:dist
+</code></pre>
+
+<h4 id="cleanmodules">clean:modules</h4>
+<ul>
+<li>Removes all CSS files from <code>$BUILD_PATH/$THEME_NAME/css/app/*.css</code> <strong>except</strong> <code>app.css</code> and <code>main.css</code>.</li>
+<li>Removes all JavaScript files from <code>$BUILD_PATH/$THEME_NAME/js/app/*.js</code> <strong>except</strong> <code>app.js</code> and <code>main.js</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME clean:modules
+</code></pre>
+
+<h4 id="cleanskins">clean:skins</h4>
+<ul>
+<li>Removes all CSS files from <code>$BUILD_PATH/$THEME_NAME/css/skin-*.css</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME clean:skins
+</code></pre>
+
+<h4 id="clean">clean</h4>
+<p>Runs all the following <em>clean</em> tasks:</p>
+<ul>
+<li><code>clean:html</code></li>
+<li><code>clean:dist</code></li>
+<li><code>clean:modules</code></li>
+<li><code>clean:skins</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME clean
+</code></pre>
+
+<hr />
+<h3 id="html-tasks">HTML tasks</h3>
+<h4 id="swig">swig</h4>
+<ul>
+<li>Compiles all Swig templates to HTML from <code>src/html/themes/$THEME_NAME/**/*.html</code> to <code>$BUILD_PATH/$THEME_NAME/**/*.html</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME swig
+</code></pre>
+
+<h4 id="prettifytheme">prettify:theme</h4>
+<ul>
+<li>Reformats all HTML files from <code>$BUILD_PATH/$THEME_NAME/**/*.html</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME prettify:theme
+</code></pre>
+
+<hr />
+<h3 id="less-tasks">Less tasks</h3>
+<h4 id="lesstheme">less:theme</h4>
+<ul>
+<li>Compiles all LESS files from <code>src/less/themes/$THEME_NAME/*.less</code> to <code>$BUILD_PATH/$THEME_NAME/css/app/*.css</code>.</li>
+<li><strong>Excluding <code>_*.less</code></strong> files which are considered partials.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME less:theme
+</code></pre>
+
+<h4 id="lessmodules">less:modules</h4>
+<ul>
+<li>Compiles all LESS files from <code>src/less/themes/$THEME_NAME/app/*.less</code> to <code>$BUILD_PATH/$THEME_NAME/css/app/*.css</code>.</li>
+<li><strong>Excluding <code>_*.less</code></strong> files which are considered partials.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME less:modules
+</code></pre>
+
+<h4 id="lessvendor">less:vendor</h4>
+<ul>
+<li>Compiles all LESS files from <code>src/less/themes/$THEME_NAME/vendor/*.less</code> to <code>$BUILD_PATH/$THEME_NAME/css/vendor/*.css</code>.</li>
+<li><strong>Excluding <code>_*.less</code></strong> files which are considered partials.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME less:vendor
+</code></pre>
+
+<h4 id="lessskins">less:skins</h4>
+<ul>
+<li>Compiles all LESS files from <code>src/less/skins/$THEME_NAME/*.less</code> to <code>$BUILD_PATH/$THEME_NAME/css/skin-*.css</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME less:skins
+</code></pre>
+
+<h4 id="less">less</h4>
+<p>Runs all the following <em>less</em> tasks:</p>
+<ul>
+<li><code>less:theme</code></li>
+<li><code>less:modules</code></li>
+<li><code>less:vendor</code></li>
+<li><code>less:skins</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME less
+</code></pre>
+
+<hr />
+<h3 id="css-vendor-prefixes">CSS vendor prefixes</h3>
+<p>Parse CSS and automatically add vendor prefixes to CSS rules for the last 4 versions of all browsers.</p>
+<h4 id="autoprefixertheme">autoprefixer:theme</h4>
+<p>Automatically add vendor prefixes to: </p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/css/app/app.css</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/css/app/main.css</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME autoprefixer:theme
+</code></pre>
+
+<h4 id="autoprefixermodules">autoprefixer:modules</h4>
+<p>Automatically add vendor prefixes to <code>$BUILD_PATH/$THEME_NAME/css/app/*.css</code>.</p>
+<p><strong>Except</strong>:</p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/css/app/app.css</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/css/app/main.css</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME autoprefixer:modules
+</code></pre>
+
+<h4 id="autoprefixerskins">autoprefixer:skins</h4>
+<ul>
+<li>Automatically add vendor prefixes to <code>$BUILD_PATH/$THEME_NAME/css/skin-*.css</code>.</li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME autoprefixer:skins
+</code></pre>
+
+<h4 id="autoprefixer">autoprefixer</h4>
+<p>Runs all the following <em>autoprefixer</em> tasks:</p>
+<ul>
+<li><code>autoprefixer:theme</code></li>
+<li><code>autoprefixer:modules</code></li>
+<li><code>autoprefixer:skins</code></li>
+</ul>
+<pre><code class="bash">grunt --theme $THEME_NAME autoprefixer
+</code></pre>
+
+<hr />
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="../../code/structure/index.html">Structure</a></li>
+<li><a href="../../code/bower/index.html">Manage assets</a></li>
+<li><a href="../../code/include-paths/index.html">Include paths</a></li>
+<li><a href="../../reference/layout/index.html#loading-assets">Loading assets</a></li>
+</ul></div>
+        </div>
+
+        
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

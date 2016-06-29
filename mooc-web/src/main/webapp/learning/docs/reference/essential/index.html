@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Essential - Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../workflow/gulp/index.html">Gulp</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../workflow/grunt/index.html">Grunt</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../code/structure/index.html">Structure</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/bower/index.html">Bower</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/include-paths/index.html">Include paths</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/less/index.html">Less</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/swig/index.html">Swig</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/browserify/index.html">Browserify</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/rtl/index.html">Right-to-Left</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/angular/index.html">AngularJS</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../layout/index.html">Layout</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../sidebar/index.html">Sidebar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../navbar/index.html">Navbar</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="index.html">Essential</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../material/index.html">Material</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../colors/index.html">Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../maps/index.html">Maps</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../navbar/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../material/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#essential">Essential</a></li>
+        
+            <li><a href="#requirements">Requirements</a></li>
+        
+            <li><a href="#expandable-areas">Expandable areas</a></li>
+        
+            <li><a href="#tabbable">Tabbable</a></li>
+        
+            <li><a href="#wizard">Wizard</a></li>
+        
+            <li><a href="#nestable-lists">Nestable lists</a></li>
+        
+            <li><a href="#tree-views">Tree views</a></li>
+        
+            <li><a href="#modals">Modals</a></li>
+        
+            <li><a href="#collapsible-panels">Collapsible panels</a></li>
+        
+            <li><a href="#cover-overlays">Cover overlays</a></li>
+        
+            <li><a href="#forms">Forms</a></li>
+        
+            <li><a href="#buttons">Buttons</a></li>
+        
+            <li><a href="#ribbons">Ribbons</a></li>
+        
+            <li><a href="#typography">Typography</a></li>
+        
+            <li><a href="#css-helpers">CSS Helpers</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="essential">Essential</h1>
+<p>The essential package provides a collection of commonly used elements and functionality:</p>
+<ul>
+<li>Buttons</li>
+<li>Icons</li>
+<li>Expandable areas</li>
+<li>Ribbons</li>
+<li>Forms</li>
+<li>Tabs</li>
+<li>Nestable lists</li>
+<li>Tree views</li>
+<li>Tables</li>
+<li>Progress bars</li>
+<li>Modals</li>
+</ul>
+<p><strong>Note</strong>: You can see full examples in the source within the <code>lib/essential/html/</code> directory.</p>
+<hr />
+<h2 id="requirements">Requirements</h2>
+<h3 id="javascript">JavaScript</h3>
+<p>To load the entire essential package, from <code>src/js/themes/$THEME_NAME/app.js</code>:</p>
+<pre><code>// Essential package
+require('essential/js/main');
+</code></pre>
+<p>This will load <code>lib/essential/js/main.js</code> into our main application script bundle.</p>
+<h3 id="less">Less</h3>
+<p>From <code>src/less/themes/$THEME_NAME/app.less</code>:</p>
+<pre><code>// Essential package
+@import "essential/less/main";
+</code></pre>
+<p>Which will load <code>lib/essential/less/main.less</code> into our main application style bundle.</p>
+<hr />
+<h4 id="rtl-support">RTL Support</h4>
+<p>Add to <code>src/less/themes/$THEME_NAME/app.less</code>, after the main component:</p>
+<pre><code>// Essential RTL
+@import "essential/less/main-rtl";
+</code></pre>
+<hr />
+<h4 id="alternative">Alternative</h4>
+<p>If working with Less and Browserify bundles is not your favorite thing, you can alternatively load the pre-built static assets we have included:</p>
+<pre><code>&lt;!-- In the head of the HTML document --&gt;
+&lt;link rel="stylesheet" href="css/app/essential.css" /&gt;
+
+&lt;!-- At the bottom of the HTML document --&gt;
+&lt;script src="js/app/essential.js"&gt;&lt;/script&gt;
+</code></pre>
+<hr />
+<h2 id="expandable-areas">Expandable areas</h2>
+<p>The expandable component is a great way to present a large content area with a small preview. Click anywhere on the preview area to show the entire content.</p>
+<pre><code>&lt;div class="expandable expandable-trigger"&gt;
+    &lt;div class="expandable-content"&gt;
+        &lt;!-- content goes here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>This will create an expandable area with a preview of <code>100px</code> height. </p>
+<p>Additionaly, you can add on top of <code>expandable-content</code>: </p>
+<ul>
+<li><code>expandable-content-medium</code> to make the preview area <code>150px</code></li>
+<li><code>expandable-content-large</code> to make the preview area <code>200px</code></li>
+</ul>
+<p>For example:</p>
+<pre><code>&lt;div class="expandable expandable-trigger"&gt;
+    &lt;div class="expandable-content expandable-content-medium"&gt;
+        &lt;!-- creates a 150px preview --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>And:</p>
+<pre><code>&lt;div class="expandable expandable-trigger"&gt;
+    &lt;div class="expandable-content expandable-content-large"&gt;
+        &lt;!-- creates a 200px preview --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>By default, the expandable indicator, which is added at the bottom of the preview area, will have a greish background color. You can make it white, by adding <code>expandable-indicator-white</code> on top of <code>expandable</code>:</p>
+<pre><code>&lt;div class="expandable expandable-indicator-white expandable-trigger"&gt;
+    &lt;div class="expandable-content"&gt;
+        &lt;!-- content goes here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>You can combine the expandable component with other UI elements, such as Bootstrap panels:</p>
+<pre><code>&lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-body expandable expandable-indicator-white expandable-trigger"&gt;
+        &lt;div class="expandable-content"&gt;
+            &lt;!-- content goes here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="initialize">Initialize</h3>
+<p>The component is self-initialized just by loading the required assets, but you can programatically initialize an expandable area via jQuery:</p>
+<h4 id="tkexpandable">$.tkExpandable()</h4>
+<pre><code>$('#my-expandable-area').tkExpandable();
+</code></pre>
+<hr />
+<h2 id="tabbable">Tabbable</h2>
+<p>The tabbable component includes many positioning and styling options, starting with minimalistic tabs to vertical or horizontal tabs, left, center or right aligned and more. The resulting tabs are responsive and the component automatically displays a horizontal scrolling area when using many tabs on a single tabbable area.</p>
+<h4 id="basics">Basics</h4>
+<p>Any tabbable widget starts with a minimal <code>tabbable</code> wrapper:</p>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable"&gt;&lt;/div&gt;
+</code></pre>
+<p>Next, we're using standard tabs functionality included with Bootstrap:</p>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable"&gt;
+
+    &lt;!-- Tabs --&gt;
+    &lt;ul class="nav nav-tabs"&gt;
+        &lt;li class="active"&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- // END Tabs --&gt;
+
+    &lt;!-- Panes --&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div id="home" class="tab-pane active"&gt;&lt;/div&gt;
+        &lt;div id="profile" class="tab-pane"&gt;&lt;/div&gt;
+        &lt;div id="messages" class="tab-pane"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- // END Panes --&gt;
+
+&lt;/div&gt;
+&lt;!-- // END Tabbable Widget --&gt;
+</code></pre>
+<h4 id="icons-and-text">Icons and text</h4>
+<p>We can add icons to our tabs:</p>
+<pre><code>&lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;
+        &lt;a href="#home" data-toggle="tab"&gt;
+            &lt;i class="fa fa-fw fa-home"&gt;&lt;/i&gt; Home
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#profile" data-toggle="tab"&gt;
+            &lt;i class="fa fa-fw fa-user"&gt;&lt;/i&gt; Profile
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#messages" data-toggle="tab"&gt;
+            &lt;i class="fa fa-fw fa-envelope"&gt;&lt;/i&gt; Messages
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h4 id="icons-only">Icons only</h4>
+<p>We can have tabs display only with icons, by adding <code>tabs-icons</code> to the <code>tabbable</code> element:</p>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable tabs-icons"&gt;
+
+    &lt;!-- Tabs --&gt;
+    &lt;ul class="nav nav-tabs"&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#home" data-toggle="tab"&gt;
+                &lt;i class="fa fa-fw fa-home"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#profile" data-toggle="tab"&gt;
+                &lt;i class="fa fa-fw fa-user"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#messages" data-toggle="tab"&gt;
+                &lt;i class="fa fa-fw fa-envelope"&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<h4 id="stacked-icons-and-text">Stacked icons and text</h4>
+<p>We can stack the icon on top of the text so they're no longer next to each other, but on two lines and text centered, by adding <code>tabs-blocks</code> to the <code>tabbable</code> element:</p>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable tabs-blocks"&gt;
+
+    &lt;!-- Tabs --&gt;
+    &lt;ul class="nav nav-tabs"&gt;
+        &lt;li class="active"&gt;
+            &lt;a href="#home" data-toggle="tab"&gt;
+                &lt;i class="fa fa-fw fa-home"&gt;&lt;/i&gt; Home
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#profile" data-toggle="tab"&gt;
+                &lt;i class="fa fa-fw fa-user"&gt;&lt;/i&gt; Profile
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#messages" data-toggle="tab"&gt;
+                &lt;i class="fa fa-fw fa-envelope"&gt;&lt;/i&gt; Messages
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<h4 id="tabs-centered-horizontally">Tabs centered horizontally</h4>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable tabs-center-h"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="active-tab-filled-with-the-primary-color">Active tab filled with the primary color</h4>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable tabs-primary"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="left-vertical-tabs">Left vertical tabs</h4>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable tabs-vertical tabs-left"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="right-vertical-tabs">Right vertical tabs</h4>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable tabs-vertical tabs-right"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="advanced-combo">Advanced combo</h4>
+<p>We can combine some or all of the options to create more complex tabbable widgets, for example a tabbable widget having the active tab filled with the primary color, with stacked icons and text, and also centered horizontally:</p>
+<pre><code>&lt;!-- Tabbable Widget --&gt;
+&lt;div class="tabbable tabs-blocks tabs-center-h tabs-primary"&gt;&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="wizard">Wizard</h2>
+<p>The wizard component can split up large forms into multiple smaller logical sections and convert them into multi-step forms with cool progress bars.</p>
+<h3 id="requirements_1">Requirements</h3>
+<p>Depends on the <a href="https://github.com/kenwheeler/slick">Slick.js</a> library.</p>
+<p>You can check if it's already installed by simply looking for the directory <code>bower_components/slick.js</code>.</p>
+<p>Install with bower:</p>
+<pre><code>bower install slick.js --save
+</code></pre>
+<p>Add the library to your theme via the <a href="../../workflow/gulp/index.html">build process</a>:</p>
+<ol>
+<li>
+<p>Create <code>.build/copy-vendor/copy.media.json</code> (or modify existing):</p>
+<pre><code>[
+    {
+        "task": "copy-vendor-media-scripts",
+        "cwd": "bower_components",
+        "src": ["slick.js/slick/slick.js"],
+        "dest": "js/vendor/media",
+        "flatten": true
+    },
+    {
+        "task": "slick-fonts",
+        "cwd": "bower_components/slick.js/slick",
+        "src": ["fonts/*"],
+        "dest": "css/vendor/fonts",
+        "flatten": true
+    },
+    {
+        "task": "slick-images",
+        "cwd": "bower_components/slick.js/slick",
+        "src": ["*.gif"],
+        "dest": "css/vendor"
+    }
+]
+</code></pre>
+</li>
+<li>
+<p>Enable the library in <code>src/swig.json</code>:</p>
+<pre><code>{
+    "css_vendor": [
+        "vendor/slick"
+    ],
+    "js_vendor": [
+        "vendor/media/slick"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Optionally, you can add the library to the <code>js/vendor/all.js</code> bundle, if you're using it.</p>
+<p>Within <code>.build/concat.json</code>, add the library to the bundle <code>files</code> array:</p>
+<pre><code>{
+    "build": "js/vendor/all.js",
+    "files": [
+        "...",
+        "media/slick.js"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Run the <a href="../../workflow/gulp/index.html#build">build task</a></p>
+</li>
+<li>
+<p>You're done! </p>
+<p>The library should be available in your <a href="../../workflow/gulp/index.html#build-paths">theme's build path</a>:</p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/media/slick.js</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/all.js</code> should also include the new library.</li>
+<li><code>$BUILD_PATH/$THEME_NAME/css/vendor/slick.css</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/css/vendor/all.css</code> should also include the library styling.</li>
+</ul>
+</li>
+</ol>
+<h3 id="basic-usage">Basic usage</h3>
+<p>The wizard markup, at it's minimum:</p>
+<pre><code>&lt;!-- The wizard container --&gt;
+&lt;div class="wizard-container"&gt;
+
+    &lt;!-- Progress --&gt;
+    &lt;ul class="wiz-progress"&gt;
+        &lt;li class="active"&gt;Step 1&lt;/li&gt;
+        &lt;li&gt;Step 2&lt;/li&gt;
+        &lt;li&gt;Step 3&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- The form --&gt;
+    &lt;form data-toggle="wizard"&gt;
+
+        &lt;!-- Wizard step --&gt;
+        &lt;fieldset class="step"&gt;
+
+            &lt;!-- Previous step --&gt;
+            &lt;button type="button" class="wiz-prev"&gt;Previous&lt;/button&gt;
+
+            &lt;!-- Next step --&gt;
+            &lt;button type="button" class="wiz-next"&gt;Next&lt;/button&gt;
+
+            &lt;!-- Go to step index (0 === first) --&gt;
+            &lt;button type="button" class="wiz-step" data-target="0"&gt;Go&lt;/button&gt;
+
+        &lt;/fieldset&gt;
+
+        &lt;!-- Other steps go here --&gt;
+
+    &lt;/form&gt;
+
+&lt;/div&gt;
+</code></pre>
+<h3 id="custom-style-and-functionality">Custom style and functionality</h3>
+<p>Behind the scene, the wizard component uses <a href="http://kenwheeler.github.io/slick/">slick.js</a> to create the basic functionality and provides much flexibility in styling. The markup above for example will be pretty much unstyled, allowing you to create your own, but you can use a predefined wizard style by adding <code>wizard-1</code> on top of <code>wizard-container</code>:</p>
+<pre><code>&lt;!-- The wizard container --&gt;
+&lt;div class="wizard-container wizard-1"&gt;&lt;/div&gt;
+</code></pre>
+<p>You can see a complete example of a wizard using the <code>wizard-1</code> predefined style:</p>
+<ul>
+<li><code>lib/essential/html/essential-wizards.html</code> for the markup</li>
+<li><code>lib/essential/less/_wizard.less</code> for the style</li>
+<li><code>lib/essential/js/_wizard.js</code> for an example of adding custom JavaScript functionality to the wizard which updates the progress bar after the wizard step changes</li>
+</ul>
+<h3 id="events">Events</h3>
+<h4 id="afterwizardstep">after.wizard.step</h4>
+<pre><code>$(document).on('after.wizard.step', function (event, data) {
+
+    // do something after a wizard has changed the active step
+
+    // you have access to the wizard container's jQuery object
+    console.log(data.container);
+
+    // you can get the index of the target step
+    console.log(data.target);
+
+    if (data.container.is('#my-wizard')) {
+        // do something only when the event was triggered by a specific wizard
+    }
+
+});
+</code></pre>
+<hr />
+<h2 id="nestable-lists">Nestable lists</h2>
+<p>Nestable is a component for nesting hierarchical lists with drag &amp; drop capabilities, compatible with both mouse events and touch enabled devices.</p>
+<h3 id="requirements_2">Requirements</h3>
+<p>Depends on the <a href="https://github.com/dbushell/Nestable">Nestable</a> library.</p>
+<p>You can check if it's already installed by simply looking for the directory <code>bower_components/nestable</code>.</p>
+<p>Install with bower:</p>
+<pre><code>bower install dbushell/Nestable --save
+</code></pre>
+<p>Add the library to your theme via the <a href="../../workflow/gulp/index.html">build process</a>:</p>
+<ol>
+<li>
+<p>Create <code>.build/copy-vendor/copy.nestable.json</code>:</p>
+<pre><code>{
+    "task": "copy-vendor-nestable-library",
+    "cwd": "bower_components",
+    "src": ["nestable/jquery.nestable.js"],
+    "dest": "js/vendor/nestable",
+    "flatten": true
+}
+</code></pre>
+</li>
+<li>
+<p>Enable the library in <code>src/swig.json</code>:</p>
+<pre><code>{
+    "js_vendor": [
+        "vendor/nestable/jquery.nestable"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Optionally, you can add the library to the <code>js/vendor/all.js</code> bundle, if you're using it.</p>
+<p>Within <code>.build/concat.json</code>, add the library to the bundle <code>files</code> array:</p>
+<pre><code>{
+    "build": "js/vendor/all.js",
+    "files": [
+        "...",
+        "nestable/jquery.nestable.js"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Run the <a href="../../workflow/gulp/index.html#build">build task</a></p>
+</li>
+<li>
+<p>You're done! </p>
+<p>The library should be available in your <a href="../../workflow/gulp/index.html#build-paths">theme's build path</a>:</p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/nestable/jquery.nestable.js</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/all.js</code> should also include the new library.</li>
+</ul>
+</li>
+</ol>
+<h3 id="basic-usage_1">Basic usage</h3>
+<p>Any nestable element has the base class <code>nestable</code>:</p>
+<pre><code>&lt;div class="nestable"&gt;&lt;/div&gt;
+</code></pre>
+<p>Within this wrapper, we can add unordered lists with the base class <code>nestable-list</code> and with it's list items having the <code>nestable-item</code> class. </p>
+<h4 id="draggable-items">Draggable Items</h4>
+<p>There are two possible drag &amp; drop scenarios. In this scenario, the list item is also the drag handle and for this we must wrap the item content with a <code>nestable-handle</code> container:</p>
+<pre><code>&lt;div class="nestable" id="nestable"&gt;
+
+    &lt;!-- Top level list --&gt;
+    &lt;ul class="nestable-list"&gt;
+
+        &lt;!-- List item --&gt;
+        &lt;li class="nestable-item" data-id="1"&gt;
+
+            &lt;!-- Wrap item content with the drag handle --&gt;
+            &lt;div class="nestable-handle"&gt;Item 1&lt;/div&gt;
+
+        &lt;/li&gt;
+
+        &lt;!-- List item --&gt;
+        &lt;li class="nestable-item" data-id="2"&gt;
+
+            &lt;!-- Drag handle --&gt;
+            &lt;div class="nestable-handle"&gt;Item 2&lt;/div&gt;
+
+            &lt;!-- Nested list --&gt;
+            &lt;ul class="nestable-list"&gt;
+
+                &lt;!-- List item --&gt;
+                &lt;li class="nestable-item" data-id="2.1"&gt;
+
+                    &lt;!-- Drag handle --&gt;
+                    &lt;div class="nestable-handle"&gt;Item 2.1&lt;/div&gt;
+
+                &lt;/li&gt;
+
+                &lt;!-- List item --&gt;
+                &lt;li class="nestable-item" data-id="2.2"&gt;
+
+                    &lt;!-- Drag handle --&gt;
+                    &lt;div class="nestable-handle"&gt;Item 2.2&lt;/div&gt;
+
+                    &lt;!-- Nested list --&gt;
+                    &lt;ul class="nestable-list"&gt;
+
+                        &lt;!-- List Items --&gt;
+
+                    &lt;/ul&gt;
+
+                &lt;/li&gt;
+                &lt;!-- // END .nestable-item --&gt;
+
+            &lt;/ul&gt;
+            &lt;!-- // END .nestable-list --&gt;
+
+        &lt;/li&gt;
+        &lt;!-- // END .nestable-item --&gt;
+
+    &lt;/ul&gt;
+    &lt;!-- // END .nestable-list --&gt;
+
+&lt;/div&gt;
+&lt;!-- // END .nestable --&gt;
+</code></pre>
+<h4 id="draggable-handles">Draggable Handles</h4>
+<p>In this scenario, we have item drag handles separated from the item's content. For this, we must add <code>nestable-item-handle</code> on top of each <code>nestable-item</code> and use <code>nestable-handle</code> and <code>nestable-content</code> within the item to separate the handle and the content:</p>
+<pre><code>&lt;div class="nestable" id="nestable-handles"&gt;
+    &lt;ul class="nestable-list"&gt;
+
+        &lt;!-- Note the additional .nestable-item-handle --&gt;
+        &lt;li class="nestable-item nestable-item-handle" data-id="1"&gt;
+
+            &lt;!-- Separate the nestable item drag handle --&gt;
+            &lt;div class="nestable-handle"&gt;&lt;i class="md md-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+
+            &lt;!-- From the item content --&gt;
+            &lt;div class="nestable-content"&gt;Item 1&lt;/div&gt;
+
+        &lt;/li&gt;
+        &lt;!-- // END .nestable-item --&gt;
+
+        &lt;li class="nestable-item nestable-item-handle" data-id="2"&gt;
+            &lt;div class="nestable-handle"&gt;&lt;i class="md md-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;div class="nestable-content"&gt;Item 2&lt;/div&gt;
+        &lt;/li&gt;
+
+        &lt;li class="nestable-item nestable-item-handle" data-id="3"&gt;
+            &lt;div class="nestable-handle"&gt;&lt;i class="md md-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;div class="nestable-content"&gt;Item 3&lt;/div&gt;
+            &lt;ul class="nestable-list"&gt;
+                &lt;li class="nestable-item nestable-item-handle" data-id="3.1"&gt;
+                    &lt;div class="nestable-handle"&gt;&lt;i class="md md-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;div class="nestable-content"&gt;Item 3.1&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class="nestable-item nestable-item-handle" data-id="3.2"&gt;
+                    &lt;div class="nestable-handle"&gt;&lt;i class="md md-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;div class="nestable-content"&gt;Item 3.2&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class="nestable-item nestable-item-handle" data-id="3.3"&gt;
+                    &lt;div class="nestable-handle"&gt;&lt;i class="md md-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;div class="nestable-content"&gt;Item 3.3&lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="draggable-handles-filled-with-the-primary-color">Draggable Handles filled with the primary color</h4>
+<pre><code>&lt;div class="nestable nestable-handle-primary" id="nestable-handles"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="initialize_1">Initialize</h3>
+<p>The <code>.nestable</code> elements are self-initialized, but you can programatically initialize a nestable element via jQuery:</p>
+<pre><code>$('#my-nestable').tkNestable();
+</code></pre>
+<h3 id="events_1">Events</h3>
+<p>The <code>change</code> event is fired when items are reordered.</p>
+<pre><code>$('#nestable').on('change', function() {
+    // do something when items are reordered
+});
+</code></pre>
+<h3 id="methods">Methods</h3>
+<p>You probably noticed in the examples we've used the <code>data-id</code> attribute on every list item. You can get a serialized object with all <code>data-*</code> attributes for each item.</p>
+<pre><code>$('#nestable').nestable('serialize');
+</code></pre>
+<p>For the first example with the Draggable Items, the serialized data would be:</p>
+<pre><code>[
+    {
+        "id": 1
+    }, 
+    {
+        "id": 2, 
+        "children": [
+            {
+                "id": "2.1"
+            },
+            {
+                "id": "2.2"
+            }
+        ]
+    }
+]
+</code></pre>
+<hr />
+<h2 id="tree-views">Tree views</h2>
+<p>Fancytree is a JavaScript dynamic tree view plugin for jQuery with support for persistence, keyboard, checkboxes, tables, drag and drop, and lazy loading. Fancytree is a sequel of the popular DynaTree plugin.</p>
+<h3 id="requirements_3">Requirements</h3>
+<p>Depends on the <a href="https://github.com/mar10/fancytree">Fancytree</a> library.</p>
+<p>You can check if it's already installed by simply looking for the directory <code>bower_components/fancytree</code>.</p>
+<p>Install with bower:</p>
+<pre><code>bower install fancytree --save
+</code></pre>
+<p>Add the library to your theme via the <a href="../../workflow/gulp/index.html">build process</a>:</p>
+<ol>
+<li>
+<p>Create <code>.build/copy-vendor/copy.tree.json</code>:</p>
+<pre><code>[
+    {
+        "task": "copy-vendor-tree-library",
+        "cwd": "bower_components",
+        "src": ["fancytree/dist/jquery.fancytree.js"],
+        "dest": "js/vendor/tree",
+        "flatten": true
+    },
+    {
+        "task": "copy-vendor-tree-css",
+        "cwd": "$ROOT_DIR",
+        "src": [
+            "bower_components/fancytree/dist/skin-bootstrap/ui.fancytree.css"
+        ],
+        "dest": "css/vendor",
+        "flatten": true
+    }
+]
+</code></pre>
+</li>
+<li>
+<p>Enable the library in <code>src/swig.json</code>:</p>
+<pre><code>{
+    "css_vendor": [
+        "vendor/ui.fancytree"
+    ],
+    "js_vendor": [
+        "vendor/tree/jquery.fancytree"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Optionally, you can add the library to the <code>js/vendor/all.js</code> bundle, if you're using it.</p>
+<p>Within <code>.build/concat.json</code>, add the library to the bundle <code>files</code> array:</p>
+<pre><code>{
+    "build": "js/vendor/all.js",
+    "files": [
+        "...",
+        "tree/jquery.fancytree.js"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Run the <a href="../../workflow/gulp/index.html#build">build task</a></p>
+</li>
+<li>
+<p>You're done! </p>
+<p>The library should be available in your <a href="../../workflow/gulp/index.html#build-paths">theme's build path</a>:</p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/tree/jquery.fancytree.js</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/all.js</code> should also include the new library.</li>
+<li><code>$BUILD_PATH/$THEME_NAME/css/vendor/ui.fancytree.css</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/css/vendor/all.css</code> should also include the library styling.</li>
+</ul>
+</li>
+</ol>
+<h3 id="basic-usage_2">Basic usage</h3>
+<p>A tree is a nested list of unordered list items. The first unordered list must have <code>display: none;</code> and has to be wrapped by a container with the <code>data-toggle</code> attribute set to <code>tree</code>:</p>
+<pre><code>&lt;div data-toggle="tree"&gt;
+    &lt;ul style="display: none;"&gt;
+        &lt;li&gt;item1&lt;/li&gt;
+        &lt;li&gt;item2&lt;/li&gt;
+        &lt;li class="folder"&gt;
+            Folder &lt;em&gt;with some&lt;/em&gt; children
+            &lt;ul&gt;
+                &lt;li&gt;Sub-item 3.1
+                    &lt;ul&gt;
+                        &lt;li&gt;Sub-item 3.1.1&lt;/li&gt;
+                        &lt;li&gt;Sub-item 3.1.2&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;Sub-item 3.2
+                    &lt;ul&gt;
+                        &lt;li&gt;Sub-item 3.2.1&lt;/li&gt;
+                        &lt;li&gt;Sub-item 3.2.2&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="expanded"&gt;
+            Document with some children (expanded on init)
+            &lt;ul&gt;
+                &lt;li class="active focused expanded"&gt;
+                    Sub-item 4.1 (expanded, active and focused on init)
+                    &lt;ul&gt;
+                        &lt;li&gt;Sub-item 4.1.1&lt;/li&gt;
+                        &lt;li&gt;Sub-item 4.1.2&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;Sub-item 4.2
+                    &lt;ul&gt;
+                        &lt;li&gt;Sub-item 4.2.1&lt;/li&gt;
+                        &lt;li&gt;Sub-item 4.2.2&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="drag-drop">Drag &amp; Drop</h3>
+<p>To enable drag &amp; drop, add the <code>data-tree-dnd</code> attribute:</p>
+<pre><code>&lt;div data-toggle="tree" data-tree-dnd&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="single-selection">Single selection</h3>
+<pre><code>&lt;div data-toggle="tree" data-tree-checkbox data-tree-select="1"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="multiple-selection">Multiple selection</h3>
+<pre><code>&lt;div data-toggle="tree" data-tree-checkbox data-tree-select="2 or 3"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="selection-mode">Selection mode</h3>
+<p>When using <code>data-tree-checkbox</code>, we can specify the selection mode with <code>data-tree-select</code> set to one of the following:</p>
+<ul>
+<li><code>1</code>: single </li>
+<li><code>2</code>: multi <em>(default)</em></li>
+<li><code>3</code>: multi-hier</li>
+</ul>
+<hr />
+<h2 id="modals">Modals</h2>
+<p>Streamlined and flexible modals &amp; dialog prompts with the minimum required functionality and smart options.</p>
+<h3 id="basic-usage_3">Basic usage</h3>
+<p>We'll be using standard modals included with Bootstrap, with some additional options. For basic usage, see the official <a href="http://getbootstrap.com/javascript/#modals">Bootstrap documentation</a>.</p>
+<pre><code>&lt;!-- Standard Bootstrap markup --&gt;
+&lt;div class="modal fade" id="modal-basic"&gt;
+    &lt;div class="modal-dialog"&gt;
+
+        &lt;!-- Additionally, wrap the .modal-content into a .v-cell container --&gt; 
+        &lt;!-- to center the content vertically --&gt;
+
+        &lt;!-- This works because we've modified the .modal-overlay --&gt;
+        &lt;!-- class to have display: table; --&gt;
+        &lt;div class="v-cell"&gt;
+
+            &lt;!-- Standard Bootstrap markup --&gt;
+            &lt;div class="modal-content"&gt;
+                &lt;div class="modal-header"&gt;
+                    &lt;button type="button" class="close" data-dismiss="modal"&gt;
+                        &lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;
+                        &lt;span class="sr-only"&gt;Close&lt;/span&gt;
+                    &lt;/button&gt;
+                    &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class="modal-body"&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam atque consequuntur dolore fugiat fugit hic in ipsam iure magnam maxime quaerat, quam qui repellat repellendus temporibus vel vitae voluptate!
+                &lt;/div&gt;
+                &lt;div class="modal-footer"&gt;
+                    &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                    &lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;Save&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;!-- // END .v-cell --&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="animations">Animations</h3>
+<h4 id="slide-down">Slide down</h4>
+<pre><code>&lt;div class="modal fade slide-down" id="modal-slide-down"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="slide-up">Slide up</h4>
+<pre><code>&lt;div class="modal fade slide-up" id="modal-slide-up"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="slide-from-left">Slide from left</h4>
+<pre><code>&lt;div class="modal fade slide-left" id="modal-slide-left"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="slide-from-right">Slide from right</h4>
+<pre><code>&lt;div class="modal fade slide-right" id="modal-slide-right"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="grow">Grow</h4>
+<pre><code>&lt;div class="modal fade grow" id="modal-grow"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="overlay">Overlay</h3>
+<p>Adding the <code>modal-overlay</code> class on top of <code>modal</code> removes the boxed style, by clearing the <code>border</code>, <code>box-shadow</code> and <code>background-color</code> CSS properties for the <code>modal-content</code> element.</p>
+<pre><code>&lt;div class="modal fade modal-overlay" id="modal-overlay"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="white-backdrop">White Backdrop</h3>
+<p>You can replace the default (dark) backdrop with a white backdrop by adding the <code>modal-backdrop-white</code> class on top of <code>modal</code>.</p>
+<pre><code>&lt;div class="modal fade modal-backdrop-white" id="modal-backdrop-white"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="size">Size</h3>
+<h4 id="small">Small</h4>
+<p>You can make the modal <code>300px</code> wide by adding <code>modal-sm</code> and <code>h-center</code> classes on the <code>modal-content</code> element.</p>
+<pre><code>&lt;div class="modal-content modal-sm h-center"&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="large">Large</h4>
+<p>You can also make it larger by adding <code>modal-lg</code> class to the <code>modal-content</code> element. Note that this doesn't require the additional <code>h-center</code> class like it does for <code>modal-sm</code>.</p>
+<pre><code>&lt;div class="modal-content modal-lg"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="combine-styles">Combine styles</h3>
+<p>You can combine several styles and options to create unique dialogs. For example, a modal with Overlay, White Backdrop and Grow at the same time:</p>
+<pre><code>&lt;div class="modal fade grow modal-overlay modal-backdrop-white" id="modal-combo"&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="toggle-controls">Toggle controls</h3>
+<pre><code>&lt;button data-toggle="modal" data-target="#modal-basic"&gt;Open the modal&lt;/button&gt;
+
+&lt;!-- Or --&gt;
+&lt;a data-toggle="modal" href="#modal-basic"&gt;Open the modal&lt;/a&gt;
+
+&lt;!-- Or --&gt;
+&lt;a data-toggle="modal" data-target="#modal-basic" href="#"&gt;Open the modal&lt;/a&gt;
+</code></pre>
+<h3 id="modal-sidebars">Modal Sidebars</h3>
+<p>We can make modals behave and display as sidebars.</p>
+<h4 id="requirements_4">Requirements</h4>
+<ul>
+<li>Requires the <a href="../../reference/sidebar/index.html">sidebar</a> component.</li>
+</ul>
+<h4 id="left-sidebar-modal">Left sidebar modal</h4>
+<p>You can add sidebar options to the <code>modal-dialog</code> element.</p>
+<pre><code>&lt;div class="modal fade slide-left" id="modal-sidebar-left"&gt;
+    &lt;div class="modal-dialog sidebar sidebar-size-3 sidebar-size-xs-1 sidebar-offset-0 left"&gt;
+
+        &lt;!-- Standard markup --&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="right-sidebar-modal">Right sidebar modal</h4>
+<p>Similarly, you can create a right sidebar modal.</p>
+<pre><code>&lt;div class="modal fade slide-right" id="modal-sidebar-right"&gt;
+    &lt;div class="modal-dialog sidebar sidebar-size-3 sidebar-size-xs-1 sidebar-offset-0 right"&gt;
+
+        &lt;!-- Standard markup --&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="collapsible-panels">Collapsible panels</h2>
+<p>Standard Bootstrap panels with collapse functionality.</p>
+<h3 id="basic-usage_4">Basic usage</h3>
+<p>To enable, add the <code>data-toggle</code> attribute with a value of <code>panel-collapse</code> to any <code>panel</code> element. Also, add the <code>panel-collapse-trigger</code> class to the <code>panel-heading</code> element.</p>
+<pre><code>&lt;div class="panel panel-default" data-toggle="panel-collapse"&gt;
+    &lt;div class="panel-heading panel-collapse-trigger"&gt;
+        &lt;h4 class="panel-title"&gt;Panel title&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="panel-body"&gt;
+        &lt;!-- Collapsible content --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="options">Options</h3>
+<h4 id="open-by-default">Open by default</h4>
+<p>Add the <code>data-open</code> attribute with a value of <code>true</code> to the <code>panel</code> element.</p>
+<pre><code>&lt;div class="panel panel-default" data-toggle="panel-collapse" data-open="true"&gt;&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="cover-overlays">Cover overlays</h2>
+<p>The cover component helps create complex layered UI elements consisting of:</p>
+<ol>
+<li>A primary area (for example, an image);</li>
+<li>An overlay area, positioned on top of the primary area, with different display options and elements of it's own.</li>
+</ol>
+<p>So, for example, consider a UI element which displays an image. When a user hovers the image, it can display a call to action on top of the image ("Buy" or "Rate" buttons). But really, you could display anything on the overlay. </p>
+<p>The cover component provides: </p>
+<ul>
+<li>smart image features like stretch-to-fit functionality with automatic resizing and aspect ratio detection.</li>
+<li>overlay helpers for positioning other elements within the overlay.</li>
+<li>overlay text size &amp; color helpers.</li>
+<li>overlay background color helpers.</li>
+</ul>
+<h3 id="requirements_5">Requirements</h3>
+<p>Depends on <a href="https://github.com/mixonic/load_image">load_image</a>, a small JavaScript library providing a realiable callback after an image is loaded.</p>
+<p>You can check if it's already installed by simply looking for the directory <code>bower_components/load_image</code>.</p>
+<p>Install with bower:</p>
+<pre><code>bower install mixonic/load_image --save
+</code></pre>
+<p>Add the library to your theme via the <a href="../../workflow/gulp/index.html">build process</a>:</p>
+<ol>
+<li>
+<p>Edit <code>.build/copy-vendor/copy.core.json</code> to include the library:</p>
+<pre><code>{
+    "task": "copy-vendor-core-scripts",
+    "cwd": "bower_components",
+    "src": [
+        "...",
+        "load_image/load_image.js"
+    ],
+    "dest": "js/vendor/core",
+    "flatten": true
+}
+</code></pre>
+</li>
+<li>
+<p>Enable the library in <code>src/swig.json</code>:</p>
+<pre><code>{
+    "js_vendor": [
+        "vendor/core/load_image"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Optionally, you can add the library to the <code>js/vendor/all.js</code> and <code>js/vendor/core/all.js</code> bundles, if you're using them.</p>
+<p>Within <code>.build/concat-vendor/concat.core.json</code>, add the library to the <code>js/vendor/core/all.js</code> bundle <code>files</code> array:</p>
+<pre><code>{
+    "build": "js/vendor/core/all.js",
+    "files": [
+        "...",
+        "load_image.js"
+    ]
+}
+</code></pre>
+<p>Note that if you're adding the library to the <code>js/vendor/core/all.js</code> bundle, you don't have to do anything else for the library to be included in <code>js/vendor/all.js</code> bundle, because the <code>js/vendor/all.js</code> bundle is already configured to include the <code>js/vendor/core/all.js</code> bundle.</p>
+<p>Within <code>.build/concat.json</code>, add the library to the <code>js/vendor/all.js</code> bundle <code>files</code> array:</p>
+<pre><code>{
+    "build": "js/vendor/all.js",
+    "files": [
+        "...",
+        "core/load_image.js"
+    ]
+}
+</code></pre>
+</li>
+<li>
+<p>Run the <a href="../../workflow/gulp/index.html#build">build task</a></p>
+</li>
+<li>
+<p>You're done! </p>
+<p>The library should be available in your <a href="../../workflow/gulp/index.html#build-paths">theme's build path</a>:</p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/core/load_image.js</code></li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/core/all.js</code> should also include the new library.</li>
+<li><code>$BUILD_PATH/$THEME_NAME/js/vendor/all.js</code> should also include the new library.</li>
+</ul>
+</li>
+</ol>
+<h3 id="basic-usage_5">Basic usage</h3>
+<pre><code>&lt;div class="cover overlay"&gt;
+    &lt;img src="path/to/image.jpg" alt="image" /&gt;
+    &lt;div class="overlay"&gt;
+        &lt;h3 class="text-overlay"&gt;Overlay&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="options_1">Options</h3>
+<p>@TODO</p>
+<hr />
+<h2 id="forms">Forms</h2>
+<p>@TODO</p>
+<hr />
+<h2 id="buttons">Buttons</h2>
+<p>In addition to standard Bootstrap button classes, we provide a couple of extra options.</p>
+<h4 id="regular-buttons">Regular buttons</h4>
+<pre><code>&lt;button class="btn btn-white"&gt;White&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-inverse"&gt;Inverse&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+</code></pre>
+<h4 id="button-sizes">Button sizes</h4>
+<p>Various buttons sizes for common scenarios, from large buttons, to medium sized, small and very small buttons.</p>
+<pre><code>&lt;button class="btn btn-default btn-lg"&gt;Large&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Regular&lt;/button&gt;
+&lt;button class="btn btn-success btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="btn btn-info btn-xs"&gt;Very Small&lt;/button&gt;
+</code></pre>
+<h4 id="buttons-with-icons">Buttons with icons</h4>
+<pre><code>&lt;!-- Text and icon --&gt;
+&lt;button class="btn btn-white"&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt; Home&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;&lt;i class="icon-user-1"&gt;&lt;/i&gt; Profile&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;&lt;i class="fa fa-check-circle"&gt;&lt;/i&gt; Confirm&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt; Delete&lt;/button&gt;
+
+&lt;!-- Only icon --&gt;
+&lt;button class="btn btn-default btn-lg"&gt;&lt;i class="fa fa-picture-o"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-inverse"&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;&lt;i class="fa fa-pencil"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-warning btn-sm"&gt;&lt;i class="fa fa-download"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-info btn-xs"&gt;&lt;i class="fa fa-cloud-upload"&gt;&lt;/i&gt;&lt;/button&gt;
+
+&lt;!-- Only icon with circular shape --&gt;
+&lt;button class="btn btn-default btn-circle"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-inverse btn-circle"&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-primary btn-circle"&gt;&lt;i class="fa fa-building"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-warning btn-circle"&gt;&lt;i class="fa fa-sign-out"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-info btn-circle"&gt;&lt;i class="fa fa-medkit"&gt;&lt;/i&gt;&lt;/button&gt;
+</code></pre>
+<h4 id="stroke-buttons">Stroke buttons</h4>
+<p>Inverse button colors for text, background and border attributes and get a stroked button.</p>
+<pre><code>&lt;!-- Stroke regular buttons --&gt;
+&lt;button class="btn btn-default btn-stroke"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary btn-stroke"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-success btn-stroke"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-warning btn-stroke"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-inverse btn-stroke"&gt;Inverse&lt;/button&gt;
+&lt;button class="btn btn-danger btn-stroke"&gt;Danger&lt;/button&gt;
+
+&lt;!-- Stroke buttons with icons only --&gt;
+&lt;button class="btn btn-default btn-stroke"&gt;&lt;i class="fa fa-picture-o"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-inverse btn-stroke"&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-primary btn-stroke"&gt;&lt;i class="fa fa-pencil"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-warning btn-stroke"&gt;&lt;i class="fa fa-download"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-info btn-stroke"&gt;&lt;i class="fa fa-cloud-upload"&gt;&lt;/i&gt;&lt;/button&gt;
+
+&lt;!-- Stroke buttons with icons and circular shape --&gt;
+&lt;button class="btn btn-default btn-stroke btn-circle"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-inverse btn-stroke btn-circle"&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-primary btn-stroke btn-circle"&gt;&lt;i class="fa fa-building"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-warning btn-stroke btn-circle"&gt;&lt;i class="fa fa-sign-out"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class="btn btn-info btn-stroke btn-circle"&gt;&lt;i class="fa fa-medkit"&gt;&lt;/i&gt;&lt;/button&gt;
+</code></pre>
+<h4 id="stacked-buttons">Stacked buttons</h4>
+<p>Stacked Buttons with two lines of text and icon. All regular button styles can be used with stacked buttons.</p>
+<pre><code>&lt;button class="btn btn-primary btn-icon-stacked"&gt;
+    &lt;i class="fa fa-2x fa-twitter"&gt;&lt;/i&gt; 
+    &lt;span&gt;Join using your&lt;br&gt;Twitter Account&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="btn btn-inverse btn-icon-stacked"&gt;
+    &lt;i class="fa fa-2x fa-google-plus"&gt;&lt;/i&gt; 
+    &lt;span&gt;Join using your&lt;br&gt;Google Account&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="btn btn-info btn-icon-stacked"&gt;
+    &lt;i class="fa fa-2x fa-dribbble"&gt;&lt;/i&gt; 
+    &lt;span&gt;Join using your&lt;br&gt;Dribble Account&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+<h4 id="buttons-with-dropdowns">Buttons with dropdowns</h4>
+<p>Use any button to trigger a dropdown menu by placing it within a <code>.btn-group</code> and providing the proper menu markup.</p>
+<pre><code>&lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
+        Dropdown Default
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"&gt;
+        Dropdown Primary
+        &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu pull-right"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="ribbons">Ribbons</h2>
+<p>The ribbon UI component is a great way to present additional information or even highlight important content.</p>
+<h3 id="bookmark-ribbons">Bookmark ribbons</h3>
+<h4 id="floating-fluid-boomark-ribbons-that-span-across-multiple-lines-of-text">Floating fluid boomark ribbons that span across multiple lines of text</h4>
+<p>Note the extra <code>ribbon-wrapper</code> class on the otherwise standard Bootstrap panel:</p>
+<pre><code class="html">&lt;div class=&quot;panel panel-default ribbon-wrapper&quot;&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+
+        &lt;!-- The ribbon --&gt;
+        &lt;div class=&quot;pull-right ribbon-mark ribbon-primary&quot;&gt;
+            &lt;span class=&quot;text&quot;&gt;Fluid mark that spans&lt;br/&gt;across multiple lines&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;!-- // END .ribbon-mark --&gt;
+
+        &lt;h3 class=&quot;margin-v-10-15&quot;&gt;Floating Bookmark ribbon&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut consectetur consequatur cum cupiditate debitis doloribus, error ex explicabo harum illum minima mollitia nisi nostrum officiis omnis optio qui quisquam saepe sit sunt totam vel velit voluptatibus? Adipisci ducimus expedita id nostrum quas quia!&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4 id="absolute-positioned-bookmark-ribbons">Absolute positioned bookmark ribbons</h4>
+<pre><code class="html">&lt;div class=&quot;panel panel-default ribbon-wrapper&quot;&gt;
+
+    &lt;!-- Left ribbon --&gt;
+    &lt;div class=&quot;ribbon-mark ribbon-default absolute left&quot;&gt;
+        &lt;span class=&quot;ribbon&quot;&gt;
+            &lt;span class=&quot;text&quot;&gt;Left&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Right ribbon --&gt;
+    &lt;div class=&quot;ribbon-mark ribbon-primary absolute right&quot;&gt;
+        &lt;span class=&quot;ribbon&quot;&gt;
+            &lt;span class=&quot;text&quot;&gt;Mark&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Arbitrary content --&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut consectetur consequatur cum cupiditate debitis doloribus, error ex explicabo harum illum minima mollitia nisi nostrum officiis omnis optio qui quisquam saepe sit sunt totam vel velit voluptatibus? Adipisci ducimus expedita id nostrum quas quia!&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="heading-ribbons">Heading ribbons</h3>
+<h4 id="left-to-right-full-ribbon-block-lines">Left to right, full ribbon block lines</h4>
+<p>Bottom corners, left to right:</p>
+<pre><code class="html">&lt;h1 class=&quot;ribbon-heading ribbon-primary bottom-left-right&quot;&gt;Important headings&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut consectetur consequatur cum cupiditate debitis doloribus, error ex explicabo harum illum minima mollitia nisi nostrum officiis omnis optio qui quisquam saepe sit sunt totam vel velit voluptatibus? Adipisci ducimus expedita id nostrum quas quia!&lt;/p&gt;
+</code></pre>
+
+<p>Top corners, left to right, appropriate when placing the next heading after a large text area:</p>
+<pre><code class="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut consectetur consequatur cum cupiditate debitis doloribus, error ex explicabo harum illum minima mollitia nisi nostrum officiis omnis optio qui quisquam saepe sit sunt totam vel velit voluptatibus? Adipisci ducimus expedita id nostrum quas quia!&lt;/p&gt;
+
+&lt;h1 class=&quot;ribbon-heading ribbon-default top-left-right&quot;&gt;Various styles included&lt;/h1&gt;
+</code></pre>
+
+<h4 id="inline-ribbon">Inline ribbon</h4>
+<p>Top corner, on left:</p>
+<pre><code class="html">&lt;div class=&quot;pull-left&quot;&gt;
+    &lt;h2 class=&quot;ribbon-heading ribbon-primary top-left inline&quot;&gt;Top left inline ribbon&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur debitis dignissimos maiores nisi optio quas, quod? Animi fuga inventore laborum nemo quaerat quis quod? Alias, architecto consequuntur corporis deleniti dolor facilis id minima necessitatibus nihil perspiciatis quo repellendus saepe, sunt suscipit velit. Deleniti dolorum id maxime omnis perspiciatis sed, veniam?&lt;/p&gt;
+</code></pre>
+
+<p>Bottom corner, on right:</p>
+<pre><code class="html">&lt;div class=&quot;pull-right&quot;&gt;
+    &lt;h3 class=&quot;ribbon-heading ribbon-primary bottom-right inline&quot;&gt;
+        Bottom right inline ribbon
+    &lt;/h3&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur debitis dignissimos maiores nisi optio quas, quod? Animi fuga inventore laborum nemo quaerat quis quod? Alias, architecto consequuntur corporis deleniti dolor facilis id minima necessitatibus nihil perspiciatis quo repellendus saepe, sunt suscipit velit. Deleniti dolorum id maxime omnis perspiciatis sed, veniam?&lt;/p&gt;
+</code></pre>
+
+<h3 id="corner-ribbons">Corner ribbons</h3>
+<p>Similar to the "Fork me on Github" button we see all the time:</p>
+<pre><code class="html">&lt;!-- Notice the extra .ribbon-corner-wrapper class --&gt;
+&lt;div class=&quot;panel panel-default ribbon-wrapper ribbon-corner-wrapper&quot;&gt;
+
+    &lt;!-- The ribbon --&gt;
+    &lt;div class=&quot;ribbon-corner left&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Fork me on GitHub&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- // END .ribbon-corner --&gt;
+
+    &lt;!-- Arbitrary content --&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;h3 class=&quot;margin-v-10-15 text-center&quot;&gt;Absolute Corner ribbon&lt;/h3&gt;
+            &lt;div class=&quot;col-xs-10 col-xs-offset-2 col-sm-11 col-sm-offset-1 text-right&quot;&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut consectetur consequatur cum cupiditate debitis doloribus, error ex explicabo harum illum minima mollitia nisi nostrum officiis omnis optio qui quisquam saepe sit sunt totam vel velit voluptatibus? Adipisci ducimus expedita id nostrum quas quia!&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut consectetur consequatur cum cupiditate debitis doloribus, error ex explicabo harum illum minima mollitia nisi nostrum officiis omnis optio qui quisquam saepe sit sunt totam vel velit voluptatibus? Adipisci ducimus expedita id nostrum quas quia!&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- // END content --&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p>Additionally, you can use <code>right</code> instead of <code>left</code> on the ribbon:</p>
+<pre><code>&lt;!-- The ribbon --&gt;
+&lt;div class="ribbon-corner right"&gt;
+    &lt;a href="#"&gt;Fork me on GitHub&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- // END .ribbon-corner --&gt;
+</code></pre>
+<hr />
+<h2 id="typography">Typography</h2>
+<p>For the basic typographic styles, we have followed the <a href="http://www.google.com/design/spec/style/typography.html#typography-styles">Material Design</a> guidelines to work across the wider set of supported platforms and to balance content density and reading comfort under typical usage conditions.</p>
+<h3 id="default-size-unit">Default size unit</h3>
+<p>For the <code>html</code> we've set a default sizing unit of <code>13px</code>, both text size and line height.</p>
+<p>From here, we're only using scalable <code>rem</code> sizing units relative to the base. Keep in mind the base unit of 1rem = 13px.</p>
+<p>The <code>body</code> has:</p>
+<pre><code>line-height: 1.53rem;
+font-size: 1rem;
+</code></pre>
+<h3 id="usage">Usage</h3>
+<h4 id="display-4">Display 4</h4>
+<p>Light text weight of 300, scalable text size and line height of 8.6rem.</p>
+<pre><code>&lt;div class="text-display-4"&gt;Display 4&lt;/div&gt;
+</code></pre>
+<h4 id="display-3">Display 3</h4>
+<p>Regular text weight of 400, scalable text size and line height of 4.3rem.</p>
+<pre><code>&lt;div class="text-display-3"&gt;Display 3&lt;/div&gt;
+</code></pre>
+<h4 id="display-2">Display 2</h4>
+<p>Regular text weight of 400, scalable text size of 3.46rem and line height of 3.69rem.</p>
+<pre><code>&lt;div class="text-display-2"&gt;Display 2&lt;/div&gt;
+</code></pre>
+<h4 id="display-1">Display 1</h4>
+<p>Regular text weight of 400, scalable text size of 2.61rem and line height of 3.07rem.</p>
+<pre><code>&lt;div class="text-display-1"&gt;Display 1&lt;/div&gt;
+</code></pre>
+<h4 id="headline">Headline</h4>
+<p>Regular text weight of 400, scalable text size of 1.84rem and line height of 2.46rem.</p>
+<pre><code>&lt;div class="text-headline"&gt;Headline&lt;/div&gt;
+</code></pre>
+<h4 id="title">Title</h4>
+<p>Medium text weight of 500, scalable text size of 1.53rem.</p>
+<pre><code>&lt;div class="text-title"&gt;Title&lt;/div&gt;
+</code></pre>
+<h4 id="subhead">Subhead</h4>
+<p>Regular text weight of 400, scalable text size of 1.15rem and line height of 1.84rem.</p>
+<pre><code>&lt;div class="text-subhead"&gt;Subhead&lt;/div&gt;
+</code></pre>
+<h4 id="subhead-2">Subhead 2</h4>
+<p>Medium text weight of 500, scalable text size of 1.15rem and line height of 2.15rem.</p>
+<pre><code>&lt;div class="text-subhead-2"&gt;Subhead 2&lt;/div&gt;
+</code></pre>
+<h4 id="caption">Caption</h4>
+<p>Regular text weight of 400, scalable text size of 0.92rem.</p>
+<pre><code>&lt;div class="text-caption"&gt;Caption&lt;/div&gt;
+</code></pre>
+<h4 id="body-1">Body 1</h4>
+<p>Regular text weight of 400, scalable text size of 1rem <strong><em>(default)</em></strong>.</p>
+<pre><code>&lt;p&gt;Regular text body.&lt;/p&gt;
+</code></pre>
+<h4 id="body-2">Body 2</h4>
+<p>Medium text weight of 500, scalable text size of 1rem and line height of 1.84rem.</p>
+<pre><code>&lt;p class="text-body-2"&gt;Medium text body.&lt;/p&gt;
+</code></pre>
+<hr />
+<h2 id="css-helpers">CSS Helpers</h2>
+<h3 id="positioning-helpers">Positioning helpers</h3>
+<h4 id="relative">relative</h4>
+<p>The <code>relative</code> class adds <code>position: relative;</code> to any element.</p>
+<h4 id="overflow-hidden">overflow-hidden</h4>
+<p>The <code>overflow-hidden</code> class adds <code>overflow: hidden;</code> to any element.</p>
+<h4 id="absolute">absolute</h4>
+<p>The <code>absolute</code> class adds <code>position: absolute;</code> to any element. Use in combination with <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code> classes to set the corresponding CSS properties to <code>$property: 0;</code>.</p>
+<h3 id="text-helpers">Text helpers</h3>
+<h4 id="text-underline">text-underline</h4>
+<p>The <code>text-underline</code> class adds <code>text-decoration: underline;</code> to any element.</p>
+<h4 id="strong">strong</h4>
+<p>The <code>strong</code> class adds <code>font-weight: bold;</code> to any element.</p>
+<h4 id="text-left">text-left</h4>
+<p>The <code>text-left</code> class adds <code>text-align: left !important;</code> to any element.</p>
+<h3 id="background-helpers">Background helpers</h3>
+<h4 id="bg-transparent">bg-transparent</h4>
+<p>The <code>bg-transparent</code> class adds <code>background: transparent !important;</code> to any element.</p>
+<h3 id="display-helpers">Display helpers</h3>
+<h4 id="display-none">display-none</h4>
+<p>The <code>display-none</code> class adds <code>display: none;</code> to any element.</p>
+<h4 id="inline-block-display-inline-block">inline-block, display-inline-block</h4>
+<p>The <code>display-inline-block</code> and <code>inline-block</code> classes adds <code>display: inline-block;</code> to any element.</p>
+<h4 id="block">block</h4>
+<p>The <code>block</code> class adds <code>display: block;</code> to any element.</p>
+<h3 id="spacing-helpers">Spacing helpers</h3>
+<h4 id="padding-none">padding-none</h4>
+<p>The <code>padding-none</code> class adds <code>padding: 0 !important;</code> to any element.</p>
+<h4 id="padding-top-none">padding-top-none</h4>
+<p>The <code>padding-top-none</code> class adds <code>padding-top: 0 !important;</code> to any element.</p>
+<h4 id="padding-bottom-none">padding-bottom-none</h4>
+<p>The <code>padding-bottom-none</code> class adds <code>padding-bottom: 0 !important;</code> to any element.</p>
+<h4 id="margin-none">margin-none</h4>
+<p>The <code>margin-none</code> class adds <code>margin: 0 !important;</code> to any element.</p>
+<h4 id="margin-bottom-none">margin-bottom-none</h4>
+<p>The <code>margin-bottom-none</code> class adds <code>margin-bottom: 0 !important;</code> to any element.</p>
+<h3 id="alignment-helpers">Alignment helpers</h3>
+<h4 id="h-center">h-center</h4>
+<p>The <code>h-center</code> class adds <code>margin-left: auto !important;</code> and <code>margin-right: auto !important;</code> to any element.</p>
+<h3 id="table-helpers">Table helpers</h3>
+<h4 id="display-table">display-table</h4>
+<p>The <code>display-table</code> class adds <code>display: table;</code> to any element.</p>
+<h4 id="v-middle">v-middle</h4>
+<p>The <code>v-middle</code> class adds <code>vertical-align: middle !important;</code> to any element.</p>
+<h4 id="v-top">v-top</h4>
+<p>The <code>v-top</code> class adds <code>vertical-align: top !important;</code> to any element.</p>
+<h4 id="v-cell">v-cell</h4>
+<p>The <code>v-cell</code> class adds <code>display: table-cell;</code> and <code>vertical-align: middle;</code> to any element.</p>
+<h4 id="table-row">table-row</h4>
+<p>The <code>table-row</code> class adds <code>display: table-row;</code> to any element.</p>
+<h4 id="table-cell">table-cell</h4>
+<p>The <code>table-cell</code> class adds <code>display: table-cell;</code> to any element.</p>
+<h3 id="sizing-helpers">Sizing helpers</h3>
+<h4 id="height-100pc">height-100pc</h4>
+<p>The <code>height-100pc</code> class adds <code>height: 100%;</code> to any element.</p>
+<p>@TODO</p></div>
+        </div>
+
+        
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

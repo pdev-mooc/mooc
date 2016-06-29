@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Browserify - Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../workflow/gulp/index.html">Gulp</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../workflow/grunt/index.html">Grunt</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../structure/index.html">Structure</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../bower/index.html">Bower</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../include-paths/index.html">Include paths</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../less/index.html">Less</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../swig/index.html">Swig</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="index.html">Browserify</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../rtl/index.html">Right-to-Left</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../angular/index.html">AngularJS</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../reference/layout/index.html">Layout</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/sidebar/index.html">Sidebar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/navbar/index.html">Navbar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/essential/index.html">Essential</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/material/index.html">Material</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/colors/index.html">Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/maps/index.html">Maps</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../swig/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../rtl/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#browserify-overview">Browserify Overview</a></li>
+        
+            <li><a href="#how-it-works">How it works</a></li>
+        
+            <li><a href="#basic-usage">Basic usage</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="browserify-overview">Browserify Overview</h1>
+<p><a href="http://browserify.org">Browserify</a> is a tool to build modular applications in JavaScript and lets you package and organize scripts in a modern and reusable fashion.</p>
+<hr />
+<h2 id="how-it-works">How it works</h2>
+<p>Browserify starts at the entry point files that you give it and searches for any <code>require()</code> calls it finds. For every <code>require()</code> call with a string in it, browserify resolves those module strings to file paths and then searches those file paths for <code>require()</code> calls recursively until the entire dependency graph is visited. </p>
+<p>Each file is concatenated into a single javascript file with a minimal <code>require()</code> definition that maps the statically-resolved names to internal IDs. This means that the bundle you generate is completely self-contained and has everything your application needs to work with a pretty negligible overhead.</p>
+<hr />
+<h2 id="basic-usage">Basic usage</h2>
+<p>Consider the file <code>src/js/themes/$THEME_NAME/app.js</code>:</p>
+<pre><code>require('./_self_executing');
+</code></pre>
+<p>And <code>src/js/themes/$THEME_NAME/_self_executing.js</code>:</p>
+<pre><code>(function(){
+    'use strict';
+
+    console.log('My custom self executing function was loaded');
+
+})();
+</code></pre>
+<p>This way, you can wrap any arbitrary code into a self executing anonymous function and <code>require</code> it from anywhere.</p>
+<h3 id="modules">Modules</h3>
+<p>Consider the file <code>src/js/themes/$THEME_NAME/app.js</code>:</p>
+<pre><code>(function($){
+    'use strict';
+
+    var my_module = require('./_module');
+
+    var app = new my_module({
+        option: 'value',
+        some: 'other'
+    });
+
+    app.init();
+
+})(jQuery);
+</code></pre>
+<p>And <code>src/js/themes/$THEME_NAME/_module.js</code>:</p>
+<pre><code>var my_module = function(options){
+    this.options = options || {};
+};
+
+my_module.prototype.init = function(){
+    console.log('My application was initialized!');
+    console.log(this.options);
+};
+
+module.exports = my_module;
+</code></pre>
+<p>But you can export anything, for example a simple function:</p>
+<p><code>src/js/themes/$THEME_NAME/_foo.js</code>:</p>
+<pre><code>module.exports = function (n) {
+    return n * 111
+};
+</code></pre>
+<p>And in <code>src/js/themes/$THEME_NAME/app.js</code>:</p>
+<pre><code>var foo = require('./_foo.js');
+console.log(foo(5));
+</code></pre>
+<p>The output will be:</p>
+<pre><code>555
+</code></pre>
+<p>But you can also export an integer directly:</p>
+<pre><code>module.exports = 555
+</code></pre>
+<p>Or an object:</p>
+<pre><code>var config = {
+    some: 'value',
+    another: 'option'
+};
+
+module.exports = config;
+</code></pre></div>
+        </div>
+
+        
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

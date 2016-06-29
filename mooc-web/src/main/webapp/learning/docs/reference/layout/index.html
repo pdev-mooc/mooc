@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Layout - Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../index.html">Installation</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../workflow/gulp/index.html">Gulp</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../workflow/grunt/index.html">Grunt</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../code/structure/index.html">Structure</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/bower/index.html">Bower</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/include-paths/index.html">Include paths</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/less/index.html">Less</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/swig/index.html">Swig</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/browserify/index.html">Browserify</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/rtl/index.html">Right-to-Left</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../code/angular/index.html">AngularJS</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="index.html">Layout</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../sidebar/index.html">Sidebar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../navbar/index.html">Navbar</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../essential/index.html">Essential</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../material/index.html">Material</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../colors/index.html">Colors</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../maps/index.html">Maps</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../../code/angular/index.html">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../sidebar/index.html">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#layout">Layout</a></li>
+        
+            <li><a href="#requirements">Requirements</a></li>
+        
+            <li><a href="#getting-started">Getting started</a></li>
+        
+            <li><a href="#swig-templates">Swig templates</a></li>
+        
+            <li><a href="#loading-assets">Loading assets</a></li>
+        
+            <li><a href="#elements">Elements</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="layout">Layout</h1>
+<p>We rely heavily on various Bootstrap components such as the Bootstrap Grid System to create our layouts, so if you haven't done so already, we encourage you to continue by familiarizing yourself with Bootstrap.</p>
+<p><strong>The layout component</strong>:</p>
+<ul>
+<li>Customizes Bootstrap's grid system spacings;</li>
+<li>Provides Swig partials for composing HTML pages in the <code>lib/layout/html/</code> directory.</li>
+<li>Provides examples of HTML pages composed from Swig partials in <code>lib/layout/html/samples/</code> directory.</li>
+<li>
+<p>Provides elements:</p>
+<ol>
+<li>A basic footer copyright line.</li>
+<li>A sticky footer.</li>
+<li>An application layout.</li>
+<li>Split areas.</li>
+<li>Scrollable areas.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2 id="requirements">Requirements</h2>
+<h3 id="javascript">JavaScript</h3>
+<p>To load the layout component, from <code>src/js/themes/$THEME_NAME/app.js</code>:</p>
+<pre><code>// Layout
+require('layout/js/main');
+</code></pre>
+<p>This will load <code>lib/layout/js/main.js</code> into our main application script bundle.</p>
+<h3 id="less">Less</h3>
+<p>From <code>src/less/themes/$THEME_NAME/app.less</code>:</p>
+<pre><code>// Layout
+@import "layout/less/layout";
+</code></pre>
+<p>Which will load <code>lib/layout/less/layout.less</code> into our main application style bundle.</p>
+<hr />
+<h4 id="alternative">Alternative</h4>
+<p>If working with Less and Browserify bundles is not your favorite thing, you can alternatively load the pre-built static assets we have included:</p>
+<pre><code>&lt;!-- In the head of the HTML document --&gt;
+&lt;link rel="stylesheet" href="css/app/layout.css" /&gt;
+
+&lt;!-- At the bottom of the HTML document --&gt;
+&lt;script src="js/app/layout.js"&gt;&lt;/script&gt;
+</code></pre>
+<hr />
+<h2 id="getting-started">Getting started</h2>
+<p>Please refer to the official <a href="http://getbootstrap.com/getting-started/#template">Bootstrap documentation</a> and <a href="http://getbootstrap.com/getting-started/#examples">Bootstrap layout examples</a>.</p>
+<hr />
+<h2 id="swig-templates">Swig templates</h2>
+<p>Composing HTML pages with Swig partials.</p>
+<ol>
+<li>
+<p><code>lib/layout/html/_header.html</code>:</p>
+<p>This is the header and provides the opening <code>html</code> and <code>body</code> tags of the HTML document.</p>
+</li>
+<li>
+<p><code>lib/layout/html/_head.html</code>: </p>
+<p>This is included from <code>_header.html</code> and provides the <code>head</code> part of the HTML document.</p>
+</li>
+<li>
+<p><code>lib/layout/html/_head_includes.html</code>: </p>
+<p>This is included from <code>_head.html</code> and provides dynamic loading of assets required by the application in the <code>head</code> section, both CSS and   JavaScript.</p>
+</li>
+<li>
+<p><code>lib/layout/html/_footer_scripts.html</code>: </p>
+<p>This provides the closing <code>body</code> and <code>html</code> tags, but also provides dynamic loading of the JavaScript required by the application, before the   closing <code>body</code> tag.</p>
+</li>
+</ol>
+<hr />
+<h2 id="loading-assets">Loading assets</h2>
+<p>The <code>_head_includes.html</code> and <code>_footer_scripts.html</code> Swig partials both contain logic to dynamically load the required application assets, by reading a JSON configuration file.</p>
+<h4 id="configuration">Configuration</h4>
+<p>We define which files will be loaded in <code>src/swig.json</code>.</p>
+<p>The vendor CSS stylesheets with the <code>css_vendor</code> key:</p>
+<pre><code>"css_vendor": [
+    "vendor/bootstrap",
+    "vendor/font-awesome",
+    "vendor/slick"
+    ...
+]
+</code></pre>
+<p>Will render in your HTML document as:</p>
+<pre><code>&lt;link rel="stylesheet" href="css/vendor/bootstrap.css" /&gt;
+&lt;link rel="stylesheet" href="css/vendor/font-awesome.css" /&gt;
+&lt;link rel="stylesheet" href="css/vendor/slick.css" /&gt;
+&lt;!-- etc. --&gt;
+</code></pre>
+<p>The application CSS stylesheets with the <code>css_modules</code> key:</p>
+<pre><code>"css_modules": [
+    "app/essentials",
+    "app/layout",
+    "app/sidebar",
+    "app/sidebar-skins"
+],
+</code></pre>
+<p>Will render in your HTML document as:</p>
+<pre><code>&lt;link rel="stylesheet" href="css/app/essentials.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/layout.css" /&gt;
+&lt;link rel="stylesheet" href="css/app/sidebar.css" /&gt;
+&lt;!-- etc. --&gt;
+</code></pre>
+<p>Similarly, we can configure the <code>js_vendor</code> and <code>js_modules</code> keys to load vendor and application scripts.</p>
+<p>Note that all the entries in this configuration are stored without a file extension (<code>.css</code> or <code>.js</code>).</p>
+<p>You will notice the main application files (<code>js/app/app.js</code> and <code>css/app/app.css</code>) are not stored in this configuration file, because they are considered special assets required by the application and will always be loaded by default.</p>
+<h4 id="minified-assets-and-concatenated-or-separate-libraries">Minified assets and concatenated or separate libraries</h4>
+<p>The <code>_head_includes.html</code> and <code>_footer_scripts.html</code> Swig partials also contain logic to automatically load the minified version of the assets at build time and also toggle between using bundles and concatenated files or separate libraries. See how to <strong>enable minification</strong> and <strong>switch concatenated files to separated libraries</strong> in <a href="../../workflow/gulp/index.html">the build process</a>.</p>
+<hr />
+<h2 id="elements">Elements</h2>
+<h3 id="footer">Footer</h3>
+<h4 id="basic-footer">Basic footer</h4>
+<pre><code>&lt;html&gt;
+    ...
+    &lt;body&gt;
+
+        &lt;!-- Footer --&gt;
+        &lt;div class="footer"&gt;
+            &lt;strong&gt;Your product name&lt;/strong&gt; - Copyright
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="sticky-footer">Sticky footer</h4>
+<p>Adding the <code>ls-bottom-footer</code> class on the <code>html</code> element will change the footer's position to <code>fixed</code> which will make it stick at the bottom area of the screen to ensure it's always visible at the same position even when the page scroll changes. It will also add the required extra spacing to the <code>body</code> element to compensate for the height of the sticky footer.</p>
+<pre><code>&lt;html class="ls-bottom-footer"&gt;
+    ...
+&lt;/html&gt;
+</code></pre>
+<hr />
+<h3 id="split-areas">Split areas</h3>
+<pre><code>&lt;div class="split-vertical"&gt;
+
+    &lt;!-- Split header --&gt;
+    &lt;!-- anything can go here --&gt;
+
+    &lt;!-- Split body --&gt;
+    &lt;!-- The split body will take all the remaining available height --&gt;
+    &lt;!-- height = split-vertical container height minus header and footer height --&gt;
+    &lt;div class="split-vertical-body"&gt;
+        &lt;div class="split-vertical-cell"&gt;
+
+            &lt;!-- scrollable area --&gt;
+            &lt;div data-scrollable&gt;
+
+                &lt;!-- content --&gt;
+                ...
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Split footer --&gt;
+    &lt;!-- anything can go here --&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p>Note that the parent container of <code>split-vertical</code> needs to have the <code>height</code> CSS property defined. For example, if we placed <code>split-vertical</code> directly under the <code>body</code> element, then the <code>html</code> and <code>body</code> would need to have <code>height: 100%; position: relative; overflow: hidden;</code>.</p>
+<hr />
+<h3 id="scrollable-areas">Scrollable areas</h3>
+<p>Vertical scrollable area via the <code>data-scrollable</code> attribute:</p>
+<pre><code>&lt;div data-scrollable&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<p>Horizontal scrollable area via the <code>data-scrollable-h</code> attribute:</p>
+<pre><code>&lt;div data-scrollable-h&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h3 id="application-layout-with-sticky-footer-split-and-scrollable-areas">Application layout with sticky footer, split and scrollable areas</h3>
+<p>To create a basic application layout, add the <code>app-desktop</code> or <code>app-mobile</code> class to the <code>html</code> element. <code>app-mobile</code> enables the application layout on both mobile and desktop devices.</p>
+<p>This adds <code>height: 100%; overflow: hidden; position: relative;</code> to the <code>html</code>, <code>body</code>, <code>#content &gt; .container-fluid</code> and <code>#content &gt; .container</code> elements, taking the full height of the browser window.</p>
+<h4 id="basic-html-example">Basic HTML example</h4>
+<pre><code>&lt;html lang="en" class="ls-bottom-footer app-desktop"&gt;
+    ...
+    &lt;body&gt;
+
+        &lt;!-- Main content area --&gt;
+        &lt;div id="content"&gt;
+
+            &lt;!-- Split area --&gt;
+            &lt;div class="container-fluid split-vertical"&gt;
+
+                &lt;div class="panel panel-default"&gt;
+                    &lt;div class="panel-heading"&gt;
+                        &lt;h4 class="panel-title"&gt;Content Header&lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;div class="panel-body"&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eos excepturi laboriosam nostrum provident voluptate. At doloremque ea molestias voluptate.
+                &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Split body --&gt;
+                &lt;!-- The split body will take all the remaining available height --&gt;
+                &lt;div class="split-vertical-body"&gt;
+                    &lt;div class="split-vertical-cell"&gt;
+
+                        &lt;!-- Scrollable area --&gt;
+                        &lt;div data-scrollable&gt;
+                            &lt;div class="overflow-hidden"&gt;
+
+                                &lt;h4&gt;Scrollable Content Panel&lt;/h4&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda cum dolorem eveniet, illo labore mollitia rem totam veritatis voluptas.&lt;/p&gt;
+                                &lt;br/&gt;
+
+                                &lt;h4&gt;Scrollable Content Panel&lt;/h4&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus facilis quia voluptates! Iure, quibusdam ratione sunt unde ut vero voluptatibus.&lt;/p&gt;
+
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- // END [data-scrollable] --&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- // END .split-vertical-cell --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- // END .split-vertical-body --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- // END split area --&gt;
+
+        &lt;/div&gt;
+
+        &lt;!-- Footer --&gt;
+        &lt;div class="footer"&gt;
+            &lt;strong&gt;Your product name&lt;/strong&gt; - Copyright
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="swig-example">Swig example</h4>
+<p>For the following example, we'll recontruct the application layout example above, using <a href="../../code/swig/index.html">Swig templates</a> and some of the Swig partials included with the layout package, to compose HTML documents.</p>
+<p>Consider a page layout in <code>src/html/themes/$THEME_NAME/_layout_app.html</code>:</p>
+<pre><code>&lt;!-- Start the HTML document --&gt;
+{% include "lib/layout/html/_header.html" { htmlClass: 'ls-bottom-footer app-desktop' } %}
+
+&lt;!-- The page content --&gt;
+&lt;!-- Define the content block --&gt;
+&lt;!-- This will be used by pages that extend this layout to inject their content --&gt;
+{% block content %}{% endblock %}
+
+&lt;!-- Include the footer copyright --&gt;
+{% include "lib/layout/html/_footer_copyright.html" %}
+
+&lt;!-- Complete the HTML document --&gt;
+{% include "lib/layout/html/_footer_scripts.html" %}
+</code></pre>
+<p>And a simple page in <code>src/html/themes/$THEME_NAME/page-simple-app.html</code>:</p>
+<pre><code>{% extends "src/html/themes/$THEME_NAME/_layout_app.html" %}
+
+{% block content %}
+
+    &lt;!-- Main content area --&gt;
+    &lt;div id="content"&gt;
+
+        &lt;!-- Split area --&gt;
+        &lt;div class="container-fluid split-vertical"&gt;
+
+            &lt;div class="panel panel-default"&gt;
+                &lt;div class="panel-heading"&gt;
+                    &lt;h4 class="panel-title"&gt;Content Header&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class="panel-body"&gt;
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eos excepturi laboriosam nostrum provident voluptate. At doloremque ea molestias voluptate.
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Split body --&gt;
+            &lt;!-- The split body will take all the remaining available height --&gt;
+            &lt;div class="split-vertical-body"&gt;
+                &lt;div class="split-vertical-cell"&gt;
+
+                    &lt;!-- Scrollable area --&gt;
+                    &lt;div data-scrollable&gt;
+                        &lt;div class="overflow-hidden"&gt;
+
+                            &lt;h4&gt;Scrollable Content Panel&lt;/h4&gt;
+                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda cum dolorem eveniet, illo labore mollitia rem totam veritatis voluptas.&lt;/p&gt;
+                            &lt;br/&gt;
+
+                            &lt;h4&gt;Scrollable Content Panel&lt;/h4&gt;
+                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus facilis quia voluptates! Iure, quibusdam ratione sunt unde ut vero voluptatibus.&lt;/p&gt;
+
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- // END [data-scrollable] --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- // END .split-vertical-cell --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- // END .split-vertical-body --&gt;
+
+        &lt;/div&gt;
+        &lt;!-- // END split area --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- // END #content --&gt;
+
+{% endblock %}
+</code></pre>
+<p>Now, you can follow through the <a href="../../workflow/gulp/index.html">build process</a> and see the compiled HTML result in your <a href="../../workflow/gulp/index.html#build-paths">theme's build path</a>: </p>
+<ul>
+<li><code>$BUILD_PATH/$THEME_NAME/page-simple-app.html</code></li>
+</ul></div>
+        </div>
+
+        
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>
