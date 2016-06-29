@@ -1,0 +1,39 @@
+[
+	{
+		"build": "js/vendor/core/jquery-ui.custom.js",
+		"cwd": "$THEME_DIR/js/vendor/core/jquery-ui",
+		"files": [
+			"core.js",
+			"widget.js",
+			"mouse.js",
+			"position.js",
+			"draggable.js",
+			"droppable.js",
+			"resizable.js",
+			"selectable.js",
+			"sortable.js"
+		]
+	},
+	{
+		"build": "js/vendor/core/all.js",
+		"cwd": "$THEME_DIR/js/vendor/core",
+		"files": [
+			"jquery.js",
+			"bootstrap.js",
+			"breakpoints.js",
+			"jquery.nicescroll.js",
+			"jquery.grid-a-licious.js",
+			"isotope.pkgd.js",
+			"packery-mode.pkgd.js",
+			"jquery.cookie.js",
+			"holder.js",
+			"handlebars.js",
+			"jquery-ui.custom.js",
+			"jquery.hotkeys.js",
+			"load_image.js",
+			"jquery.debouncedresize.js",
+			"modernizr.js",
+			"velocity.js"
+		]
+	}
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+<h:form>
+<h:panelGrid columns="2">
+<h:outputLabel value="Login:" />
+<h:inputText value="#{authenticationBean.login}" />
+<h:outputLabel value="password: " />
+<h:inputSecret value="#{authenticationBean.password}" id="pwd"/>
+<h:message for="pwd"/>
+<h:outputLabel value="role" />
+<h:selectOneMenu value="#{authenticationBean.role}">
+<f:selectItem itemLabel="ADMIN" itemValue="ADMIN"/>
+<f:selectItem itemLabel="SIMPLE_USER" itemValue="SIMPLE_USER"/>
+<f:selectItem itemLabel="GUEST" itemValue="GUEST"/>
+</h:selectOneMenu>
+
+
+<h:commandButton action="#{authenticationBean.addUser()}" value="Add" />
+</h:panelGrid>
+
+</h:form>
+</body> 
+</html>

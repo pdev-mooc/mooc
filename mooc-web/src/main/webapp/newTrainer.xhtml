@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+<h:form id="createTrainerBean">
+<h:panelGrid columns="2">
+<h:outputLabel value="First Name:" />
+<h:inputText value="#{trainerBean.firstName}" />
+<h:outputLabel value="Last name:" />
+<h:inputText value="#{trainerBean.lastName}" />
+<h:outputLabel value="E-mail:" />
+<h:inputText id="mail_vali" value="#{trainerBean.email}" />
+<h:outputLabel value="password: " />
+<h:inputSecret value="#{trainerBean.password}" id="pwd"/>
+<h:message for="pwd"/>
+<h:outputLabel value="role" />
+<h:selectOneMenu value="#{trainerBean.role}">
+<f:selectItem itemLabel="learner" itemValue="learner"/>
+<f:selectItem itemLabel="trainer" itemValue="trainer"/>
+</h:selectOneMenu>
+
+
+<h:commandButton action="#{trainerBean.addTrainer()}" value="Add" />
+</h:panelGrid>
+
+</h:form>
+</body> 
+</html>
