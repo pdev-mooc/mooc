@@ -11,9 +11,12 @@ import javax.ejb.Startup;
 import com.mooc.domain.Chapter;
 import com.mooc.domain.CommitteeMember;
 import com.mooc.domain.Course;
+import com.mooc.domain.Learner;
 import com.mooc.domain.Student;
 import com.mooc.domain.Tutor;
+import com.mooc.enumeration.UserRole;
 import com.mooc.services.CourseRemoteService;
+import com.mooc.services.LearnerRemoteService;
 import com.mooc.services.UserRemoteService;
 
 @Singleton
@@ -23,7 +26,8 @@ public class DatabasePopulator {
 	private UserRemoteService userService;
 	@EJB
 	private CourseRemoteService courseService;
-
+	@EJB
+	private LearnerRemoteService learnerRemoteService;
 	public DatabasePopulator() {
 	}
 
@@ -51,7 +55,15 @@ public class DatabasePopulator {
 		coursesList.add(courses.get(0));
 		coursesList.add(courses.get(1));
 		student.setCourses(coursesList);
-		userService.persist(student);		
+		userService.persist(student);	
+		/*****learner***/
+		Learner l = new Learner();
+		l.setFirstName("malek");
+		l.setEmail("malek@gmail.com");
+		l.setLastName("belanes");
+		l.setPassword("malek");
+		l.setUserRole(UserRole.learner);
+		learnerRemoteService.create(l);
 	}
 
 }
