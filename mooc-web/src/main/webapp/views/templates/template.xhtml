@@ -5,7 +5,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 
-<head>
+<h:head>
 <title><ui:insert name="pageTitle">Page Title</ui:insert></title>
 <style type="text/css">
 body {
@@ -26,16 +26,16 @@ body {
 	color: #8E969D;
 }
 </style>
-</head>
+</h:head>
 
-<body bgcolor="#ffffff">
+<h:body bgcolor="#ffffff">
 	<table style="border: 1px solid #CAD6E0" align="center" cellpadding="0"
 		cellspacing="0" border="0" width="400">
 		<tbody>
 
 			<tr>
 				<td class="header" height="42" align="center" valign="middle"
-					width="100%" bgcolor="#E4EBEB"><ui:insert name="pageHeader">Page Header</ui:insert>
+					width="100%" bgcolor="#E4EBEB"><ui:insert name="pageHeader"></ui:insert>
 				</td>
 			</tr>
 			<tr>
@@ -49,7 +49,7 @@ body {
 						<tbody>
 							<tr>
 								<td align="center" width="100%" valign="middle"><ui:insert
-										name="body">Page Body</ui:insert></td>
+										name="pageBody">Page Body</ui:insert></td>
 							</tr>
 						</tbody>
 					</table>
@@ -58,10 +58,10 @@ body {
 
 			<tr>
 				<td colspan="2" valign="bottom" height="1" width="100%"
-					bgcolor="#CAD6E0"></td>
+					bgcolor="#CAD6E0"><ui:insert name="pageFooter"></ui:insert></td>
 			</tr>
 		</tbody>
 	</table>
-</body>
+</h:body>
 
 </html>
