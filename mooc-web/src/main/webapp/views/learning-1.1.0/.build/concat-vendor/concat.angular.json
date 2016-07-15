@@ -1,0 +1,13 @@
+{
+	"build": "js/vendor/angular/all.js",
+	"cwd": "$THEME_DIR/js/vendor/angular",
+	"files": [
+		"angular.js",
+		"angular-resource.js",
+		"angular-sanitize.js",
+		"angular-touch.js",
+		"angular-ui-router.js",
+		"ui-utils.js"
+	],
+	"themes": ["angular"]
+}
