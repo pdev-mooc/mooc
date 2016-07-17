@@ -3,6 +3,7 @@ package com.mooc.util;
 import javax.faces.context.FacesContext;
 
 import com.mooc.domain.CommitteeMember;
+import com.mooc.domain.Student;
 import com.mooc.domain.Tutor;
 
 public class SessionUtils {
@@ -21,6 +22,10 @@ public class SessionUtils {
 
 	public static Tutor getTutor() {
 		return 	(Tutor) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("tutor");
+	}
+
+	public static void setCurrentStudent(Student student) {
+		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("student", student);
 	}
 
 }

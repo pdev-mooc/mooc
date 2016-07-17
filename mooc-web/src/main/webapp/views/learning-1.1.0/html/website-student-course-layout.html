@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition
+	template="/views/learning-1.1.0/html/website-student-layout.xhtml">
+	<ui:define name="pageContent">
+	<div class="parallax bg-white page-section third" style="padding-bottom:0">
+      <div class="container parallax-layer">
+        <div class="media v-middle media-overflow-visible">
+          <div class="media-left">
+            <span class="icon-block s30 bg-lightred"><i class="fa fa-github"></i></span>
+          </div>
+          <div class="media-body">
+            <div class="text-headline">
+              <h:outputText value="#{courseView.course.title}" />
+            </div>
+          </div>
+          <div class="media-right">
+            <div class="dropdown">
+              <a class="btn btn-white dropdown-toggle" href="#">Course <span
+              class="caret"></span></a>
+              <ul class="dropdown-menu pull-right">
+                <li>
+                  <a href="">Something</a>
+                </li>
+                <li>
+                  <a href="">Something else</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-section">
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading panel-collapse-trigger">
+                <h4 class="panel-title">
+                  Resources
+                </h4>
+              </div>
+              <div class="panel-body list-group">
+                <ul class="list-group list-group-menu">
+                  <li class="list-group-item active">
+                    <a class="link-text-color" href="website-take-course.html">Curriculum</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a class="link-text-color" href="website-course-forums.html">Course
+                    Forums</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a class="link-text-color" href="website-take-quiz.html">Take
+                    Quiz</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a class="link-text-color" href="website-quiz-results.html">Quiz
+                    Results</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading panel-collapse-trigger">
+                <h4 class="panel-title">
+                  Instructor
+                </h4>
+              </div>
+              <div class="panel-body">
+                <div class="media v-middle">
+                  <div class="media-left">
+                    <img src="images/people/110/guy-6.jpg" alt="About Adrian"
+                    width="60" class="img-circle" />
+                  </div>
+                  <div class="media-body">
+                    <h4 class="text-title margin-none">
+                      <a href="#"><h:outputText value="#{courseView.course.tutor.firstName} #{courseView.course.tutor.lastName}" /> </a>
+                    </h4>
+                    <span class="caption text-light">Biography</span>
+                  </div>
+                </div>
+                <br />
+                <div class="expandable expandable-indicator-white expandable-trigger">
+                  <div class="expandable-content">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      A accusamus aut consectetur consequatur cum cupiditate
+                      debitis doloribus, error ex explicabo harum illum minima
+                      mollitia nisi nostrum officiis omnis optio qui quisquam
+                      saepe sit sunt totam vel velit voluptatibus? Adipisci
+                      ducimus expedita id nostrum quas quia!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</ui:define>
+</ui:composition>
+</html>
