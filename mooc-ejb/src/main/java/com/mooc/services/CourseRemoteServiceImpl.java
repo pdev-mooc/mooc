@@ -31,11 +31,7 @@ public class CourseRemoteServiceImpl extends GenericRemoteService<Course> implem
 		TypedQuery<Course> q = entityManager
 				.createQuery("select u from Course u where u.id=?0", Course.class)
 				.setParameter(0, id);
-		List<Course> list = q.getResultList();
-		if (list.isEmpty()) {
-			return null;
-		}
-		return list.get(0);
+		return q.getSingleResult();
 	}
 
 }

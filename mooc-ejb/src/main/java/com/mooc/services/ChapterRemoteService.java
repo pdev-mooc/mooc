@@ -7,4 +7,6 @@ import com.mooc.domain.Chapter;
 @Remote
 public interface ChapterRemoteService extends EntityRemoteService<Chapter> {
 
+	Chapter findChapter(Integer courseId, Integer chapterId);
+
 }

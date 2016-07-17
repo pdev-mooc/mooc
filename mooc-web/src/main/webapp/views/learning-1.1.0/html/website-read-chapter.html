@@ -7,24 +7,7 @@
 <ui:composition template="/views/learning-1.1.0/html/website-student-course-layout.xhtml">
         <ui:define name="courseContent">
           <div class="col-md-9">
-            <div class="page-section padding-top-none">
-              <div class="media media-grid v-middle">
-                <div class="media-body">
-                  <h1 class="text-headline margin-none">
-                    Description
-                  </h1>
-                </div>
-              </div>
-              <br />
-              <p class="text-body-2">
-              	<h:outputText value="#{courseView.course.description}" />
-              </p>
-            </div>
-            <h5 class="text-subhead-2 text-light">
-              Curriculum
-            </h5>
             <h:form>
-            <ui:repeat var="chapter" value="#{courseView.course.chapters}">
             <div class="panel panel-default curriculum open paper-shadow">
               <div class="panel-heading panel-heading-gray">
                 <div class="media">
@@ -35,19 +18,20 @@
                   </div>
                   <div class="media-body">
                     <h4 class="text-headline">
-                      <h:commandButton action="#{chapterView.loadChapter(courseView.course.id, chapter.id)}"
-                      	value="#{chapter.title}" />
+                      <h:outputText value="#{chapterView.chapter.title}" />
                     </h4>
                     <p>
-                      <h:outputText value="#{chapter.recap}" />
+                      <h:outputText value="#{chapterView.chapter.body}" />
                     </p>
                   </div>
                 </div>
                 <span class="collapse-status collapse-open">Open</span> <span
                 class="collapse-status collapse-close">Close</span>
               </div>
+              <div class="list-group collapse in" id="curriculum-1">
+                
+              </div>
             </div>
-			</ui:repeat>
 			</h:form>
           </div>
           </ui:define>

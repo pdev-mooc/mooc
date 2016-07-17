@@ -10827,7 +10827,7 @@ hr {
   padding: 16px 0;
 }
 .page-section.third {
-  padding: 24px 0;
+  padding: 80px 0;
 }
 .page-section + .page-section:not(.equal) {
   padding-top: 0;
@@ -15894,7 +15894,7 @@ ul.img-grid li img {
 .form-control-material .form-control {
   font-size: 1.23rem;
   border: none;
-  line-height: 16px;
+  line-height: 32px;
   background-color: transparent;
   padding: 3px 0 13px;
   box-shadow: none;

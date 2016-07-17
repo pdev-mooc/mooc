@@ -3,6 +3,7 @@ package com.mooc.domain;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +23,7 @@ public class Chapter implements Serializable {
 	protected Integer id;
 	private String title;
 	private String recap;
+	@Column(columnDefinition = "text")
 	private String body;
 	@OneToMany
 	private List<Quizz> quizzs;

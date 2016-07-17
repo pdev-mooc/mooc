@@ -261,12 +261,12 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
       <div class="container parallax-layer">
         <div class="media v-middle">
           <div class="media-left text-center">
-            <a href="#"> <img src="images/people/110/guy-6.jpg" alt="people"
-            class="img-circle width-80" /> </a>
+            <h:outputLink value="website-student-dashboard.html"> <img src="images/people/110/guy-6.jpg" alt="people"
+            class="img-circle width-80" /> </h:outputLink> 
           </div>
           <div class="media-body">
             <h1 class="text-white text-display-1 margin-v-0">
-              <h:outputText value="#{studentView.student.firstName}" /> <h:outputText value="#{studentView.student.lastName}" />
+              <h:outputText value="#{studentView.student.firstName} #{studentView.student.lastName}" />
             </h1>
             <p class="text-subhead">
               <a class="link-white text-underline"

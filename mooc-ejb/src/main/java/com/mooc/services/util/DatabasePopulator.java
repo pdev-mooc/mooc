@@ -37,9 +37,29 @@ public class DatabasePopulator {
 		Course course1 = new Course("Java", "Java Course", tutor);
 		Course course2 = new Course("PHP", "PHP Course", tutor);
 		Course course3 = new Course("C#", "C# Course", tutor);
-		course1.getChapters().add(new Chapter("Chapter 1", "Introduction to Java", "", course1));
-		course1.getChapters().add(new Chapter("Chapter 1", "Introduction to PHP", "", course2));
-		course1.getChapters().add(new Chapter("Chapter 1", "Introduction to C#", "", course3));
+		course1.getChapters().add(new Chapter("Chapter 1", "Introduction to Java",
+				"Like any programming language, the Java language has its own structure, syntax rules,"
+				+ "and programming paradigm. The Java language's programming paradigm is based on the concept of OOP, which the language's features support."
+				+ "The Java language is a C-language derivative, so its syntax rules look much like C's."
+				+ "For example, code blocks are modularized into methods and delimited by braces ({ and }), and variables are declared before they are used."
+				+ "Structurally, the Java language starts with packages. A package is the Java language's namespace mechanism."
+				+ " Within packages are classes, and within classes are methods, variables, constants, and more."
+				+ "You learn about the parts of the Java language in this tutorial.", course1));
+		course1.getChapters().add(new Chapter("Chapter 1", "Introduction to PHP",
+				"PHP is a programming language that can do all sorts of things: evaluate form data sent from a browser,"
+				+ "build custom web content to serve the browser, talk to a database,"
+				+ "and even send and receive cookies (little packets of data that your browser uses to remember things,"
+				+ "like if you're logged in to Codecademy)."
+				+ "Check out the code in the editor. Looks familiar, doesn't it?"
+				+ "That's because a lot of it is regular old HTML! The PHP code is written in the <?php and ?> ."
+				+ "See how it generates numbers, creates lists, and adds text directly to your webpage?",
+				course2));
+		course1.getChapters().add(new Chapter("Chapter 1", "Introduction to C#",
+				"C# (pronounced \"C sharp\") is a simple, modern, object-oriented, and type-safe programming language."
+						+ "It will immediately be familiar to C and C++ programmers."
+						+ "C# combines the high productivity of Rapid Application Development (RAD)"
+						+ "languages and the raw power of C++.",
+				course3));
 		tutor.getCourses().add(course1);
 		tutor.getCourses().add(course2);
 		tutor.getCourses().add(course3);

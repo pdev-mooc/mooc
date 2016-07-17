@@ -27,7 +27,7 @@ public class StudentView {
 		}
 		student = (Student) user;
 		SessionUtils.setCurrentStudent(student);
-		return "/views/learning-1.1.0/html/website-student-dashboard.html";
+		return "website-student-dashboard.html";
 	}
 
 	public Student getStudent() {
