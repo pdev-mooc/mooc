@@ -12,11 +12,13 @@ import com.mooc.domain.Chapter;
 import com.mooc.domain.CommitteeMember;
 import com.mooc.domain.Course;
 import com.mooc.domain.Learner;
+import com.mooc.domain.Role;
 import com.mooc.domain.Student;
 import com.mooc.domain.Tutor;
 import com.mooc.enumeration.UserRole;
 import com.mooc.services.CourseRemoteService;
 import com.mooc.services.LearnerRemoteService;
+import com.mooc.services.RoleRemoteService;
 import com.mooc.services.UserRemoteService;
 
 @Singleton
@@ -28,6 +30,8 @@ public class DatabasePopulator {
 	private CourseRemoteService courseService;
 	@EJB
 	private LearnerRemoteService learnerRemoteService;
+	@EJB
+	private RoleRemoteService roleRemoteService;
 	public DatabasePopulator() {
 	}
 
@@ -62,8 +66,20 @@ public class DatabasePopulator {
 		l.setEmail("malek@gmail.com");
 		l.setLastName("belanes");
 		l.setPassword("malek");
-		l.setUserRole(UserRole.learner);
+		Role r = new Role();
+		r.setRoleName("learner");
+		l.setUserRole(r);		
 		learnerRemoteService.create(l);
+		
+		/*Learner2*/
+		Learner l2 = new Learner();
+		l2.setFirstName("malek2");
+		l2.setEmail("malek2@gmail.com");
+		l2.setLastName("belanes");
+		l2.setPassword("malek2");	
+		
+		l2.setUserRole(roleRemoteService.findByName(r.getRoleName()));
+		learnerRemoteService.create(l2);
 	}
 
 }

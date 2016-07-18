@@ -1,13 +1,17 @@
 package com.mooc.bean;
 
+import java.time.LocalDate;
+
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
+import com.mooc.domain.Session;
 import com.mooc.domain.Trainer;
 import com.mooc.enumeration.UserRole;
+import com.mooc.services.SessionRemoteService;
 import com.mooc.services.TrainerRemoteService;
 
 
@@ -15,11 +19,11 @@ import com.mooc.services.TrainerRemoteService;
 @ManagedBean
 @SessionScoped
 public class SessionBean {
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String password;
-	private String role;
+	private LocalDate startDate;
+	private LocalDate endDate;
+	private Trainer trainer;
+	private String description;
+
 	
 	public SessionBean() {
 		super();
@@ -27,26 +31,51 @@ public class SessionBean {
 	}
 
 	@EJB
-	private TrainerRemoteService trainerService;
+	private SessionRemoteService sessionService;
 	
-	public String addTrainer(){
+	public String addSession(){
 
 	
-		UserRole selectedRole=null;
-		for(UserRole r:UserRole.values()){
-			
-			if(r.toString().equals(role)){selectedRole=r;}
-		}
-		Trainer trainer = new Trainer();
-		trainer.setFirstName(firstName);
-		trainer.setLastName(lastName);
-		trainer.setEmail(email);
-		trainer.setPassword(password);	
-		trainer.setUserRole(selectedRole);
 		
-		trainerService.create(trainer);
+		Session session = new Session();
+		session.setEndDate(endDate);
+		session.setStartDate(startDate);
+		
+		sessionService.create(session);
 		
 		return null;
+	}
+
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
+
+	public Trainer getTrainer() {
+		return trainer;
+	}
+
+	public void setTrainer(Trainer trainer) {
+		this.trainer = trainer;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 /*
@@ -65,53 +94,7 @@ public class SessionBean {
 
 
 
-	public String getFirstName() {
-		return firstName;
-	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
-	public TrainerRemoteService getTrainerService() {
-		return trainerService;
-	}
-
-	public void setTrainerService(TrainerRemoteService trainerService) {
-		this.trainerService = trainerService;
-	}
 	
 
 

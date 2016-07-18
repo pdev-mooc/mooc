@@ -1,9 +1,5 @@
 package com.mooc.domain;
 
-
-
-
-
 import java.io.Serializable;
 
 import javax.persistence.Entity;

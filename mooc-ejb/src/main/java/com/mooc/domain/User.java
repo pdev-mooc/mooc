@@ -2,6 +2,7 @@ package com.mooc.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
@@ -10,9 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.mooc.enumeration.UserRole;
+
 
 @Table(name = "User")
 @Entity
@@ -30,13 +32,25 @@ public class User implements Serializable {
 	@Column(unique=true)
 	protected String email;
 	protected String password;
-	protected UserRole userRole;
+	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+	protected Role userRole;
+
+	public Role getUserRole() {
+		return userRole;
+	}
+
+
+	public void setUserRole(Role userRole) {
+		this.userRole = userRole;
+	}
+
 
 	public User() {
 	}
 
 	
-	public User(String firstName, String lastName, String email, String password, UserRole userRole) {
+
+	public User(String firstName, String lastName, String email, String password, Role userRole) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -86,12 +100,6 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public UserRole getUserRole() {
-		return userRole;
-	}
 
-	public void setUserRole(UserRole userRole) {
-		this.userRole = userRole;
-	}
 
 }

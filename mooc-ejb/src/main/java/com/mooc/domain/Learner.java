@@ -35,8 +35,9 @@ public class Learner extends User implements Serializable {
 	}
 
 	
-	public Learner(String firstName, String lastName, String login, String password, UserRole userRole) {
-		super(firstName, lastName, login, password, userRole);
+	
+	public Learner(String firstName, String lastName, String email, String password, Role userRole) {
+		super(firstName, lastName, email, password, userRole);
 		// TODO Auto-generated constructor stub
 	}
 	public List<Session> getSessions() {

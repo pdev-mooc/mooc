@@ -1,7 +1,7 @@
 package com.mooc.domain;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -23,8 +23,8 @@ public class Session implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
 	
-	private Date startDate;
-	private Date endDate;
+	private LocalDate startDate;
+	private LocalDate endDate;
 	@OneToOne(mappedBy="session")
 	private Trainer trainer;
 	private List <Learner> learners;
@@ -40,18 +40,8 @@ public class Session implements Serializable {
 		this.id = id;
 	}
 	
-	public Date getStartDate() {
-		return startDate;
-	}
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
-	public Date getEndDate() {
-		return endDate;
-	}
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
-	}
+
+
 	public Trainer getTrainer() {
 		return trainer;
 	}
@@ -78,6 +68,18 @@ public class Session implements Serializable {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
 	}
 
 	
