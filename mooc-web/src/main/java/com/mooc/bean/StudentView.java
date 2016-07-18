@@ -27,11 +27,15 @@ public class StudentView {
 		}
 		student = (Student) user;
 		SessionUtils.setCurrentStudent(student);
-		return "website-student-dashboard.html";
+		return "website-student-dashboard.html?faces-redirect=true";
 	}
 
 	public Student getStudent() {
 		return student;
+	}
+
+	public void saveChanges() {
+		userService.persist(student);
 	}
 
 }

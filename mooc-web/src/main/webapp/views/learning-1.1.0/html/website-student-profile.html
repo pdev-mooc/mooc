@@ -3,7 +3,8 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pt="http:// xmlns.jcp.org/jsf/passthrough">
 <ui:composition template="/views/learning-1.1.0/html/website-student-layout.xhtml">
 <ui:define name="pageContent">
    <div class="container">
@@ -29,7 +30,7 @@
              <!-- Panes -->
              <div class="tab-content">
                <div id="account" class="tab-pane active">
-                 <form class="form-horizontal" action="">
+                 <h:form class="form-horizontal" action="">
                    <div class="form-group">
                      <label for="inputEmail3" class="col-sm-2 control-label">Avatar</label>
                      <div class="col-md-6">
@@ -101,7 +102,7 @@
                      <div class="col-md-6">
                        <div class="form-control-material">
                        	<h:inputSecret value="#{studentView.student.password}" class="form-control"
-                         id="inputPassword3" /> <label for="inputPassword3">Password</label>
+                         id="inputPassword3" required="true" redisplay="true"/> <label for="inputPassword3">Password</label>
                        </div>
                      </div>
                    </div>
@@ -116,11 +117,11 @@
                    <div class="form-group margin-none">
                      <div class="col-md-offset-2 col-md-10">
                        <button type="submit"
-                       class="btn btn-primary paper-shadow relative">Save
+                       class="btn btn-primary paper-shadow relative" pt:action="#{studentView.saveChanges()}">Save
                        Changes</button>
                      </div>
                    </div>
-                 </form>
+                 </h:form>
                </div>
              </div>
              <!-- // END Panes -->
