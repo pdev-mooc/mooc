@@ -1,5 +1,6 @@
 package com.mooc.services.util;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +12,12 @@ import javax.ejb.Startup;
 import com.mooc.domain.Chapter;
 import com.mooc.domain.CommitteeMember;
 import com.mooc.domain.Course;
+import com.mooc.domain.Message;
+import com.mooc.domain.Person;
 import com.mooc.domain.Student;
 import com.mooc.domain.Tutor;
 import com.mooc.services.CourseRemoteService;
+import com.mooc.services.MessageRemoteService;
 import com.mooc.services.UserRemoteService;
 
 @Singleton
@@ -23,6 +27,8 @@ public class DatabasePopulator {
 	private UserRemoteService userService;
 	@EJB
 	private CourseRemoteService courseService;
+	@EJB
+	private MessageRemoteService messageService;
 
 	public DatabasePopulator() {
 	}
@@ -71,7 +77,17 @@ public class DatabasePopulator {
 		coursesList.add(courses.get(0));
 		coursesList.add(courses.get(1));
 		student.setCourses(coursesList);
-		userService.persist(student);		
+		userService.persist(student);
+		
+		//Person sender = new Person("dahmani", "said", "said@mooc.com", "pw");
+		//Person reciver = new Person("belanes", "salem", "salem@mooc.com", "pw");
+	
+		Person sender = userService.findUserById(1);
+		Person reciver =userService.findUserById(2);
+		Message message = new Message("blabla", sender, reciver);
+		messageService.persist(message);
+		
+		
 	}
 
 }

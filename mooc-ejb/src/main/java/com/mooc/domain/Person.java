@@ -25,6 +25,7 @@ public class Person implements Principal, Serializable {
 	protected String lastName;
 	protected String email;
 	protected String password;
+	
 
 	public Person() {
 	}
