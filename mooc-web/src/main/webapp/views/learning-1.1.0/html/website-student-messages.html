@@ -151,12 +151,21 @@
               <div class="media-body">
                 <div class="form-group">
                   <div class="input-group">
-                    <div class="input-group-btn">
-                      <a class="btn btn-primary" href="#"> <i
-                      class="fa fa-envelope"></i> Send </a>
-                    </div>
-                    <!-- /btn-group -->
-                    <input type="text" class="form-control share-text" />
+                  		<h:form>
+		                    <div class="input-group-btn">
+		                    <i class="fa fa-envelope"></i>
+		                    <h:commandButton class="btn btn-primary" value="Send" actionListener="#{messageBean.send()}">
+							<f:param name="receiverId" value=""></f:param>
+							<f:param name="senderId" value="#{studentView.student.id}"></f:param>
+							</h:commandButton>
+		                     <!--   <a class="btn btn-primary" href="#"> <i
+		                      class="fa fa-envelope"></i> Send </a>-->
+
+		                    </div>
+                   		    <!-- /btn-group -->
+                            <h:inputText class="form-control share-text" value="#{messageBean.messageBody}" />
+                            <!--<input type="text" class="form-control share-text" />-->
+                       </h:form>
                   </div>
                   <!-- /input-group -->
                 </div>
@@ -304,6 +313,27 @@
                           <span class="v-center"> <span
                           class="btn btn-circle btn-white btn-lg"><i
                           class="fa fa-graduation-cap"></i></span> </span> </a>
+                        </div>
+                        <div class="connected-user">
+                        <h2>BienVenue #{connectedUserBean.connectedUser.pseudo}</h2>
+
+<h:dataTable value="#{connectedUserBean.user}" var="u" border="1">
+<h:column>
+<f:facet name="header">Utilisateurs connectés</f:facet>
+#{u.pseudo}
+</h:column>
+
+<h:column>
+<h:form id="formAjoutMessage">
+<h:commandButton value="contacter" action="#{connectedUserBean.ContacterUser(u)}" />
+
+</h:form>
+</h:column>
+
+</h:dataTable>
+                        
+                        
+                        
                         </div>
                       </div>
                       <div class="media-body">
