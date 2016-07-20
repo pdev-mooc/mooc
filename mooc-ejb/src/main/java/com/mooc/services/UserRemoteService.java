@@ -13,4 +13,5 @@ public interface UserRemoteService extends EntityRemoteService<Person> {
 	Person findUser(String email, String password);
 	
 	Person findUserById(Integer id );
+	List<Person> getUserContact(Integer id );
 }

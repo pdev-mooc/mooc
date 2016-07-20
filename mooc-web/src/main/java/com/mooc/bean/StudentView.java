@@ -1,5 +1,10 @@
 package com.mooc.bean;
 
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -29,6 +34,13 @@ public class StudentView {
 		SessionUtils.setCurrentStudent(student);
 		return "website-student-dashboard.html?faces-redirect=true";
 	}
+	public Set<Person> getContacts(){
+	
+		Set<Person> listContact = new HashSet<Person>(userService.getUserContact(this.student.getId()));	
+		return listContact;
+		
+	}
+
 
 	public Student getStudent() {
 		return student;

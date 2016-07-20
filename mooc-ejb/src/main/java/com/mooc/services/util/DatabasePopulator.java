@@ -79,8 +79,10 @@ public class DatabasePopulator {
 		student.setCourses(coursesList);
 		userService.persist(student);
 		
-		//Person sender = new Person("dahmani", "said", "said@mooc.com", "pw");
-		//Person reciver = new Person("belanes", "salem", "salem@mooc.com", "pw");
+		Student sender1 = new Student("belanes", "malek", "said@mooc.com", "pw");
+		userService.persist(sender1);
+		Student reciver1 = new Student("belanes", "raouf", "salem@mooc.com", "pw");
+		userService.persist(reciver1);
 	
 		Person sender = userService.findUserById(1);
 		Person reciver =userService.findUserById(2);

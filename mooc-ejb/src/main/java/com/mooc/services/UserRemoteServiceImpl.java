@@ -37,6 +37,18 @@ public class UserRemoteServiceImpl extends GenericRemoteService<Person> implemen
 		}
 		return list.get(0);
 	}
+
+	@Override
+	public List<Person> getUserContact(Integer id) {
+		TypedQuery<Person> q = entityManager
+				.createQuery("select u from Person u where u.id!=?0", Person.class)
+				.setParameter(0, id);
+		List<Person> list = q.getResultList();
+		if (list.isEmpty()) {
+			return null;
+		}
+		return list;
+	}
 	
 	
 

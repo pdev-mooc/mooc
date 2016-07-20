@@ -15,7 +15,29 @@
               <div class="media-left">
                 <div class="messages-list">
                   <div class="panel panel-default paper-shadow">
-                    <ul class="list-group">
+                  <ul class="list-group">
+                    <h:dataTable value="#{studentView.contacts}" var="u" border="1">
+						<h:column>
+						<f:facet name="header" class="list-group">Utilisateurs connectés</f:facet>
+						<a href="#"> </a>
+                        <div class="media v-middle">
+                          <div class="media-left">
+                            <img src="images/people/110/woman-#{u.id}.jpg" width="50"
+                            alt="" class="media-object" />
+                          </div>
+                          <div class="media-body">
+                            <span class="date">Today</span> <span class="user">#{u.firstName}
+                            #{u.lastName}</span>
+                            <div class="text-light">
+                              Are we ok to meet...
+                            </div>
+                          </div>
+                        </div>
+						</h:column>						 	
+					</h:dataTable>
+					</ul>
+                    <!--<ul class="list-group">
+                    
                       <li class="list-group-item active">
                         <a href="#"> </a>
                         <div class="media v-middle">
@@ -144,7 +166,7 @@
                           </div>
                         </div>
                       </li>
-                    </ul>
+                    </ul>-->
                   </div>
                 </div>
               </div>
@@ -314,27 +336,7 @@
                           class="btn btn-circle btn-white btn-lg"><i
                           class="fa fa-graduation-cap"></i></span> </span> </a>
                         </div>
-                        <div class="connected-user">
-                        <h2>BienVenue #{connectedUserBean.connectedUser.pseudo}</h2>
 
-<h:dataTable value="#{connectedUserBean.user}" var="u" border="1">
-<h:column>
-<f:facet name="header">Utilisateurs connectés</f:facet>
-#{u.pseudo}
-</h:column>
-
-<h:column>
-<h:form id="formAjoutMessage">
-<h:commandButton value="contacter" action="#{connectedUserBean.ContacterUser(u)}" />
-
-</h:form>
-</h:column>
-
-</h:dataTable>
-                        
-                        
-                        
-                        </div>
                       </div>
                       <div class="media-body">
                         <h4 class="media-heading margin-v-5-3">
