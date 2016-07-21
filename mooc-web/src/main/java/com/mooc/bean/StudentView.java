@@ -22,6 +22,7 @@ public class StudentView {
 	@EJB
 	private UserRemoteService userService;
 	private Student student = new Student();
+	private String contactSelected="0";
 
 	public String login() {
 		Person user = userService.findUser(student.getEmail(), student.getPassword());
@@ -40,6 +41,39 @@ public class StudentView {
 		return listContact;
 		
 	}
+	
+	public void contacter(String id){
+		
+		contactSelected=id;
+		
+	}
+	
+	public String listMessage() {
+		
+		//Person connectedUser = userService.findUserById(this.student.getId());
+		Person selectedUser = new Person();
+		if( contactSelected !="0"){
+			 selectedUser = userService.findUserById(Integer.parseInt(contactSelected));
+		}
+		return "<div class=\"panel-body\">"
+				+ "<div class=\"media v-middle\">"
+				+ "<div class=\"media-left\">"
+				+ "<img src=\"images/people/110/woman-"+contactSelected+".jpg\" alt=\"person\""
+				+ " class=\"media-object img-circle width-50\" />"
+				+ "</div> "
+				+ "<div class=\"media-body message\">"
+				+ " <h4 class=\"text-subhead margin-none\">"
+				+ " <a href=\"#\">"+selectedUser.getFirstName()+" "+selectedUser.getLastName()
+				+"</a>"
+				+ "</h4> <p class=\"text-caption text-light\">"
+				+ "  <i class=\"fa fa-clock-o\"></i>"
+				+ " 2 min ago "
+				+ "</div> "
+				+ "</div> "
+				+ "<p>  Is 4pm ok? </p>"
+				+ "</div>";
+
+	}
 
 
 	public Student getStudent() {
@@ -48,6 +82,12 @@ public class StudentView {
 
 	public void saveChanges() {
 		userService.persist(student);
+	}
+	public String getContactSelected() {
+		return contactSelected;
+	}
+	public void setContactSelected(String contactSelected) {
+		this.contactSelected = contactSelected;
 	}
 
 }
