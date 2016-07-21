@@ -4,7 +4,9 @@
    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:ui="http://richfaces.org/a4j"
+      xmlns:h="http://java.sun.com/jsf/html">
   <head>
     <meta content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -275,16 +277,17 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
         <div class="row">
           <div class="col-md-8 col-lg-9">
             <div class="panel panel-default paper-shadow">
-              <ul class="list-group">
+              <ul class="list-group"> 
+              <h:outputText value="#{studentView.topics.size()}" />             
+              <ui:repeat var="topic" value="#{studentView.topics}">
                 <li class="list-group-item">
                   <div class="media v-middle">
                     <div class="media-body">
                       <h4 class="text-headline margin-none">
-                        General
+                        <h:outputText  value="#{topic.title}" />
                       </h4>
                       <p class="text-subhead text-light">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Dolores, illo.
+                        <h:outputText value="#{topic.topicDescription}" />
                       </p>
                     </div>
                     <div class="media-right">
@@ -293,6 +296,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                     </div>
                   </div>
                 </li>
+                </ui:repeat>
                 <li class="list-group-item media v-middle">
                   <div class="media-left">
                     <div class="icon-block half img-circle bg-grey-300">
@@ -474,8 +478,8 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                       </p>
                     </div>
                     <div class="media-right">
-                      <a href="#" class="btn btn-white btn-flat"><i
-                      class="fa fa-fw fa-plus"></i> New Topic</a>
+                      <a class="btn btn-white btn-flat" ><i
+                      class="fa fa-fw fa-plus"></i>New Topic</a> 
                     </div>
                   </div>
                 </li>
