@@ -49,34 +49,6 @@ public class StudentView {
 		
 	}
 	
-	public String listMessage() {
-		
-		//Person connectedUser = userService.findUserById(this.student.getId());
-		Person selectedUser = new Person();
-		if( contactSelected !="0"){
-			 selectedUser = userService.findUserById(Integer.parseInt(contactSelected));
-		}
-		return "<div class=\"panel-body\">"
-				+ "<div class=\"media v-middle\">"
-				+ "<div class=\"media-left\">"
-				+ "<img src=\"images/people/110/woman-"+contactSelected+".jpg\" alt=\"person\""
-				+ " class=\"media-object img-circle width-50\" />"
-				+ "</div> "
-				+ "<div class=\"media-body message\">"
-				+ " <h4 class=\"text-subhead margin-none\">"
-				+ " <a href=\"#\">"+selectedUser.getFirstName()+" "+selectedUser.getLastName()
-				+"</a>"
-				+ "</h4> <p class=\"text-caption text-light\">"
-				+ "  <i class=\"fa fa-clock-o\"></i>"
-				+ " 2 min ago "
-				+ "</div> "
-				+ "</div> "
-				+ "<p>  Is 4pm ok? </p>"
-				+ "</div>";
-
-	}
-
-
 	public Student getStudent() {
 		return student;
 	}

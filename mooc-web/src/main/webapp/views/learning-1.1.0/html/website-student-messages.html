@@ -26,10 +26,10 @@
                             alt="" class="media-object" />
                           </div>
                           <div class="media-body">
-                            <span class="date">Today</span> <span class="user">#{u.firstName}
+                            <span class="date">#{messageBean.lastMessageBySender(u).sendDate}</span> <span class="user">#{u.firstName}
                             #{u.lastName}</span>
-                            <div class="text-light">
-                              Are we ok to meet...
+                            <div class="text-light">	
+                              #{messageBean.lastMessageBySender(u).content}
                             </div>
                              <div class="text-light">
                               	<h:form> 
@@ -196,9 +196,9 @@
                   </div>
                   <!-- /input-group -->
                 </div>
-               <div class="panel panel-default paper-shadow">
-               <h:outputText id="outputMessage" escape="false" value="#{studentView.listMessage()}"/>
-               </div>
+               
+               <h:outputText id="outputMessage" escape="false" value="#{messageBean.listMessage()}"/>
+               
                <!--<div class="panel panel-default paper-shadow">
                   <div class="panel-body">
                     <div class="media v-middle">
