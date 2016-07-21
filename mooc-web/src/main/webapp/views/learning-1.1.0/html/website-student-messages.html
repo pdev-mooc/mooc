@@ -180,9 +180,10 @@
                 </div>
               </div>
               <div class="media-body">
-                <div class="form-group">
-                  <div class="input-group">
+
                   		<h:form>
+                  <div class="form-group">
+                  <div class="input-group">
 		                    <div class="input-group-btn">
 		                    <i class="fa fa-envelope"></i>
 		                    <h:commandButton class="btn btn-primary" value="Send" actionListener="#{messageBean.send()}">
@@ -194,10 +195,11 @@
                    		    <!-- /btn-group -->
                             <h:inputText class="form-control share-text" value="#{messageBean.messageBody}" />
                             <!--<input type="text" class="form-control share-text" />-->
-                       </h:form>
-                  </div>
+                                              </div>
                   <!-- /input-group -->
                 </div>
+                       </h:form>
+
                
                <h:outputText id="outputMessage" escape="false" value="#{messageBean.listMessage()}"/>
                
