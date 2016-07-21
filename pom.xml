@@ -16,7 +16,7 @@
 
 		<version.wildfly.maven.plugin>1.1.0.Alpha5</version.wildfly.maven.plugin>
 		<version.wildfly>9.0.1.Final</version.wildfly>
-		<version.hibernate>4.3.10.Final</version.hibernate>
+		<version.hibernate>5.2.1.Final</version.hibernate>
 		<primefaces.version>5.3</primefaces.version>
 		<commons.io.version>1.4</commons.io.version>
 		<commons.fileupload.version>1.2.1</commons.fileupload.version>

@@ -3,7 +3,8 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 <ui:composition
 	template="/views/learning-1.1.0/html/website-student-layout.xhtml">
 	<ui:define name="pageContent">
@@ -89,12 +90,7 @@
                 <div class="expandable expandable-indicator-white expandable-trigger">
                   <div class="expandable-content">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      A accusamus aut consectetur consequatur cum cupiditate
-                      debitis doloribus, error ex explicabo harum illum minima
-                      mollitia nisi nostrum officiis omnis optio qui quisquam
-                      saepe sit sunt totam vel velit voluptatibus? Adipisci
-                      ducimus expedita id nostrum quas quia!
+                    	<h:outputText pt:value="#{courseView.course.tutor.biography}"/>
                     </p>
                   </div>
                 </div>

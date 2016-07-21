@@ -24,8 +24,16 @@ public class SessionUtils {
 		return 	(Tutor) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("tutor");
 	}
 
-	public static void setCurrentStudent(Student student) {
+	public static void setLoggedInStudent(Student student) {
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("student", student);
+	}
+
+	public static Student getLoggedInStudent() {
+		return (Student) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("student");
+	}
+
+	public static void clearSession() {
+		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().clear();
 	}
 
 }

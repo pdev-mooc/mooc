@@ -25,6 +25,7 @@ public class Person implements Principal, Serializable {
 	protected String lastName;
 	protected String email;
 	protected String password;
+	private String profilePictureURL;
 
 	public Person() {
 	}
@@ -98,6 +99,14 @@ public class Person implements Principal, Serializable {
 
 	public int hashCode() {
 		return email.hashCode();
+	}
+
+	public String getProfilePictureURL() {
+		return profilePictureURL;
+	}
+
+	public void setProfilePictureURL(String profilePictureURL) {
+		this.profilePictureURL = profilePictureURL;
 	}
 
 }

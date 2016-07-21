@@ -26,8 +26,13 @@ public class StudentView {
 			return "/views/learning-1.1.0/html/login.html";
 		}
 		student = (Student) user;
-		SessionUtils.setCurrentStudent(student);
+		SessionUtils.setLoggedInStudent(student);
 		return "website-student-dashboard.html?faces-redirect=true";
+	}
+
+	public String logout() {
+		SessionUtils.clearSession();
+		return "login.html?faces-redirect=true";
 	}
 
 	public Student getStudent() {

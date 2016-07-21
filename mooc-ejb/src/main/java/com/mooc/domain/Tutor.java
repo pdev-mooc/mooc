@@ -15,6 +15,8 @@ public class Tutor extends Person {
 
 	private static final long serialVersionUID = 1L;
 
+	private String biography;
+
 	@OneToMany(fetch=FetchType.EAGER, targetEntity=Course.class, mappedBy="tutor", cascade=CascadeType.ALL)
 	private List<Course> courses = new ArrayList<>();
 
@@ -31,6 +33,14 @@ public class Tutor extends Person {
 
 	public void setCourses(List<Course> courses) {
 		this.courses = courses;
+	}
+
+	public String getBiography() {
+		return biography;
+	}
+
+	public void setBiography(String biography) {
+		this.biography = biography;
 	}
 
 }
