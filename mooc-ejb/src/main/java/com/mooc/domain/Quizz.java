@@ -1,7 +1,6 @@
 package com.mooc.domain;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +21,10 @@ public class Quizz implements Serializable {
 	private String question;
 	private String propositions;
 	private Integer response;
+	private String title;
+	
+	public Quizz() {		
+	}
 	
 	public Integer getId() {
 		return id;
@@ -46,6 +49,13 @@ public class Quizz implements Serializable {
 	}
 	public void setResponse(Integer response) {
 		this.response = response;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	
