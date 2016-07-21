@@ -16,7 +16,8 @@ import com.mooc.domain.Student;
 import com.mooc.services.UserRemoteService;
 import com.mooc.util.SessionUtils;
 
-@ManagedBean @SessionScoped
+@ManagedBean(name="studentView")
+@SessionScoped
 public class StudentView {
 
 	@EJB
