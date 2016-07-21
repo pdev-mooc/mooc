@@ -2,6 +2,7 @@ package com.mooc.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -25,7 +26,7 @@ public class Message implements Serializable {
 	private Person sender;
 	@ManyToOne
 	private Person reciver;
-	private LocalDate sendDate;
+	private Date sendDate;
 	public String getcontent() {
 		return content;
 	}
@@ -44,10 +45,10 @@ public class Message implements Serializable {
 	public void setReciver(Person reciver) {
 		this.reciver = reciver;
 	}
-	public LocalDate getSendDate() {
+	public Date getSendDate() {
 		return sendDate;
 	}
-	public void setSendDate(LocalDate sendDate) {
+	public void setSendDate(Date sendDate) {
 		this.sendDate = sendDate;
 	}
 	public Message() {		
@@ -57,7 +58,7 @@ public class Message implements Serializable {
 		this.content = content;
 		this.sender = sender;
 		this.reciver = reciver;
-		this.sendDate = LocalDate.now() ;
+		this.sendDate = new Date( );
 		
 	}
 
